@@ -1,47 +1,40 @@
-/* --- 1. GLOBAL AYARLAR --- */
-:root {
-    --cam-bocegi: #00bfa5;
-    --arka-plan: #004d40;
-    --siyah-kutu: #1a1a1a;
-    --koyu-gri: #252525;
-}
-
+/* --- SENİN ORİJİNAL KODLARIN (DOKUNULMADI) --- */
 body {
-    background-color: var(--arka-plan);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #004d40; 
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     margin: 0;
-    color: white;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* --- 2. LAYOUT (PC'de 3'lü Yan Yana) --- */
 .main-layout {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; 
+    width: 95%;
+    max-width: 1600px; 
+    padding: 30px 0;
     gap: 20px;
-    padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
 }
 
 .sidebar {
-    flex: 1;
-    min-width: 280px;
-    max-width: 320px;
-    background: var(--siyah-kutu);
+    width: 260px;
+    background: #1a1a1a; 
     border-radius: 20px;
     padding: 20px;
+    color: white;
     height: fit-content;
+    position: sticky;
+    top: 30px;
+    border: 1px solid rgba(0, 191, 165, 0.2);
 }
 
-.container {
-    flex: 2;
-    min-width: 400px;
-    max-width: 800px;
+.container { 
+    width: 100%;
+    max-width: 750px; 
 }
 
-/* --- 3. KATEGORİ BUTONLARI (Sayısal/Sözel) --- */
 .category-selection {
     display: flex;
     gap: 10px;
@@ -50,85 +43,95 @@ body {
 
 .cat-btn {
     flex: 1;
-    padding: 15px;
-    border: none;
+    padding: 12px;
     border-radius: 12px;
-    background: var(--siyah-kutu);
-    color: white;
+    border: 2px solid rgba(255,255,255,0.1);
     font-weight: bold;
     cursor: pointer;
+    background: #1a1a1a;
+    color: white;
     transition: 0.3s;
 }
 
 .cat-btn.active {
-    background: var(--cam-bocegi);
-    color: #000;
+    background: #00bfa5; 
+    border-color: #00bfa5;
 }
 
-/* --- 4. SORU KARTI VE ŞIKLAR --- */
 .question-card {
-    background: var(--cam-bocegi);
-    color: #1a1a1a;
-    padding: 30px;
+    background: #00bfa5;
     border-radius: 20px;
+    padding: 30px;
     margin-bottom: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: #333;
 }
 
 .option-btn {
     width: 100%;
+    margin-bottom: 10px;
     padding: 15px;
-    margin-top: 10px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px;
-    background: rgba(255,255,255,0.15);
-    color: white !important;
-    text-align: left;
-    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: 850 !important;
+    font-size: 1.15rem !important;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    text-align: left;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .option-btn:hover {
-    background: rgba(255,255,255,0.25);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* --- 5. SONRAKİ SORU BUTONU --- */
+.option-btn.correct {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
+    border: 2px solid #2ecc71 !important;
+}
+
+.option-btn.wrong {
+    background-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
+    border: 2px solid #e74c3c !important;
+}
+
 .next-btn {
-    width: 100%;
-    padding: 16px;
-    background: var(--cam-bocegi);
+    background: #00bfa5;
     color: white;
+    width: 100%;
+    padding: 15px;
     border: none;
-    border-radius: 15px;
-    font-weight: 900;
-    font-size: 16px;
+    border-radius: 12px;
+    font-weight: bold;
     cursor: pointer;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-/* --- 6. AI ANALİZ KUTUSU VE GİRİŞ ALANI --- */
 .ai-card {
-    background: var(--siyah-kutu);
-    padding: 25px;
+    background: #1a1a1a;
+    color: white;
     border-radius: 20px;
-    border: 1px solid rgba(0, 191, 165, 0.3);
+    padding: 25px;
 }
 
-.ai-content {
-    min-height: 60px;
-    margin: 15px 0;
-    line-height: 1.6;
-    color: #ddd;
+.ai-content { 
+    min-height: 100px; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    line-height: 1.6; 
 }
 
 .input-area {
     display: flex;
-    background: var(--koyu-gri);
-    padding: 8px;
-    border-radius: 12px;
-    gap: 10px;
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #user-input {
@@ -136,55 +139,93 @@ body {
     background: transparent;
     border: none;
     color: white;
-    padding: 10px;
     outline: none;
 }
 
-#send-btn {
-    background: var(--cam-bocegi);
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
+#send-btn { 
+    background: #00bfa5; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
 }
 
-/* --- 7. DİĞER BİLEŞENLER (Nav, Year, Spotify) --- */
-.nav-grid, .year-grid {
+/* --- TELEFON VE TABLET ARAYÜZÜ (GÜNCELLEDİM) --- */
+@media screen and (max-width: 1100px) {
+    .main-layout {
+        flex-direction: column !important; /* Her şeyi alt alta diz */
+        align-items: center !important;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+
+    .sidebar {
+        width: 90% !important; /* Panelleri genişlet */
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 15px !important;
+        min-width: unset !important;
+    }
+
+    .container {
+        width: 95% !important;
+        max-width: 100% !important;
+        order: -1; /* Soruyu en üste taşı (Mobil için önemli) */
+    }
+
+    .nav-grid {
+        grid-template-columns: repeat(5, 1fr) !important; /* Mobil rakamlar yan yana kalsın */
+    }
+
+    .year-grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* Yılları 3'lü yap */
+    }
+
+    .spotify-container {
+        width: 280px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important; /* Ortaya al */
+        bottom: 10px !important;
+    }
+}
+
+/* Soru Hafızası Rakamları için Fix */
+.nav-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.nav-item {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 10px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Yıl Butonları Izgarası */
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
 }
 
 .year-btn {
-    background: #252525;
-    color: white;
-    border: none;
+    background: #111;
+    color: #fff;
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
+    border: 1px solid #333;
 }
 
-.year-btn.active { background: var(--cam-bocegi); color: #000; }
+.year-btn.active { background: #00bfa5; }
 
-.spotify-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    z-index: 1000;
-    background: var(--siyah-kutu);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid var(--cam-bocegi);
-}
-
-/* --- 8. MOBİL UYUM --- */
-@media (max-width: 1100px) {
-    .main-layout { flex-direction: column; align-items: center; }
-    .sidebar, .container { width: 100% !important; max-width: 100%; }
-    .sidebar-left { order: 2; }
-    .container { order: 1; }
-    .sidebar-right { order: 3; }
-}
+/* Skor Kutusu */
+.score-box { text-align: center; background: #00bfa5; padding: 15px; border-radius: 12px; color: white; margin-top: 10px; }
+#stat-score { font-size: 28px; font-weight: 900; }
