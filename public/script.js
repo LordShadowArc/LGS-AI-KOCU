@@ -383,3 +383,19 @@ function resetProgress() {
         location.reload(); // Sayfayı yenileyerek her şeyi tertemiz yapar
     }
 }
+
+// Şıkları neon yapan asıl fonksiyon
+function highlightButtons(selected, correct) {
+    const options = ['A', 'B', 'C', 'D'];
+    options.forEach(opt => {
+        const btn = document.getElementById(`opt-${opt}`);
+        if (btn) {
+            if (opt === correct) {
+                btn.classList.add('correct'); // Doğru şıkkı yeşil neon yapar
+            } else if (opt === selected && selected !== correct) {
+                btn.classList.add('wrong'); // Yanlış seçileni kırmızı neon yapar
+            }
+            btn.disabled = true; // Diğer şıklara basılmasını engeller
+        }
+    });
+}
