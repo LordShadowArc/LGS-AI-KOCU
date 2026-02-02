@@ -530,3 +530,16 @@ button:active, .option-btn:active {
     font-weight: 800 !important;
     transition: all 0.3s ease !important;
 }
+
+/* JavaScript'in eklediği sınıfları en üstün tut */
+#opt-A.correct, #opt-B.correct, #opt-C.correct, #opt-D.correct {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
+    color: white !important;
+}
+
+#opt-A.wrong, #opt-B.wrong, #opt-C.wrong, #opt-D.wrong {
+    background-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
+    color: white !important;
+}
