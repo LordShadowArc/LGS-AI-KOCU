@@ -1,0 +1,352 @@
+[
+  {
+    "index": 1,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde 'çizgi' sözcüğü 'bir durumdan başka bir duruma geçişi belirleyen sınır' anlamında kullanılmıştır?",
+    "options": { "A": "Yazarın son kitabında farklı bir çizgi yakaladığını görüyoruz.", "B": "Gençlik ile yaşlılık arasındaki o ince çizgiyi fark etmek zordur.", "C": "Çocuk, defterine yamuk yumuk çizgiler çiziyordu.", "D": "Yüzündeki derin çizgiler yaşadığı zorlukları anlatıyordu." },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Türkçe",
+    "question": "Metinde geçen 'kendi göbeğini kendi kesmek' deyimiyle anlatılmak istenen aşağıdakilerden hangisidir?",
+    "options": { "A": "Kendi işini kimseden yardım almadan, kendi başına halletmek", "B": "Başkalarına yük olmaktan çekinmemek", "C": "Bir işi yaparken çok zorlanmak", "D": "Acele karar verip pişman olmak" },
+    "answer": "A"
+  },
+  {
+    "index": 3,
+    "subject": "Türkçe",
+    "question": "Sözel Mantık: Bir binanın ilk dört katında A, B, C ve D kişileri oturmaktadır. B, A'nın hemen üstündeki katta; C ise D'nin hemen altındaki kattadır. En alt katta A oturduğuna göre, 4. katta kim oturur?",
+    "options": { "A": "B", "B": "C", "C": "D", "D": "A" },
+    "answer": "C"
+  },
+  {
+    "index": 4,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?",
+    "options": { "A": "Herşeyin hayırlısı olsun diye dua etti.", "B": "Pek çok insan bu konuda yanılıyor.", "C": "Sıra dışı bir olayla karşılaştık.", "D": "Gökdelenlerin sayısı her geçen gün artıyor." },
+    "answer": "A"
+  },
+  {
+    "index": 5,
+    "subject": "Türkçe",
+    "question": "Anlatım Teknikleri: Bir yazarın, kendi çocukluk anılarını yer ve zaman belirterek samimi bir dille anlattığı metin türü aşağıdakilerden hangisidir?",
+    "options": { "A": "Makale", "B": "Anı (Hatıra)", "C": "Deneme", "D": "Fıkra" },
+    "answer": "B"
+  },
+  {
+    "index": 6,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde 'çatı' özelliği aranmaz?",
+    "options": { "A": "Kitabı masanın üzerine bıraktı.", "B": "Bugün hava çok güzeldi.", "C": "Soruları hızlıca çözdü.", "D": "Okula geç kaldığını fark etti." },
+    "answer": "B"
+  },
+  {
+    "index": 7,
+    "subject": "Türkçe",
+    "question": "Görsel Yorumlama: Bir grafikte Türkiye'nin 2021 yılı fındık ihracat rakamları aylara göre verilmiştir. Grafikte Ocak ayında düşüş, Eylül ayında ise zirve görülmektedir. Buna göre hangisi yanlıştır?",
+    "options": { "A": "Eylül ayı en çok ihracat yapılan aydır.", "B": "İhracat rakamları her ay düzenli artmıştır.", "C": "Ocak ayı ihracatı Eylül'den azdır.", "D": "Yıl içinde dalgalanmalar yaşanmıştır." },
+    "answer": "B"
+  },
+  {
+    "index": 8,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde amaç-sonuç ilişkisi vardır?",
+    "options": { "A": "Kar yağdığı için yollar kapandı.", "B": "Seni görmek için buralara kadar geldim.", "C": "Çok çalıştığından başarılı oldu.", "D": "Hava soğuyunca eve girdik." },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Türkçe",
+    "question": "Metin tamamlama: 'Başarılı olmak isteyen bir kişi, sadece çalışmakla yetinmemeli, aynı zamanda ....................' cümlesi hangisiyle tamamlanmalıdır?",
+    "options": { "A": "planlı hareket etmelidir.", "B": "vakit kaybetmelidir.", "C": "başkalarını kıskanmalıdır.", "D": "dinlenmeyi unutmalıdır." },
+    "answer": "A"
+  },
+  {
+    "index": 10,
+    "subject": "Türkçe",
+    "question": "Cümle ögeleri: 'Küçük çocuk, elindeki kırmızı balonu aniden bıraktı.' cümlesinin nesnesi hangisidir?",
+    "options": { "A": "Küçük çocuk", "B": "Elindeki kırmızı balonu", "C": "Aniden", "D": "Bıraktı" },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Türkçe",
+    "question": "Söz sanatları: 'Güneş bugün bize gülümsüyordu.' cümlesinde hangi söz sanatı vardır?",
+    "options": { "A": "Benzetme", "B": "Kişileştirme", "C": "Abartma", "D": "Zıtlık" },
+    "answer": "B"
+  },
+  {
+    "index": 12,
+    "subject": "Türkçe",
+    "question": "Fiilimsiler: 'Koşarak gelen çocuk, ağlayan bebeği güldürdü.' cümlesinde kaç tane fiilimsi vardır?",
+    "options": { "A": "1", "B": "2", "C": "3", "D": "4" },
+    "answer": "B"
+  },
+  {
+    "index": 13,
+    "subject": "Türkçe",
+    "question": "Noktalama: Aşağıdaki cümlelerin hangisinde kesme işareti yanlış kullanılmıştır?",
+    "options": { "A": "Türkiye'nin başkenti Ankara'dır.", "B": "Türk Dil Kurumu'nun binası çok eski.", "C": "Ahmet'in kitabı bende kalmış.", "D": "29 Ekim 1923'te Cumhuriyet ilan edildi." },
+    "answer": "B"
+  },
+  {
+    "index": 14,
+    "subject": "Türkçe",
+    "question": "Sözcükte anlam: 'Yüz' sözcüğü hangisinde sayı anlamında kullanılmıştır?",
+    "options": { "A": "Denizde yüzmek çok keyifli.", "B": "Yüzündeki gülümseme hiç eksilmesin.", "C": "Kitabın yüz sayfasını okudum.", "D": "Koyunun derisini çabucak yüzdü." },
+    "answer": "C"
+  },
+  {
+    "index": 15,
+    "subject": "Türkçe",
+    "question": "Paragraf ana düşünce: Bir metinde kitap okumanın insanın hayal dünyasını zenginleştirdiğinden bahsediliyorsa ana düşünce nedir?",
+    "options": { "A": "Kitaplar pahalı araçlardır.", "B": "Okumak, zihinsel gelişimi sağlar.", "C": "Sadece roman okunmalıdır.", "D": "Kütüphaneler sessiz yerlerdir." },
+    "answer": "B"
+  },
+  {
+    "index": 16,
+    "subject": "Türkçe",
+    "question": "Cümle birleştirme: 1. Kitap okumayı severim. 2. Boş vakitlerimi değerlendiririm. Bu iki cümlenin anlamca birleşmiş hali hangisidir?",
+    "options": { "A": "Kitap okuyarak boş vakitlerimi değerlendiririm.", "B": "Boş vaktim olunca kitap alırım.", "C": "Okumayı sevdiğim için vaktim azalıyor.", "D": "Her vakit kitap okunmaz." },
+    "answer": "A"
+  },
+  {
+    "index": 17,
+    "subject": "Türkçe",
+    "question": "Anlatım bozukluğu: 'Onunla ilk tanıştığımız günü unutamam.' cümlesindeki bozukluğun nedeni nedir?",
+    "options": { "A": "Kelimenin yanlış yerde kullanımı", "B": "Gereksiz kelime kullanımı", "C": "Anlamca çelişen kelimeler", "D": "Özne-yüklem uyuşmazlığı" },
+    "answer": "B"
+  },
+  {
+    "index": 18,
+    "subject": "Türkçe",
+    "question": "Soru işareti: Aşağıdakilerin hangisinde soru işareti yanlış kullanılmıştır?",
+    "options": { "A": "Nereye gittiğini biliyor musun?", "B": "Buraya ne zaman gelecek?", "C": "Ders çalıştı mı çalışmadı mı bilmiyorum?", "D": "Kaç yaşındasın?" },
+    "answer": "C"
+  },
+  {
+    "index": 19,
+    "subject": "Türkçe",
+    "question": "Deyimler: 'Ağzı kulaklarına varmak' deyimi hangi duyguyu ifade eder?",
+    "options": { "A": "Üzüntü", "B": "Şaşkınlık", "C": "Çok sevinmek", "D": "Korku" },
+    "answer": "C"
+  },
+  {
+    "index": 20,
+    "subject": "Türkçe",
+    "question": "Metin türü: Bir kişinin başından geçen komik bir olayı kısaca anlattığı yazı türü hangisidir?",
+    "options": { "A": "Makale", "B": "Fıkra (Anlatı)", "C": "Biyografi", "D": "Haber metni" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mustafa Kemal'in 'Ordular, ilk hedefiniz Akdeniz'dir. İleri!' emrini verdiği Başkomutanlık Meydan Muharebesi'nin diğer adı nedir?",
+    "options": { "A": "Sakarya", "B": "Dumlupınar", "C": "İnönü", "D": "Çanakkale" },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Lozan Antlaşması'nda Boğazlar üzerindeki tam egemenliğimizin kısıtlanmasına neden olan durum hangisidir?",
+    "options": { "A": "Kapitülasyonlar", "B": "Uluslararası bir komisyonun kurulması", "C": "Dış borçlar", "D": "Azınlık hakları" },
+    "answer": "B"
+  },
+  {
+    "index": 23,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Atatürk ilkelerinden 'Halkçılık', toplumda neyin sağlanmasını amaçlar?",
+    "options": { "A": "Sınıf ayrımı", "B": "Sosyal adalet ve eşitlik", "C": "Dini yönetim", "D": "Sadece zenginlerin hakları" },
+    "answer": "B"
+  },
+  {
+    "index": 24,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mudanya Ateşkes Antlaşması ile hangi bölgemiz savaşılmadan kurtarılmıştır?",
+    "options": { "A": "Doğu Anadolu", "B": "Doğu Trakya", "C": "Antalya", "D": "Adana" },
+    "answer": "B"
+  },
+  {
+    "index": 25,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Terakkiperver Cumhuriyet Fırkası'nın kapatılmasına neden olan olay hangisidir?",
+    "options": { "A": "Menemen Olayı", "B": "Şeyh Sait İsyanı", "C": "İzmir Suikastı", "D": "Bursa Olayı" },
+    "answer": "B"
+  },
+  {
+    "index": 26,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Sovyet Rusya ile imzalanan ve TBMM'yi tanıyan ilk büyük Avrupa devleti belgesi hangisidir?",
+    "options": { "A": "Gümrü Antlaşması", "B": "Moskova Antlaşması", "C": "Ankara Antlaşması", "D": "Kars Antlaşması" },
+    "answer": "B"
+  },
+  {
+    "index": 27,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Tekalif-i Milliye Emirleri'nin çıkarılma amacı nedir?",
+    "options": { "A": "Yeni bir devlet kurmak", "B": "Ordunun ihtiyaçlarını halktan karşılamak", "C": "Eğitimi modernize etmek", "D": "Vergi sistemini değiştirmek" },
+    "answer": "B"
+  },
+  {
+    "index": 28,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Kabotaj Kanunu'nun kabul edilmesi hangi ilke ile doğrudan ilgilidir?",
+    "options": { "A": "Laiklik", "B": "Milliyetçilik", "C": "Devletçilik", "D": "Halkçılık" },
+    "answer": "B"
+  },
+  {
+    "index": 29,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Milli Mücadele döneminde Batı Cephesi'nde kimlere karşı savaşılmıştır?",
+    "options": { "A": "Ermeniler", "B": "Yunanlılar", "C": "Fransızlar", "D": "İtalyanlar" },
+    "answer": "B"
+  },
+  {
+    "index": 30,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Atatürk'ün 'Hayatta en hakiki mürşit ilimdir.' sözü hangi ilke ile ilişkilidir?",
+    "options": { "A": "Cumhuriyetçilik", "B": "Laiklik", "C": "Halkçılık", "D": "Devletçilik" },
+    "answer": "B"
+  },
+  {
+    "index": 31,
+    "subject": "Din Kültürü",
+    "question": "'Şüphesiz biz her şeyi bir ölçüye göre yarattık.' ayeti hangi kavramla ilgilidir?",
+    "options": { "A": "Zekat", "B": "Kader", "C": "İhlas", "D": "Tevekkül" },
+    "answer": "B"
+  },
+  {
+    "index": 32,
+    "subject": "Din Kültürü",
+    "question": "Zekat verilecek mallarda aranan 'nisap miktarı' neyi ifade eder?",
+    "options": { "A": "Borç miktarını", "B": "Zenginlik ölçüsünü", "C": "Ailenin nüfusunu", "D": "Verilecek zekat oranını" },
+    "answer": "B"
+  },
+  {
+    "index": 33,
+    "subject": "Din Kültürü",
+    "question": "Hz. Muhammed'in güvenilirliğini ifade eden sıfatı hangisidir?",
+    "options": { "A": "Muhammedü'l Emin", "B": "Hatemü'n Nebiyyin", "C": "Resulullah", "D": "Habibullah" },
+    "answer": "A"
+  },
+  {
+    "index": 34,
+    "subject": "Din Kültürü",
+    "question": "Kendi emeğiyle geçinmeyi teşvik eden, rızkın Allah'tan olduğunu belirten kavram hangisidir?",
+    "options": { "A": "Tevekkül", "B": "Emek ve Rızık", "C": "Ecel ve Ömür", "D": "Kaza ve Kader" },
+    "answer": "B"
+  },
+  {
+    "index": 35,
+    "subject": "Din Kültürü",
+    "question": "İslam'ın korunmasına önem verdiği beş temel esastan 'aklın korunması' hangisiyle ilgilidir?",
+    "options": { "A": "Zekat vermek", "B": "Alkol ve uyuşturucudan uzak durmak", "C": "Yalan söylememek", "D": "İbadet etmek" },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Din Kültürü",
+    "question": "Kurban ibadetinin toplumsal açıdan en önemli faydası nedir?",
+    "options": { "A": "Et yemek", "B": "Dayanışma ve paylaşmayı artırmak", "C": "Tatile gitmek", "D": "Spor yapmak" },
+    "answer": "B"
+  },
+  {
+    "index": 37,
+    "subject": "Din Kültürü",
+    "question": "Ayetü'l Kürsi hangi surede yer almaktadır?",
+    "options": { "A": "Fatiha", "B": "Bakara", "C": "İhlas", "D": "Maun" },
+    "answer": "B"
+  },
+  {
+    "index": 38,
+    "subject": "Din Kültürü",
+    "question": "Hangisi sadaka-i cariye kapsamına girer?",
+    "options": { "A": "Bir fakire yemek vermek", "B": "Okul veya çeşme yaptırmak", "C": "Güler yüz göstermek", "D": "Bayram namazı kılmak" },
+    "answer": "B"
+  },
+  {
+    "index": 39,
+    "subject": "Din Kültürü",
+    "question": "Kişinin ölüm anına ne ad verilir?",
+    "options": { "A": "Ömür", "B": "Ecel", "C": "Kader", "D": "Rızık" },
+    "answer": "B"
+  },
+  {
+    "index": 40,
+    "subject": "Din Kültürü",
+    "question": "Hz. Yusuf'un hayatının anlatıldığı kıssaya ne ad verilir?",
+    "options": { "A": "Kıssa-i Enbiya", "B": "Ahsenü'l Kasas", "C": "Siyer-i Nebi", "D": "Hadis-i Şerif" },
+    "answer": "B"
+  },
+  {
+    "index": 41,
+    "subject": "İngilizce",
+    "question": "Sally: I am going to the book fair. Do you want to join me?\nJane: ...................., I have to study for my exam.",
+    "options": { "A": "Sure", "B": "I'm sorry, but I can't", "C": "That's a great idea", "D": "Why not" },
+    "answer": "B"
+  },
+  {
+    "index": 42,
+    "subject": "İngilizce",
+    "question": "A true friend should always .................... you when you are in trouble.",
+    "options": { "A": "back up", "B": "argue with", "C": "lie to", "D": "ignore" },
+    "answer": "A"
+  },
+  {
+    "index": 43,
+    "subject": "İngilizce",
+    "question": "Which of the following is a 'cooking method'?",
+    "options": { "A": "Spoon", "B": "Grill", "C": "Bowl", "D": "Knife" },
+    "answer": "B"
+  },
+  {
+    "index": 44,
+    "subject": "İngilizce",
+    "question": "Waiter: How would you like your steak?\nCustomer: ...................., please.",
+    "options": { "A": "With a fork", "B": "Grilled", "C": "In the kitchen", "D": "At 7 p.m." },
+    "answer": "B"
+  },
+  {
+    "index": 45,
+    "subject": "İngilizce",
+    "question": "Tom: How often do you go to the gym?\nMark: .................... . I love exercising.",
+    "options": { "A": "Never", "B": "Three times a week", "C": "Last year", "D": "By car" },
+    "answer": "B"
+  },
+  {
+    "index": 46,
+    "subject": "İngilizce",
+    "question": "Which one is NOT a type of internet safety rule?",
+    "options": { "A": "Don't share your password.", "B": "Don't meet strangers.", "C": "Post all your private photos.", "D": "Be polite to others." },
+    "answer": "C"
+  },
+  {
+    "index": 47,
+    "subject": "İngilizce",
+    "question": "If you want to bake a cake, you should .................... the oven first.",
+    "options": { "A": "preheat", "B": "wash", "C": "freeze", "D": "boil" },
+    "answer": "A"
+  },
+  {
+    "index": 48,
+    "subject": "İngilizce",
+    "question": "Teenagers usually .................... social media to keep in touch with their friends.",
+    "options": { "A": "use", "B": "avoid", "C": "hate", "D": "sell" },
+    "answer": "A"
+  },
+  {
+    "index": 49,
+    "subject": "İngilizce",
+    "question": "Which one is an 'extreme sport'?",
+    "options": { "A": "Skydiving", "B": "Playing chess", "C": "Reading", "D": "Cooking" },
+    "answer": "A"
+  },
+  {
+    "index": 50,
+    "subject": "İngilizce",
+    "question": "A: What is the .................... like in Erzurum in winter?\nB: It is very cold and snowy.",
+    "options": { "A": "people", "B": "weather", "C": "food", "D": "transport" },
+    "answer": "B"
+  }
+]

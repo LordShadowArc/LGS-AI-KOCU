@@ -1,0 +1,282 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "Bir kenarının uzunluğu 5⁴ cm olan kare şeklindeki kağıdın bir yüzüne aşağıdaki gibi 12 eş dikdörtgen ve 1 kare çizilmiştir. Bu şekillerden kare ve iki eş dikdörtgen kırmızıya boyanmıştır. Buna göre kırmızı bölgelerin alanları toplamı kaç santimetrekaredir?",
+    "options": { "A": "5⁷", "B": "2·5⁷", "C": "5⁸", "D": "2·5⁸" },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "Dikdörtgen şeklindeki bir kağıt, alanları santimetrekare cinsinden 10'dan büyük birer tam kare pozitif tam sayıya eşit olan karesel bölgelere ayrılmıştır. Eşit alanlı bölgeler aynı harf ile gösterildiğine göre (A, B, C, D bölgeleri), dikdörtgen şeklindeki bu kağıdın bir yüzünün alanı en az kaç santimetrekaredir?",
+    "options": { "A": "168", "B": "255", "C": "364", "D": "392" },
+    "answer": "C"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Alanları 1050 cm² olan kare şeklindeki bir panoya, kenarlarının uzunlukları 5'in pozitif tam sayı kuvveti ve 2'nin pozitif tam sayı kuvveti olan dikdörtgen şeklinde bir afiş, panonun kenarlarına paralel olacak şekilde asılacaktır. Afişin alanı en fazla kaç santimetrekaredir?",
+    "options": { "A": "400", "B": "480", "C": "800", "D": "1000" },
+    "answer": "C"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Kütleleri 3 gram olan sarı boncuklar ve 5 gram olan mavi boncuklar kullanılarak bir kolye yapılmıştır. Kolyedeki mavi boncukların toplam kütlesi, sarı boncukların toplam kütlesine eşittir. Toplam kütle 230 gramdan az olduğuna göre, sarı ve mavi boncuk sayıları arasındaki fark en fazla kaçtır?",
+    "options": { "A": "14", "B": "15", "C": "28", "D": "30" },
+    "answer": "A"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "Dört farklı renkteki kartların her birinden üçer adet vardır. Kartların üzerinde √0,09, √0,25, √0,64 ve √1,44 sayıları yazmaktadır. Eymen bu kartlardan seçerek toplamları bir doğal sayı olacak şekilde gruplandırıyor. Buna göre Eymen en fazla kaç kart seçmiş olabilir?",
+    "options": { "A": "8", "B": "9", "C": "10", "D": "11" },
+    "answer": "C"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Bir kenar uzunluğu x metre olan kare şeklindeki bir bölgeye, kenar uzunlukları 2 metre olan kare şeklinde 4 eş bölgeye çocuk parkı yapılacaktır. Kalan bölgenin alanını veren cebirsel ifade hangisidir?",
+    "options": { "A": "(x-2)(x+2)", "B": "(x-4)(x+4)", "C": "(x-8)(x+8)", "D": "(x-16)(x+16)" },
+    "answer": "B"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "Bir lokantada hazırlanan yemek çeşitleri ve porsiyon sayıları sütun grafiğiyle, kullanılan toplam 60g tuzun dağılımı daire grafiğiyle gösterilmiştir. Daire grafiğinde: Köfte 90°, Çorba 72°, Pilav 48°, Musakka 60°, Makarna 36°, Taze Fasulye 54°. Her birinden birer porsiyon yiyen bir müşteri toplam 5g tuz tükettiğine göre hangi yemekleri yemiştir?",
+    "options": { "A": "Çorba–Pilav–Musakka", "B": "Pilav–Musakka–Köfte", "C": "Çorba–Musakka–Makarna", "D": "Pilav–Taze Fasulye–Köfte" },
+    "answer": "D"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Bir veri grubundaki sayıların toplamının, gruptaki terim sayısına bölümüne aritmetik ortalama denir. Sıfırdan farklı a, b, c, d sayılarının ortalaması x ise, bu sayılara hangi sayı eklenirse yeni ortalama yine x olur?",
+    "options": { "A": "0", "B": "x", "C": "x/2", "D": "4x" },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "Kenar uzunlukları √128 cm ve √200 cm olan dikdörtgen şeklindeki bir kağıt, kenarları boyunca kesilerek kare şeklinde eş parçalara ayrılacaktır. Parçaların bir kenarı en fazla kaç cm olabilir?",
+    "options": { "A": "√2", "B": "2√2", "C": "3√2", "D": "4√2" },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "Yükseklikleri santimetre cinsinden birer tam sayı olan kutular üst üste dizilerek 3 blok oluşturulmuştur. Blokların her birinin toplam yüksekliği birbirine eşittir. Bu üç blok üst üste konulup en üstteki kutu çıkarıldığında yeni yüksekliğin hangisi olması beklenemez? (Blok yükseklikleri k kütlesindedir)",
+    "options": { "A": "82", "B": "86", "C": "90", "D": "94" },
+    "answer": "C"
+  },
+  {
+    "index": 11,
+    "subject": "Matematik",
+    "question": "Doğrusal bir yol boyunca dizilen kare prizma şeklindeki taşların bir yüzey alanı (x²+2x+1) cm²'dir. Bu taşlar arasında boşluk kalmadan 20 adet dizildiğine göre yolun toplam uzunluğu nedir?",
+    "options": { "A": "20x+20", "B": "10x+10", "C": "20x", "D": "x+20" },
+    "answer": "A"
+  },
+  {
+    "index": 12,
+    "subject": "Matematik",
+    "question": "Bir olayın olma olasılığı = İstenen durum / Tüm durumlar. 1'den 10'a kadar numaralandırılmış topların bulunduğu bir torbadan rastgele çekilen bir topun üzerindeki sayının asal sayı olma olasılığı kaçtır?",
+    "options": { "A": "2/5", "B": "1/2", "C": "3/10", "D": "4/5" },
+    "answer": "A"
+  },
+  {
+    "index": 13,
+    "subject": "Matematik",
+    "question": "300 MB boyutundaki bir dosya internetten indirilmektedir. İndirilen kısmın zamana göre dağılımı (MB): 1. gün %40, 2. gün %25 ve 3. gün kalan kısım. Bu veriler daire grafiğinde gösterilirse 3. günü temsil eden merkez açı kaç derecedir?",
+    "options": { "A": "105", "B": "120", "C": "126", "D": "135" },
+    "answer": "C"
+  },
+  {
+    "index": 14,
+    "subject": "Matematik",
+    "question": "Dik koordinat sisteminde A(3, -4) noktasının x eksenine göre yansıması olan noktanın koordinatları aşağıdakilerden hangisidir?",
+    "options": { "A": "(-3, -4)", "B": "(3, 4)", "C": "(-3, 4)", "D": "(4, -3)" },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Matematik",
+    "question": "Bir kenar uzunluğu a olan karenin köşegen uzunluğu a√2'dir. Kenar uzunlukları 10 cm olan bir kare levhanın köşegeni boyunca kesilmesiyle elde edilen üçgenin çevresi kaç cm'dir?",
+    "options": { "A": "20+10√2", "B": "30√2", "C": "40", "D": "10+20√2" },
+    "answer": "A"
+  },
+  {
+    "index": 16,
+    "subject": "Matematik",
+    "question": "Denklemi 2x - 3y = 12 olan doğrunun eksenleri kestiği noktalar arasındaki uzaklık kaç birimdir?",
+    "options": { "A": "2√13", "B": "5", "C": "10", "D": "12" },
+    "answer": "A"
+  },
+  {
+    "index": 17,
+    "subject": "Matematik",
+    "question": "Benzerlik oranı 2/3 olan iki üçgenden küçük olanın alanı 16 cm² ise büyük olanın alanı kaç cm²'dir?",
+    "options": { "A": "24", "B": "32", "C": "36", "D": "48" },
+    "answer": "C"
+  },
+  {
+    "index": 18,
+    "subject": "Matematik",
+    "question": "Yarıçapı r olan dairenin alanı πr²'dir. Bir kenarı 12 cm olan kare şeklindeki kağıttan en büyük alana sahip daire kesilip atılıyor. Kalan kağıdın alanı kaç cm²'dir? (π=3)",
+    "options": { "A": "36", "B": "72", "C": "108", "D": "144" },
+    "answer": "A"
+  },
+  {
+    "index": 19,
+    "subject": "Matematik",
+    "question": "Hangi sayının 3 katının 5 fazlası, aynı sayının 2 katının 10 fazlasına eşittir?",
+    "options": { "A": "3", "B": "5", "C": "10", "D": "15" },
+    "answer": "B"
+  },
+  {
+    "index": 20,
+    "subject": "Matematik",
+    "question": "Bir torbada özdeş 4 kırmızı ve bir miktar mavi bilye vardır. Torbadan rastgele çekilen bir bilyenin kırmızı olma olasılığı 1/3 olduğuna göre torbadaki toplam bilye sayısı kaçtır?",
+    "options": { "A": "8", "B": "12", "C": "16", "D": "20" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "Fen Bilimleri",
+    "question": "Bezelyelerde çiçek rengi özelliğine göre mor çiçekli iki bezelyenin çaprazlanması sonucu beyaz çiçekli bezelyeler elde edilmiştir. Buna göre çaprazlanan bezelyelerle ilgili hangisi kesinlikle doğrudur?",
+    "options": { "A": "İkisi de saf döldür.", "B": "İkisi de heterozigottur.", "C": "Biri homozigot baskındır.", "D": "Fenotipleri farklıdır." },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "Fen Bilimleri",
+    "question": "DNA zinciri üzerinde yer alan anlamlı görev birimlerine ne ad verilir?",
+    "options": { "A": "Gen", "B": "Nükleotid", "C": "Kromozom", "D": "Organel" },
+    "answer": "A"
+  },
+  {
+    "index": 23,
+    "subject": "Fen Bilimleri",
+    "question": "21 Haziran tarihinde Kuzey Yarım Küre'de en uzun gündüz yaşanır. Bu tarihten itibaren Kuzey Yarım Küre'de gündüz süreleri için ne söylenebilir?",
+    "options": { "A": "Uzar", "B": "Kısalmaya başlar", "C": "Değişmez", "D": "Önce kısalır sonra uzar" },
+    "answer": "B"
+  },
+  {
+    "index": 24,
+    "subject": "Fen Bilimleri",
+    "question": "Basınç konusuyla ilgili olarak; bir cismin zemine temas eden yüzey alanı azaltılırsa zemine uygulanan basınç nasıl değişir? (Ağırlık sabit)",
+    "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Sıfır olur" },
+    "answer": "A"
+  },
+  {
+    "index": 25,
+    "subject": "Fen Bilimleri",
+    "question": "Sıvı basıncı; sıvının derinliği ve yoğunluğu ile doğru orantılıdır. Şekildeki özdeş kaplarda aynı derinlikte su ve alkol (dsu > dalkol) bulunmaktadır. Kap tabanındaki basınçlar için hangisi doğrudur?",
+    "options": { "A": "Su dolu kapta basınç fazladır.", "B": "Alkol dolu kapta basınç fazladır.", "C": "Basınçlar eşittir.", "D": "Derinlik azdır." },
+    "answer": "A"
+  },
+  {
+    "index": 26,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik sistemde elementler artan atom numaralarına göre dizilir. Benzer kimyasal özellik gösteren elementler aynı dikey sütunda yer alır. Bu sütunlara ne denir?",
+    "options": { "A": "Periyot", "B": "Grup", "C": "Katman", "D": "Yörünge" },
+    "answer": "B"
+  },
+  {
+    "index": 27,
+    "subject": "Fen Bilimleri",
+    "question": "Bir maddenin sadece dış görünüşünde meydana gelen, kimliğini değiştirmeyen değişimlere fiziksel değişim denir. Hangisi buna örnektir?",
+    "options": { "A": "Odunun yanması", "B": "Sütün mayalanması", "C": "Gümüşün kararması", "D": "Camın kırılması" },
+    "answer": "D"
+  },
+  {
+    "index": 28,
+    "subject": "Fen Bilimleri",
+    "question": "Kimyasal tepkimelerde kütlenin korunumu yasası gereği; girenlerin toplam kütlesi ürünlerin toplam kütlesine eşittir. 12g Karbon ile bir miktar Oksijen tepkimeye girip 44g Karbondioksit oluşturuyorsa kaç gram Oksijen kullanılmıştır?",
+    "options": { "A": "12", "B": "32", "C": "44", "D": "56" },
+    "answer": "B"
+  },
+  {
+    "index": 29,
+    "subject": "Fen Bilimleri",
+    "question": "Turnusol kağıdını asitler kırmızıya, bazlar maviye çevirir. pH değeri 9 olan bir madde için aşağıdakilerden hangisi doğrudur?",
+    "options": { "A": "Asittir", "B": "Bazdır", "C": "Nötrdür", "D": "Tadı ekşidir" },
+    "answer": "B"
+  },
+  {
+    "index": 30,
+    "subject": "Fen Bilimleri",
+    "question": "Makara ağırlıklarının ve sürtünmelerin önemsenmediği sistemde bir hareketli makara kullanılarak 100 N ağırlığındaki yük kaç N kuvvetle dengelenir?",
+    "options": { "A": "50", "B": "100", "C": "150", "D": "200" },
+    "answer": "A"
+  },
+  {
+    "index": 31,
+    "subject": "Fen Bilimleri",
+    "question": "Besin zincirinde enerjinin temel kaynağı Güneş'tir. Güneş enerjisini doğrudan kullanabilen canlılara ne denir?",
+    "options": { "A": "Tüketiciler", "B": "Ayrıştırıcılar", "C": "Üreticiler", "D": "Etçiller" },
+    "answer": "C"
+  },
+  {
+    "index": 32,
+    "subject": "Fen Bilimleri",
+    "question": "Fotosentez olayında bitkiler dışarıdan ne alıp dışarıya ne verirler?",
+    "options": { "A": "Oksijen alıp CO2 verirler.", "B": "CO2 alıp Oksijen verirler.", "C": "Azot alıp CO2 verirler.", "D": "CO2 alıp Su verirler." },
+    "answer": "B"
+  },
+  {
+    "index": 33,
+    "subject": "Fen Bilimleri",
+    "question": "Küresel ısınmanın temel nedeni olan gazların atmosferde birikerek Güneş ışınlarını tutmasına ne ad verilir?",
+    "options": { "A": "Sera Etkisi", "B": "Ozon Delinmesi", "C": "Asit Yağmuru", "D": "Erozyon" },
+    "answer": "A"
+  },
+  {
+    "index": 34,
+    "subject": "Fen Bilimleri",
+    "question": "Bir maddenin sıcaklığını 1°C artırmak için gerekli olan ısı miktarına ne denir?",
+    "options": { "A": "Erime ısısı", "B": "Öz ısı", "C": "Buharlaşma ısısı", "D": "Isı kapasitesi" },
+    "answer": "B"
+  },
+  {
+    "index": 35,
+    "subject": "Fen Bilimleri",
+    "question": "Elektrikle yüklü K ve L cisimleri birbirini itiyorsa bu cisimlerin yük durumları için ne söylenebilir?",
+    "options": { "A": "Zıt yüklüdürler.", "B": "Aynı yüklüdürler.", "C": "Biri nötrdür.", "D": "Topraklanmışlardır." },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Fen Bilimleri",
+    "question": "Cam çubuk ipek kumaşa sürtüldüğünde cam çubuğun yükü ne olur?",
+    "options": { "A": "Pozitif (+)", "B": "Negatif (-)", "C": "Nötr", "D": "Değişmez" },
+    "answer": "A"
+  },
+  {
+    "index": 37,
+    "subject": "Fen Bilimleri",
+    "question": "Hangisi yenilenebilir enerji kaynakları arasında yer almaz?",
+    "options": { "A": "Rüzgar", "B": "Güneş", "C": "Doğalgaz", "D": "Biyokütle" },
+    "answer": "C"
+  },
+  {
+    "index": 38,
+    "subject": "Fen Bilimleri",
+    "question": "Besin piramidinde aşağıdan yukarıya doğru gidildikçe hangi özellik azalır?",
+    "options": { "A": "Biyolojik birikim", "B": "Vücut büyüklüğü", "C": "Aktarılan enerji", "D": "Zehir miktarı" },
+    "answer": "C"
+  },
+  {
+    "index": 39,
+    "subject": "Fen Bilimleri",
+    "question": "Adaptasyon ile ilgili verilen örneklerden hangisi yanlıştır?",
+    "options": { "A": "Develerin hörgüçlü olması", "B": "Kaktüsün iğne yapraklı olması", "C": "Spor yapanın kaslarının gelişmesi", "D": "Kutup ayısının beyaz olması" },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Fen Bilimleri",
+    "question": "Güneş ışınlarının bir bölgeye düşme açısı azaldıkça (eğik geldikçe) o bölgedeki birim yüzeye düşen enerji miktarı nasıl değişir?",
+    "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Önce artar sonra azalır" },
+    "answer": "B"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "Üslü ifadeler: 5⁻³ ifadesinin değeri aşağıdakilerden hangisine eşittir?",
+    "options": { "A": "125", "B": "1/125", "C": "-125", "D": "-1/125" },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "Kareköklü ifadeler: √0,81 + √1,21 işleminin sonucu kaçtır?",
+    "options": { "A": "0,2", "B": "1,1", "C": "2,0", "D": "2,2" },
+    "answer": "C"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Bir torbada özdeş 4 kırmızı, 5 mavi ve bir miktar sarı bilye vardır. Rastgele çekilen bir bilyenin sarı olma olasılığı mavi olma olasılığından daha azdır. Buna göre sarı bilye sayısı en fazla kaçtır?",
+    "options": { "A": "3", "B": "4", "C": "5", "D": "6" },
+    "answer": "B"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Alanları 100 cm² ve 64 cm² olan iki kare, birer kenarları boyunca birleştiriliyor. Yeni oluşan şeklin çevresi kaç cm'dir?",
+    "options": { "A": "48", "B": "52", "C": "56", "D": "60" },
+    "answer": "B"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "Çarpanlar ve Katlar: Aralarında asal iki sayının EKOK'u 60'tır. Bu sayılardan biri 12 ise diğeri kaçtır?",
+    "options": { "A": "5", "B": "10", "C": "15", "D": "20" },
+    "answer": "A"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Cebirsel ifadeler: 3x(x - 2) ifadesinin dağılma özelliği uygulanmış hali hangisidir?",
+    "options": { "A": "3x² - 2", "B": "3x² - 6", "C": "3x² - 6x", "D": "x² - 6x" },
+    "answer": "C"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "Veri Analizi: Bir sınıftaki öğrencilerin dağılımı daire grafiğinde gösterilmiştir. Erkeklerin açısı 120° ise kızların sayısının erkeklerin sayısına oranı kaçtır?",
+    "options": { "A": "1/2", "B": "2", "C": "3/2", "D": "2/3" },
+    "answer": "B"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Özdeşlikler: x² - 16 ifadesinin çarpanlarına ayrılmış hali hangisidir?",
+    "options": { "A": "(x-4)(x-4)", "B": "(x-4)(x+4)", "C": "(x-8)(x+8)", "D": "(x-16)(x+1)" },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "4² · 2³ işleminin sonucu kaçtır?",
+    "options": { "A": "2⁵", "B": "2⁷", "C": "2⁸", "D": "2⁹" },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "√48 sayısı hangi iki tam sayı arasındadır?",
+    "options": { "A": "5 ile 6", "B": "6 ile 7", "C": "7 ile 8", "D": "8 ile 9" },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Matematik",
+    "question": "Bir kenarı 2√3 cm olan karenin alanı kaç cm²'dir?",
+    "options": { "A": "6", "B": "12", "C": "18", "D": "24" },
+    "answer": "B"
+  },
+  {
+    "index": 12,
+    "subject": "Matematik",
+    "question": "EBOB(24, 36) kaçtır?",
+    "options": { "A": "6", "B": "12", "C": "18", "D": "24" },
+    "answer": "B"
+  },
+  {
+    "index": 13,
+    "subject": "Matematik",
+    "question": "0,000078 sayısının bilimsel gösterimi hangisidir?",
+    "options": { "A": "7,8 · 10⁻⁵", "B": "7,8 · 10⁻⁶", "C": "78 · 10⁻⁶", "D": "0,78 · 10⁻⁴" },
+    "answer": "A"
+  },
+  {
+    "index": 14,
+    "subject": "Matematik",
+    "question": "İki basamaklı en küçük tam kare sayı kaçtır?",
+    "options": { "A": "10", "B": "16", "C": "25", "D": "36" },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Matematik",
+    "question": "Bir olayın olma olasılığı 3/8 ise olmama olasılığı kaçtır?",
+    "options": { "A": "1/8", "B": "3/8", "C": "5/8", "D": "1" },
+    "answer": "C"
+  },
+  {
+    "index": 16,
+    "subject": "Matematik",
+    "question": "(x + 5)² ifadesinin açılımı nedir?",
+    "options": { "A": "x² + 25", "B": "x² + 5x + 25", "C": "x² + 10x + 25", "D": "x² + 10x + 10" },
+    "answer": "C"
+  },
+  {
+    "index": 17,
+    "subject": "Matematik",
+    "question": "√12 + √27 işleminin sonucu nedir?",
+    "options": { "A": "√39", "B": "5√3", "C": "6√3", "D": "9" },
+    "answer": "B"
+  },
+  {
+    "index": 18,
+    "subject": "Matematik",
+    "question": "Hangi sayının karesi 169'dur?",
+    "options": { "A": "11", "B": "12", "C": "13", "D": "14" },
+    "answer": "C"
+  },
+  {
+    "index": 19,
+    "subject": "Matematik",
+    "question": "Bir çark 8 eş parçaya bölünmüş ve 1'den 8'ye kadar numaralandırılmıştır. Çark çevrildiğinde okun asal sayı gelme olasılığı nedir?",
+    "options": { "A": "1/4", "B": "1/2", "C": "3/8", "D": "5/8" },
+    "answer": "B"
+  },
+  {
+    "index": 20,
+    "subject": "Matematik",
+    "question": "3x - 12 cebirsel ifadesinin çarpanlarından biri hangisidir?",
+    "options": { "A": "x - 3", "B": "x - 4", "C": "x + 4", "D": "3x" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "Fen Bilimleri",
+    "question": "21 Mart tarihinde Ekinoks yaşanır. Bu tarihte Dünya'nın her yerinde ne gerçekleşir?",
+    "options": { "A": "En uzun gündüz", "B": "Gece-gündüz eşitliği", "C": "En uzun gece", "D": "Kış başlangıcı" },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "Fen Bilimleri",
+    "question": "DNA eşlenmesi sırasında hangisi en son gerçekleşir?",
+    "options": { "A": "Fermuar gibi açılma", "B": "Nükleotidlerin eşleşmesi", "C": "İki yeni DNA oluşumu", "D": "Sitoplazmadan nükleotid girişi" },
+    "answer": "C"
+  },
+  {
+    "index": 23,
+    "subject": "Fen Bilimleri",
+    "question": "Bezelyelerde mor çiçek (M) beyaz çiçeğe (m) baskındır. Mm x mm çaprazlamasında beyaz çiçekli bezelye oluşma oranı nedir?",
+    "options": { "A": "%0", "B": "%25", "C": "%50", "D": "%75" },
+    "answer": "C"
+  },
+  {
+    "index": 24,
+    "subject": "Fen Bilimleri",
+    "question": "Bir çöl tilkisinin kulaklarının uzun olması neye örnektir?",
+    "options": { "A": "Mutasyon", "B": "Modifikasyon", "C": "Adaptasyon", "D": "Varyasyon" },
+    "answer": "C"
+  },
+  {
+    "index": 25,
+    "subject": "Fen Bilimleri",
+    "question": "Katı basıncı ile ilgili: Özdeş küplerle kurulan düzeneklerde, temas yüzeyi artarsa basınç nasıl değişir?",
+    "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Sıfır olur" },
+    "answer": "B"
+  },
+  {
+    "index": 26,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik tabloda 1A grubunda bulunan bir element için hangisi kesinlikle doğrudur?",
+    "options": { "A": "Metaldir", "B": "Ametaldir", "C": "Son katmanında 1 elektron vardır", "D": "Gaz halindedir" },
+    "answer": "C"
+  },
+  {
+    "index": 27,
+    "subject": "Fen Bilimleri",
+    "question": "Limon suyunun pH değeri hangisi olabilir?",
+    "options": { "A": "2,5", "B": "7,0", "C": "9,5", "D": "12,0" },
+    "answer": "A"
+  },
+  {
+    "index": 28,
+    "subject": "Fen Bilimleri",
+    "question": "Kimyasal tepkimelerde hangisi kesinlikle korunur?",
+    "options": { "A": "Molekül sayısı", "B": "Hacim", "C": "Atom sayısı ve türü", "D": "Fiziksel hal" },
+    "answer": "C"
+  },
+  {
+    "index": 29,
+    "subject": "Fen Bilimleri",
+    "question": "Sıvı basıncı derinliğe bağlıdır. Şekildeki h, 2h, 3h derinlikteki kapların taban basınçları sıralaması nedir?",
+    "options": { "A": "P1 > P2 > P3", "B": "P3 > P2 > P1", "C": "P1 = P2 = P3", "D": "P2 > P1 > P3" },
+    "answer": "B"
+  },
+  {
+    "index": 30,
+    "subject": "Fen Bilimleri",
+    "question": "Hangisi bir kimyasal değişimdir?",
+    "options": { "A": "Demirin paslanması", "B": "Buzun erimesi", "C": "Şekerin suda çözünmesi", "D": "Kağıdın yırtılması" },
+    "answer": "A"
+  },
+  {
+    "index": 31,
+    "subject": "Fen Bilimleri",
+    "question": "Hangi madde turnusol kağıdını maviye çevirir?",
+    "options": { "A": "Sirke", "B": "Tuz ruhu", "C": "Sabunlu su", "D": "Portakal suyu" },
+    "answer": "C"
+  },
+  {
+    "index": 32,
+    "subject": "Fen Bilimleri",
+    "question": "Kalıtım birimi olan Genler nerede bulunur?",
+    "options": { "A": "Hücre zarı", "B": "Sitoplazma", "C": "Kromozom", "D": "Koful" },
+    "answer": "C"
+  },
+  {
+    "index": 33,
+    "subject": "Fen Bilimleri",
+    "question": "Yüksek basınç alanından alçak basınç alanına doğru olan yatay hava hareketine ne denir?",
+    "options": { "A": "Yağmur", "B": "Rüzgar", "C": "Nem", "D": "Sis" },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Fen Bilimleri",
+    "question": "Sıvı basıncı sıvının hangi özelliğine bağlı değildir?",
+    "options": { "A": "Derinlik", "B": "Yoğunluk", "C": "Kabın şekli", "D": "Yerçekimi" },
+    "answer": "C"
+  },
+  {
+    "index": 35,
+    "subject": "Fen Bilimleri",
+    "question": "Bir nükleotidin yapısında aşağıdakilerden hangisi bulunmaz?",
+    "options": { "A": "Fosfat", "B": "Şeker", "C": "Organik Baz", "D": "Aminoasit" },
+    "answer": "D"
+  },
+  {
+    "index": 36,
+    "subject": "Fen Bilimleri",
+    "question": "Hangisi bir mutasyon örneğidir?",
+    "options": { "A": "Spor yapanın kas yapması", "B": "Van kedisinin gözlerinin farklı olması", "C": "Bronzlaşma", "D": "Arı sütünün kraliçe yapması" },
+    "answer": "B"
+  },
+  {
+    "index": 37,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik tablonun sağ tarafında genellikle hangi tür elementler bulunur?",
+    "options": { "A": "Metaller", "B": "Ametaller", "C": "Yarı metaller", "D": "Sıvı metaller" },
+    "answer": "B"
+  },
+  {
+    "index": 38,
+    "subject": "Fen Bilimleri",
+    "question": "Asit yağmurlarına neden olan gazlardan biri hangisidir?",
+    "options": { "A": "Oksijen", "B": "Azot", "C": "Kükürt dioksit", "D": "Hidrojen" },
+    "answer": "C"
+  },
+  {
+    "index": 39,
+    "subject": "Fen Bilimleri",
+    "question": "Açık hava basıncını ölçen alet hangisidir?",
+    "options": { "A": "Termometre", "B": "Barometre", "C": "Manometre", "D": "Dinamometre" },
+    "answer": "B"
+  },
+  {
+    "index": 40,
+    "subject": "Fen Bilimleri",
+    "question": "Hangisi fiziksel bir değişimdir?",
+    "options": { "A": "Yoğurdun ekşimesi", "B": "Ekmeğin küflenmesi", "C": "Odunun kırılması", "D": "Kömürün yanması" },
+    "answer": "C"
+  }
+]

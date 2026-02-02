@@ -1,0 +1,352 @@
+[
+  {
+    "index": 1,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde 'dokunmak' sözcüğü 'insanın duygularını etkilemek' anlamında kullanılmıştır?",
+    "options": { "A": "Masadaki kağıtlara kimse dokunmasın.", "B": "Bu filmdeki sahneler herkese çok dokundu.", "C": "Çay çok sıcak olduğu için bardağa dokunamadım.", "D": "Bu ilaç mideme dokundu." },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Türkçe",
+    "question": "'Gözünü dört açmak' deyiminin anlamı aşağıdakilerden hangisidir?",
+    "options": { "A": "Çok şaşırmak", "B": "Uyanık ve dikkatli bulunmak", "C": "Etrafına öfkeyle bakmak", "D": "Bir şeyi çok özlemek" },
+    "answer": "B"
+  },
+  {
+    "index": 3,
+    "subject": "Türkçe",
+    "question": "Sözel Mantık: Ahmet, Burcu, Cem ve Deniz bir lokantada pizza, hamburger, pide ve kebap yemişlerdir. Ahmet pide yememiştir. Burcu pizza yemiştir. Deniz hamburger yemiştir. Herkes farklı bir şey yediğine göre kebap yiyen kimdir?",
+    "options": { "A": "Ahmet", "B": "Burcu", "C": "Cem", "D": "Deniz" },
+    "answer": "A"
+  },
+  {
+    "index": 4,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?",
+    "options": { "A": "Bugün pek çok işim var.", "B": "Her gün spor yapmalısın.", "C": "Onunla bir kaç gün önce tanıştık.", "D": "Herkes buraya toplansın." },
+    "answer": "C"
+  },
+  {
+    "index": 5,
+    "subject": "Türkçe",
+    "question": "Aşağıdakilerden hangisi bir 'öznel' yargıdır?",
+    "options": { "A": "Türkiye'nin başkenti Ankara'dır.", "B": "Bu kitap 250 sayfadan oluşuyor.", "C": "Yazarın son hikayesi çok sürükleyici.", "D": "Oyun üç perdeden oluşmaktadır." },
+    "answer": "C"
+  },
+  {
+    "index": 6,
+    "subject": "Türkçe",
+    "question": "Cümlenin Ögeleri: 'Öğretmenimiz, yarınki sınavın ertelendiğini duyurdu.' cümlesinin yüklemi hangisidir?",
+    "options": { "A": "Öğretmenimiz", "B": "Yarınki sınavın", "C": "Ertelendiğini", "D": "Duyurdu" },
+    "answer": "D"
+  },
+  {
+    "index": 7,
+    "subject": "Türkçe",
+    "question": "Fiilimsiler: 'Gülümseyen çocuklar her zaman sevilir.' cümlesindeki fiilimsinin türü nedir?",
+    "options": { "A": "İsim-fiil", "B": "Sıfat-fiil", "C": "Zarf-fiil", "D": "Çekimli fiil" },
+    "answer": "B"
+  },
+  {
+    "index": 8,
+    "subject": "Türkçe",
+    "question": "Metin Türü: Bir yazarın, bir konu hakkındaki görüşlerini kanıtlama amacı gütmeden samimi bir dille yazdığı tür hangisidir?",
+    "options": { "A": "Makale", "B": "Deneme", "C": "Eleştiri", "D": "Haber metni" },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Türkçe",
+    "question": "Noktalama: 'Haydi( ) çabuk olalım( )' cümlesinde parantezlere hangi işaretler gelmelidir?",
+    "options": { "A": "(,) (.)", "B": "(,) (!)", "C": "(!) (.)", "D": "(;) (!)" },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Türkçe",
+    "question": "Söz Sanatları: 'Kaya gibi sert bir iradesi vardı.' cümlesinde hangi sanat vardır?",
+    "options": { "A": "Kişileştirme", "B": "Benzetme", "C": "Konuşturma", "D": "Zıtlık" },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Türkçe",
+    "question": "Paragrafta akışı bozan cümle: (I) Doğa yürüyüşleri insanı zinde tutar. (II) Şehir hayatı çok gürültülüdür. (III) Bu yürüyüşler sırasında temiz hava alınır. (IV) Kaslarımız daha güçlü hale gelir.",
+    "options": { "A": "I", "B": "II", "C": "III", "D": "IV" },
+    "answer": "B"
+  },
+  {
+    "index": 12,
+    "subject": "Türkçe",
+    "question": "Sözcükte Yapı: 'Gözlükçü' kelimesinin kökü nedir?",
+    "options": { "A": "Göz", "B": "Gözlük", "C": "Gözle", "D": "Gözlükçü" },
+    "answer": "A"
+  },
+  {
+    "index": 13,
+    "subject": "Türkçe",
+    "question": "Cümle Anlamı: 'Hiçbir başarı tesadüf değildir.' cümlesinden hangisi çıkarılabilir?",
+    "options": { "A": "Şanslı olanlar kazanır.", "B": "Başarı çalışmanın ürünüdür.", "C": "Başarısızlık kaçınılmazdır.", "D": "Çalışmak her zaman yetmez." },
+    "answer": "B"
+  },
+  {
+    "index": 14,
+    "subject": "Türkçe",
+    "question": "Görsel Okuma: Bir grafikte kütüphane üyelerinin yaş dağılımı verilmiştir. 10-18 yaş %50, 19-30 yaş %30, 31+ yaş %20'dir. Hangisine ulaşılabilir?",
+    "options": { "A": "En az üye gençlerdir.", "B": "Üyelerin yarısı 10-18 yaş arasıdır.", "C": "Yaşlılar kütüphaneye hiç gitmez.", "D": "Her yaş grubunda eşit üye vardır." },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Türkçe",
+    "question": "Anlatım Biçimi: 'Güneş yavaşça tepelerin ardından batıyordu. Gökyüzü kızıla boyanmış, kuşlar yuvalarına dönmüştü.'",
+    "options": { "A": "Tartışma", "B": "Betimleme", "C": "Açıklama", "D": "Tanık Gösterme" },
+    "answer": "B"
+  },
+  {
+    "index": 16,
+    "subject": "Türkçe",
+    "question": "Anlatım Bozukluğu: 'Dosyaları masaya gizlice sessizce bıraktı.' cümlesindeki bozukluk nedenidir?",
+    "options": { "A": "Sözcüğün yanlış yerde kullanımı", "B": "Gereksiz sözcük kullanımı", "C": "Deyim hatası", "D": "Özne eksikliği" },
+    "answer": "B"
+  },
+  {
+    "index": 17,
+    "subject": "Türkçe",
+    "question": "Sözcükte Anlam: 'Sert' sözcüğü hangisinde mecaz anlamdadır?",
+    "options": { "A": "Sert bir yastıkta uyudum.", "B": "Hava bugün çok sert esiyor.", "C": "Bize karşı çok sert davrandı.", "D": "Ceviz kabuğu çok sertti." },
+    "answer": "C"
+  },
+  {
+    "index": 18,
+    "subject": "Türkçe",
+    "question": "Paragraf Başlığı: Bir metinde sürekli su tasarrufu ve kaynakların tükenmesinden bahsediliyorsa başlık ne olmalıdır?",
+    "options": { "A": "Deniz Canlıları", "B": "Suyun Önemi", "C": "Mevsimler", "D": "Tarım Alanları" },
+    "answer": "B"
+  },
+  {
+    "index": 19,
+    "subject": "Türkçe",
+    "question": "Cümle Tamamlama: 'Eğitim, ....................' cümlesi hangisiyle tamamlanamaz?",
+    "options": { "A": "geleceğe yapılan yatırımdır.", "B": "her kapıyı açan anahtardır.", "C": "gereksiz bir zaman kaybıdır.", "D": "insanı özgürleştirir." },
+    "answer": "C"
+  },
+  {
+    "index": 20,
+    "subject": "Türkçe",
+    "question": "Yazım Kuralları: Hangisinde tarihlerin yazımı doğrudur?",
+    "options": { "A": "15 mayıs 2023", "B": "15 Mayıs 2023", "C": "15.Mayıs.2023", "D": "15/mayıs/2023" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mustafa Kemal'in doğduğu Selanik şehrinin 'çok uluslu' olması hangisini etkilemiştir?",
+    "options": { "A": "Zengin kültürel yapı", "B": "Ekonomik çöküş", "C": "Tek tip eğitim", "D": "Tarımın gelişmesi" },
+    "answer": "A"
+  },
+  {
+    "index": 22,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "I. Dünya Savaşı'nda Osmanlı Devleti'nin 'Taarruz' amacıyla açtığı cephe hangisidir?",
+    "options": { "A": "Çanakkale", "B": "Kafkas", "C": "Suriye", "D": "Hicaz" },
+    "answer": "B"
+  },
+  {
+    "index": 23,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mondros Ateşkes Antlaşması'nın 7. maddesi hangisine zemin hazırlamıştır?",
+    "options": { "A": "Barış görüşmelerine", "B": "İşgallerin hukuki dayanağına", "C": "Ordunun güçlenmesine", "D": "Ekonomik kalkınmaya" },
+    "answer": "B"
+  },
+  {
+    "index": 24,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Milli bilincin uyanması için yayımlanan ilk genelge hangisidir?",
+    "options": { "A": "Havza Genelgesi", "B": "Amasya Genelgesi", "C": "Erzurum Kongresi", "D": "Sivas Kongresi" },
+    "answer": "A"
+  },
+  {
+    "index": 25,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Misak-ı Milli sınırları içinde 'manda ve himaye'nin reddedilmesi neyin göstergesidir?",
+    "options": { "A": "Tam bağımsızlık isteğinin", "B": "Dış yardım arayışının", "C": "Padişaha bağlılığın", "D": "Batılılaşma çabasının" },
+    "answer": "A"
+  },
+  {
+    "index": 26,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "TBMM'nin açılmasıyla hangi sistem sona ermiştir?",
+    "options": { "A": "Kişisel egemenlik", "B": "Hukuk devleti", "C": "Ulusal egemenlik", "D": "Düzenli ordu" },
+    "answer": "A"
+  },
+  {
+    "index": 27,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Sevr Antlaşması'nı Türk milletinin kabul etmediğinin en büyük kanıtı nedir?",
+    "options": { "A": "Saltanat Şurası'nın toplanması", "B": "Kurtuluş Savaşı'nın verilmesi", "C": "İngiltere ile görüşülmesi", "D": "İstanbul'un işgali" },
+    "answer": "B"
+  },
+  {
+    "index": 28,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Güney Cephesi'nde halkın kendi imkanlarıyla yaptığı savunmaya ne ad verilir?",
+    "options": { "A": "Kuvayı Milliye", "B": "Düzenli Ordu", "C": "Teşkilat-ı Esasiye", "D": "Tekalif-i Milliye" },
+    "answer": "A"
+  },
+  {
+    "index": 29,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Ermenilerle imzalanan ve TBMM'nin ilk siyasi başarısı olan antlaşma hangisidir?",
+    "options": { "A": "Gümrü", "B": "Moskova", "C": "Kars", "D": "Ankara" },
+    "answer": "A"
+  },
+  {
+    "index": 30,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "İstiklal Marşı'nın kabul edildiği tarih hangisidir?",
+    "options": { "A": "23 Nisan 1920", "B": "12 Mart 1921", "C": "29 Ekim 1923", "D": "30 Ağustos 1922" },
+    "answer": "B"
+  },
+  {
+    "index": 31,
+    "subject": "Din Kültürü",
+    "question": "İnsanın gücü dışında kalan ve Allah'ın takdiri olan iradeye ne denir?",
+    "options": { "A": "Cüzi İrade", "B": "Külli İrade", "C": "Tevekkül", "D": "İhlas" },
+    "answer": "B"
+  },
+  {
+    "index": 32,
+    "subject": "Din Kültürü",
+    "question": "Rızkı veren ve canlıları besleyen Allah'ın ismi hangisidir?",
+    "options": { "A": "Rezzak", "B": "Alim", "C": "Semi", "D": "Basar" },
+    "answer": "A"
+  },
+  {
+    "index": 33,
+    "subject": "Din Kültürü",
+    "question": "Ayetü'l Kürsi'de Allah'ın hangi sıfatından bahsedilmez?",
+    "options": { "A": "Kayyum olması", "B": "Hayy olması", "C": "Çocuk sahibi olması", "D": "Her şeyi bilmesi" },
+    "answer": "C"
+  },
+  {
+    "index": 34,
+    "subject": "Din Kültürü",
+    "question": "Zekat verilecek mallar için gereken bir yıllık süreye ne denir?",
+    "options": { "A": "Nisap", "B": "Havaic-i Asliye", "C": "Havl-i Haul", "D": "Sadaka" },
+    "answer": "C"
+  },
+  {
+    "index": 35,
+    "subject": "Din Kültürü",
+    "question": "Hangisi zekat verilebilecek kişilerden biridir?",
+    "options": { "A": "Zengin amca", "B": "Yoksul komşu", "C": "Anne ve baba", "D": "Çocuklar" },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Din Kültürü",
+    "question": "Hz. Şuayb hangi kavme peygamber olarak gönderilmiştir?",
+    "options": { "A": "Ad", "B": "Semud", "C": "Medyen", "D": "Lut" },
+    "answer": "C"
+  },
+  {
+    "index": 37,
+    "subject": "Din Kültürü",
+    "question": "Maun Suresi'nde kimlerin namazı kınanmaktadır?",
+    "options": { "A": "Huşu ile kılanların", "B": "Gösteriş için kılanların", "C": "Vaktinde kılanların", "D": "Cemaatle kılanların" },
+    "answer": "B"
+  },
+  {
+    "index": 38,
+    "subject": "Din Kültürü",
+    "question": "Kişinin ölümünden sonra da devam eden iyiliklere ne denir?",
+    "options": { "A": "Fitre", "B": "Zekat", "C": "Sadaka-i Cariye", "D": "Fidye" },
+    "answer": "C"
+  },
+  {
+    "index": 39,
+    "subject": "Din Kültürü",
+    "question": "Allah'ın evrendeki her şeyi belli bir plan ve ölçüye göre yaratmasına ne denir?",
+    "options": { "A": "Kader", "B": "Kaza", "C": "Mucize", "D": "Sünnet" },
+    "answer": "A"
+  },
+  {
+    "index": 40,
+    "subject": "Din Kültürü",
+    "question": "Yoksullara verilen ve Ramazan ayına özel olan zorunlu sadaka hangisidir?",
+    "options": { "A": "Zekat", "B": "Fitre (Fıtır Sadakası)", "C": "Sadaka-i Cariye", "D": "Fidye" },
+    "answer": "B"
+  },
+  {
+    "index": 41,
+    "subject": "İngilizce",
+    "question": "Jack: I am having a party on Sunday. Would you like to come?\nTim: ...................., but I have an exam. I must study.",
+    "options": { "A": "That sounds awesome", "B": "I'd love to", "C": "I don't like parties", "D": "Sure, I'll be there" },
+    "answer": "B"
+  },
+  {
+    "index": 42,
+    "subject": "İngilizce",
+    "question": "A true friend should always .................... you when you need help.",
+    "options": { "A": "argue with", "B": "back up", "C": "lie to", "D": "ignore" },
+    "answer": "B"
+  },
+  {
+    "index": 43,
+    "subject": "İngilizce",
+    "question": "I prefer .................... to heavy metal because it's more relaxing.",
+    "options": { "A": "classical music", "B": "rock music", "C": "rap music", "D": "pop music" },
+    "answer": "A"
+  },
+  {
+    "index": 44,
+    "subject": "İngilizce",
+    "question": "If you want to bake a cake, you should .................... the oven first.",
+    "options": { "A": "wash", "B": "preheat", "C": "peel", "D": "slice" },
+    "answer": "B"
+  },
+  {
+    "index": 45,
+    "subject": "İngilizce",
+    "question": "Teenagers usually use social media to .................... with their friends.",
+    "options": { "A": "keep in touch", "B": "argue", "C": "waste time", "D": "hate" },
+    "answer": "A"
+  },
+  {
+    "index": 46,
+    "subject": "İngilizce",
+    "question": "Which of the following is a 'Kitchen Tool'?",
+    "options": { "A": "Whisk", "B": "Bake", "C": "Spicy", "D": "Delicious" },
+    "answer": "A"
+  },
+  {
+    "index": 47,
+    "subject": "İngilizce",
+    "question": "Mark: How do you cook chicken?\nSue: I usually .................... it in the oven.",
+    "options": { "A": "boil", "B": "roast", "C": "fry", "D": "chop" },
+    "answer": "B"
+  },
+  {
+    "index": 48,
+    "subject": "İngilizce",
+    "question": "A: .................... do you go to the cinema?\nB: Once a month.",
+    "options": { "A": "How often", "B": "Where", "C": "Why", "D": "What time" },
+    "answer": "A"
+  },
+  {
+    "index": 49,
+    "subject": "İngilizce",
+    "question": "I'm sorry, I can't talk right now. I'll .................... you later.",
+    "options": { "A": "call back", "B": "hang up", "C": "put through", "D": "dial" },
+    "answer": "A"
+  },
+  {
+    "index": 50,
+    "subject": "İngilizce",
+    "question": "Internet .................... is very important. You shouldn't share your password.",
+    "options": { "A": "safety", "B": "connection", "C": "addiction", "D": "browser" },
+    "answer": "A"
+  }
+]

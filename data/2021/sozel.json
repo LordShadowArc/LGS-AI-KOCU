@@ -1,0 +1,352 @@
+[
+  {
+    "index": 1,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde 'açmak' sözcüğü 'bir yeri kullanılır duruma getirmek' anlamında kullanılmıştır?",
+    "options": { "A": "Yoğun kar yağışından dolayı kapanan köy yollarını açtılar.", "B": "Taze çiçeklerin kokusu odayı iyice açmıştı.", "C": "Konuşmacı, konuyu biraz daha açarak örnekler verdi.", "D": "Çocuk, elindeki hediye paketini büyük bir heyecanla açtı." },
+    "answer": "A"
+  },
+  {
+    "index": 2,
+    "subject": "Türkçe",
+    "question": "Yazarın bu eserindeki karakterler o kadar canlı ki sanki her an kitaptan çıkıp yanımıza oturacaklar. Bu cümledeki altı çizili ifadenin kattığı anlam aşağıdakilerden hangisidir?",
+    "options": { "A": "Anlatımda aşırılığa kaçıldığı", "B": "Karakterlerin çok etkileyici olduğu", "C": "Eserin gerçek hayatla örtüştüğü", "D": "Okuyucunun hayal dünyasını zorladığı" },
+    "answer": "C"
+  },
+  {
+    "index": 3,
+    "subject": "Türkçe",
+    "question": "Sözel mantık sorusu: Bir rafta K, L, M, N, P kitapları yan yana dizilmiştir. L kitabı M'nin hemen sağındadır. K ve P kitapları arasında iki kitap vardır. N en sağdadır. Buna göre M kitabı baştan kaçıncı sıradadır?",
+    "options": { "A": "1", "B": "2", "C": "3", "D": "4" },
+    "answer": "B"
+  },
+  {
+    "index": 4,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?",
+    "options": { "A": "Sende mi bizimle gelmek istiyorsun?", "B": "Türk Dil Kurumu'nun binasına gittik.", "C": "Herkes kendi işine odaklanmalı.", "D": "29 Ekim Cumhuriyet Bayramı coşkuyla kutlandı." },
+    "answer": "A"
+  },
+  {
+    "index": 5,
+    "subject": "Türkçe",
+    "question": "Metinde geçen 'iğneyle kuyu kazmak' deyimiyle anlatılmak istenen aşağıdakilerden hangisidir?",
+    "options": { "A": "Zor bir işi sabırla yapmaya çalışmak", "B": "İmkansız bir şeyin peşinden koşmak", "C": "Kısa sürede büyük işler başarmak", "D": "Başkalarının işine engel olmak" },
+    "answer": "A"
+  },
+  {
+    "index": 6,
+    "subject": "Türkçe",
+    "question": "Görsel Okuma Sorusu: Bir grafikte yıllara göre kitap okuma oranları verilmiştir. 2018'de %20, 2019'da %25, 2020'de %22 ve 2021'de %30 seviyesindedir. Bu grafiğe göre hangisine ulaşılabilir?",
+    "options": { "A": "Okuma oranları sürekli artmıştır.", "B": "En düşük oran 2018 yılına aittir.", "C": "2020'de rekor kırılmıştır.", "D": "2019 ve 2021 yılları eşittir." },
+    "answer": "B"
+  },
+  {
+    "index": 7,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde amaç-sonuç ilişkisi vardır?",
+    "options": { "A": "Yağmur yağdığı için pikniğe gidemedik.", "B": "Sınavı kazanmak için çok çalışıyor.", "C": "Hava soğuyunca eve erken döndük.", "D": "Kitap okumayı çok sevdiği belliydi." },
+    "answer": "B"
+  },
+  {
+    "index": 8,
+    "subject": "Türkçe",
+    "question": "Bir paragraf sorusu: (I) Şehir hayatı her geçen gün zorlaşıyor. (II) Kalabalık ve gürültü insanı yoruyor. (III) Bu yüzden birçok kişi köylere göç ediyor. (IV) Köylerde yaşam standartları eskisi gibi değil. Bu parçada numaralanmış cümlelerden hangisi düşüncenin akışını bozmaktadır?",
+    "options": { "A": "I", "B": "II", "C": "III", "D": "IV" },
+    "answer": "D"
+  },
+  {
+    "index": 9,
+    "subject": "Türkçe",
+    "question": "Aşağıdakilerden hangisi bir 'varsayım' cümlesidir?",
+    "options": { "A": "Diyelim ki bu iş istediğin gibi gitmedi.", "B": "Belki yarın hava daha güzel olur.", "C": "Keşke ben de sizinle gelseydim.", "D": "Ödevini bitirince oyun oynayabilirsin." },
+    "answer": "A"
+  },
+  {
+    "index": 10,
+    "subject": "Türkçe",
+    "question": "Söz sanatları: 'Kükremiş sel gibiyim, bendimi çiğner, aşarım.' dizesinde hangi söz sanatı vardır?",
+    "options": { "A": "Kişileştirme", "B": "Benzetme", "C": "Konuşturma", "D": "Zıtlık" },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Türkçe",
+    "question": "Fiilimsiler: 'Gelen gideni aratır.' cümlesindeki fiilimsilerin türü nedir?",
+    "options": { "A": "İsim-fiil", "B": "Sıfat-fiil", "C": "Zarf-fiil", "D": "Çekimli fiil" },
+    "answer": "B"
+  },
+  {
+    "index": 12,
+    "subject": "Türkçe",
+    "question": "Noktalama İşaretleri: 'Pazardan elma( ) armut ve muz aldım( )' Yay ayraçla gösterilen yerlere sırasıyla hangi işaretler gelmelidir?",
+    "options": { "A": "(,) (.)", "B": "(;) (.)", "C": "(,) (!)", "D": "(:) (?)" },
+    "answer": "A"
+  },
+  {
+    "index": 13,
+    "subject": "Türkçe",
+    "question": "Cümlenin Ögeleri: 'Öğrenciler, bahçede neşeyle koşuyorlar.' cümlesinin yüklemi hangisidir?",
+    "options": { "A": "Öğrenciler", "B": "Bahçede", "C": "Neşeyle", "D": "Koşuyorlar" },
+    "answer": "D"
+  },
+  {
+    "index": 14,
+    "subject": "Türkçe",
+    "question": "Sözcükte Anlam: 'Sert' sözcüğü hangisinde 'hoşgörüsüz, katı' anlamında kullanılmıştır?",
+    "options": { "A": "Bu ekmek çok sert olmuş.", "B": "Müdür bey bize karşı çok sert davrandı.", "C": "Sert bir rüzgar esmeye başladı.", "D": "Taşın yüzeyi oldukça sertti." },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Türkçe",
+    "question": "Paragrafta Başlık: Bir metinde sürekli ormanların korunmasından ve ağaç dikmenin öneminden bahsediliyorsa bu metnin en uygun başlığı ne olur?",
+    "options": { "A": "Doğa Sevgisi", "B": "Ormanların Önemi", "C": "Şehir ve Yaşam", "D": "Mevsimler" },
+    "answer": "B"
+  },
+  {
+    "index": 16,
+    "subject": "Türkçe",
+    "question": "Anlatım Biçimleri: Bir olay, yer, zaman ve kişi unsurlarına bağlı kalarak anlatılıyorsa bu anlatım biçimi nedir?",
+    "options": { "A": "Açıklama", "B": "Tartışma", "C": "Öyküleme", "D": "Betimleme" },
+    "answer": "C"
+  },
+  {
+    "index": 17,
+    "subject": "Türkçe",
+    "question": "Cümlede Anlam: 'Okumayan bir insan, hiç görmemiş birine benzer.' cümlesinden hangisi çıkarılabilir?",
+    "options": { "A": "Gözleri görmeyenler kitap okuyamaz.", "B": "Kitap okumak insanın ufkunu açar.", "C": "Sadece görenler bilgi sahibi olabilir.", "D": "Kitap okumak yorucu bir iştir." },
+    "answer": "B"
+  },
+  {
+    "index": 18,
+    "subject": "Türkçe",
+    "question": "Metin Türleri: Yazarın bir konu hakkındaki görüşlerini ispatlama kaygısı gütmeden, kendi kendisiyle konuşuyormuş gibi yazdığı yazı türü nedir?",
+    "options": { "A": "Makale", "B": "Deneme", "C": "Fıkra", "D": "Eleştiri" },
+    "answer": "B"
+  },
+  {
+    "index": 19,
+    "subject": "Türkçe",
+    "question": "Deyimler: 'Gözden düşmek' deyiminin anlamı nedir?",
+    "options": { "A": "Birinin sevgisini ve güvenini kaybetmek", "B": "Görmek yeteneğini yitirmek", "C": "Bir şeye çok dikkatli bakmak", "D": "Eski bir eşyayı çöpe atmak" },
+    "answer": "A"
+  },
+  {
+    "index": 20,
+    "subject": "Türkçe",
+    "question": "Sözcükte Yapı: 'Suluk' sözcüğünün kökü ve eki hangi türdedir?",
+    "options": { "A": "İsim kökü + Yapım eki", "B": "Fiil kökü + Çekim eki", "C": "İsim kökü + Çekim eki", "D": "Fiil kökü + Yapım eki" },
+    "answer": "A"
+  },
+  {
+    "index": 21,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mustafa Kemal’in öğrenim hayatında gittiği okullardan hangisi askeri ortaokul statüsündedir?",
+    "options": { "A": "Mahalle Mektebi", "B": "Selanik Askeri Rüştiyesi", "C": "Manastır Askeri İdadisi", "D": "Harp Akademisi" },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Birinci Dünya Savaşı'nda Osmanlı Devleti'nin kazandığı tek taarruz cephesi olmasa da büyük bir savunma başarısı gösterdiği cephe hangisidir?",
+    "options": { "A": "Kanal", "B": "Kafkas", "C": "Çanakkale", "D": "Hicaz-Yemen" },
+    "answer": "C"
+  },
+  {
+    "index": 23,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Amasya Genelgesi'nde yer alan 'Milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır.' maddesi Milli Mücadele'nin neyini belirtir?",
+    "options": { "A": "Gerekçesini", "B": "Amacını ve yöntemini", "C": "Hazırlık safhasını", "D": "Dış desteğini" },
+    "answer": "B"
+  },
+  {
+    "index": 24,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Erzurum Kongresi'nde alınan 'Manda ve himaye kabul olunamaz.' kararı neyin hedeflendiğini gösterir?",
+    "options": { "A": "Tam bağımsızlığın", "B": "Ekonomik kalkınmanın", "C": "Padişaha bağlılığın", "D": "Batılılaşmanın" },
+    "answer": "A"
+  },
+  {
+    "index": 25,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Lozan Barış Antlaşması'nda çözüme kavuşturulan 'Kapitülasyonlar'ın kaldırılması en çok hangi alanda gelişmeyi sağlamıştır?",
+    "options": { "A": "Askeri", "B": "Siyasi", "C": "Ekonomik", "D": "Kültürel" },
+    "answer": "C"
+  },
+  {
+    "index": 26,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Tekalif-i Milliye Emirleri hangi savaşın kazanılmasından sonra ordunun ihtiyacını karşılamak için yayımlanmıştır?",
+    "options": { "A": "Birinci İnönü", "B": "Sakarya Meydan Muharebesi", "C": "Kütahya-Eskişehir", "D": "Büyük Taarruz" },
+    "answer": "C"
+  },
+  {
+    "index": 27,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mudanya Ateşkes Antlaşması ile savaşılmadan kurtarılan yerler arasında hangisi yoktur?",
+    "options": { "A": "İstanbul", "B": "Boğazlar", "C": "Doğu Trakya", "D": "İzmir" },
+    "answer": "D"
+  },
+  {
+    "index": 28,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Milli Cemiyetlerin 'Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti' adı altında birleştirilmesi nerede gerçekleşmiştir?",
+    "options": { "A": "Sivas Kongresi", "B": "Erzurum Kongresi", "C": "Amasya Görüşmeleri", "D": "TBMM'nin açılışı" },
+    "answer": "A"
+  },
+  {
+    "index": 29,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "TBMM'ye karşı çıkarılan isyanlara karşı alınan önlemlerden biri olan 'Hıyanet-i Vataniye Kanunu'nun amacı nedir?",
+    "options": { "A": "Orduyu güçlendirmek", "B": "Meclisin otoritesini korumak", "C": "Ekonomiyi düzeltmek", "D": "Eğitimi yaygınlaştırmak" },
+    "answer": "B"
+  },
+  {
+    "index": 30,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mustafa Kemal'in 'Ordular, ilk hedefiniz Akdeniz'dir. İleri!' emrini verdiği savaş hangisidir?",
+    "options": { "A": "Sakarya", "B": "İkinci İnönü", "C": "Büyük Taarruz", "D": "Çanakkale" },
+    "answer": "C"
+  },
+  {
+    "index": 31,
+    "subject": "Din Kültürü",
+    "question": "Evrendeki yasalar (Sünnetullah) kapsamında; suyun kaldırma kuvveti hangi yasaya örnektir?",
+    "options": { "A": "Biyolojik Yasalar", "B": "Fiziksel Yasalar", "C": "Toplumsal Yasalar", "D": "Psikolojik Yasalar" },
+    "answer": "B"
+  },
+  {
+    "index": 32,
+    "subject": "Din Kültürü",
+    "question": "Zekat ibadeti ile ilgili hangisi yanlıştır?",
+    "options": { "A": "Yılda bir kez verilir.", "B": "Nisap miktarı mala sahip olanlar verir.", "C": "Sadece Ramazan ayında verilebilir.", "D": "Malın temizlenmesini sağlar." },
+    "answer": "C"
+  },
+  {
+    "index": 33,
+    "subject": "Din Kültürü",
+    "question": "Kişinin kendi özgür iradesiyle yaptığı seçimlerin sonuçlarını üstlenmesine ne denir?",
+    "options": { "A": "Tevekkül", "B": "Sorumluluk", "C": "Kader", "D": "Rızık" },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Din Kültürü",
+    "question": "Sadaka-i Cariye ne demektir?",
+    "options": { "A": "Gizli verilen sadaka", "B": "Öldükten sonra da sevabı devam eden iyilik", "C": "Sadece parayla yapılan yardım", "D": "Bayramda verilen fitre" },
+    "answer": "B"
+  },
+  {
+    "index": 35,
+    "subject": "Din Kültürü",
+    "question": "İslam dininin korunmasını istediği beş temel esastan 'Neslin Korunması' hangisiyle doğrudan ilgilidir?",
+    "options": { "A": "Hırsızlığın yasaklanması", "B": "Aile kurumunun desteklenmesi", "C": "Eğitimin zorunlu olması", "D": "İbadetlerin yapılması" },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Din Kültürü",
+    "question": "Hz. Musa'nın Firavun ile mücadelesinde kendisine yardımcı olarak verilen peygamber kardeşi kimdir?",
+    "options": { "A": "Hz. Harun", "B": "Hz. Yusuf", "C": "Hz. Şuayb", "D": "Hz. İsa" },
+    "answer": "A"
+  },
+  {
+    "index": 37,
+    "subject": "Din Kültürü",
+    "question": "Maun Suresi'nde aşağıdakilerden hangisi eleştirilmektedir?",
+    "options": { "A": "Çok ibadet edenler", "B": "Yardımlaşmaya engel olan ve yetimi itip kakanlar", "C": "Ticaretle uğraşanlar", "D": "Yalan söyleyenler" },
+    "answer": "B"
+  },
+  {
+    "index": 38,
+    "subject": "Din Kültürü",
+    "question": "Bir kişinin elinden gelen her şeyi yaptıktan sonra sonucu Allah'a bırakıp O'na güvenmesine ne denir?",
+    "options": { "A": "Kaza", "B": "Tevekkül", "C": "İhlas", "D": "Sabır" },
+    "answer": "B"
+  },
+  {
+    "index": 39,
+    "subject": "Din Kültürü",
+    "question": "Aşağıdakilerden hangisi zekat verilecek kişilerden biri değildir?",
+    "options": { "A": "Yoksullar", "B": "Borçlular", "C": "Zengin olan anne ve baba", "D": "Yolda kalmışlar" },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Din Kültürü",
+    "question": "Canın korunması ilkesi gereği İslam neyi yasaklamıştır?",
+    "options": { "A": "İçki içmeyi", "B": "Haksız yere birini öldürmeyi", "C": "Yalan söylemeyi", "D": "Gıybet etmeyi" },
+    "answer": "B"
+  },
+  {
+    "index": 41,
+    "subject": "İngilizce",
+    "question": "Alice: I’m going to the cinema on Saturday. Would you like to come with me?\nTom: I’d love to, but I have to finish my project. \nWhy does Tom refuse the invitation?",
+    "options": { "A": "He doesn't like movies.", "B": "He is busy with his homework.", "C": "He is going to stay at a hotel.", "D": "He has no money." },
+    "answer": "B"
+  },
+  {
+    "index": 42,
+    "subject": "İngilizce",
+    "question": "Which of the following is related to 'In the Kitchen' unit?",
+    "options": { "A": "Roast the chicken for 40 minutes.", "B": "You should wear a helmet.", "C": "I love playing basketball.", "D": "The weather is sunny today." },
+    "answer": "A"
+  },
+  {
+    "index": 43,
+    "subject": "İngilizce",
+    "question": "Customer: Can I have a hamburger, please?\nWaiter: Sure. ....................?\nCustomer: No, thanks. Just the burger. \nFill in the blank.",
+    "options": { "A": "How much is it", "B": "Would you like anything to drink", "C": "Where is the restaurant", "D": "Do you like meat" },
+    "answer": "B"
+  },
+  {
+    "index": 44,
+    "subject": "İngilizce",
+    "question": "Mary: How do you communicate with your friends?\nJane: I usually .................... because it's faster than sending a letter.",
+    "options": { "A": "smoke signals", "B": "send text messages", "C": "read a book", "D": "go to school" },
+    "answer": "B"
+  },
+  {
+    "index": 45,
+    "subject": "İngilizce",
+    "question": "A person who likes spending time with friends and meeting new people is ....................",
+    "options": { "A": "stubborn", "B": "outgoing", "C": "selfish", "D": "lazy" },
+    "answer": "B"
+  },
+  {
+    "index": 46,
+    "subject": "İngilizce",
+    "question": "If you want to make an omelette, you should .................... the eggs in a bowl first.",
+    "options": { "A": "whisk", "B": "bake", "C": "peel", "D": "slice" },
+    "answer": "A"
+  },
+  {
+    "index": 47,
+    "subject": "İngilizce",
+    "question": "Tim: I am bored. Let's do something fun.\nBob: .................... going to the concert?\nTim: That sounds great!",
+    "options": { "A": "Why don't", "B": "How about", "C": "Let's", "D": "Would you" },
+    "answer": "B"
+  },
+  {
+    "index": 48,
+    "subject": "İngilizce",
+    "question": "Which one is a 'Natural Force'?",
+    "options": { "A": "Earthquake", "B": "Smartphone", "C": "Friendship", "D": "Recipe" },
+    "answer": "A"
+  },
+  {
+    "index": 49,
+    "subject": "İngilizce",
+    "question": "Online games are very popular .................... teenagers these days.",
+    "options": { "A": "at", "B": "among", "C": "on", "D": "under" },
+    "answer": "B"
+  },
+  {
+    "index": 50,
+    "subject": "İngilizce",
+    "question": "You should not share your .................... with anyone on the internet for your safety.",
+    "options": { "A": "password", "B": "favorite song", "C": "homework", "D": "hobbies" },
+    "answer": "A"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "a, b birer doğal sayı olmak üzere a√b = √a²b dir. Bir bilye atma oyununda, başlangıç çizgisinden atılan bilye mavi bölgede kalmıştır. Mavi bölgenin başlangıç çizgisine olan uzaklığı 6 metre ile 7 metre arasındadır. Buna göre bu bilyenin başlangıç çizgisine uzaklığı metre cinsinden aşağıdakilerden hangisi olamaz?",
+    "options": { "A": "2√10", "B": "3√5", "C": "4√3", "D": "2√13" },
+    "answer": "D"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "Ayşe’nin bir yılda okuduğu kitapların türlerine göre dağılımı daire grafiğinde gösterilmiştir: Şiir kitapları 90°, Romanlar 120° ve geri kalanlar Hikaye kitaplarıdır. Bu verilere uygun sütun grafiğinde kitap sayılarının oranı hangisi gibi olur?",
+    "options": { "A": "Şiir: 3, Roman: 4, Hikaye: 5", "B": "Şiir: 3, Roman: 5, Hikaye: 4", "C": "Şiir: 4, Roman: 3, Hikaye: 5", "D": "Şiir: 2, Roman: 4, Hikaye: 6" },
+    "answer": "A"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Bir basketbol takımındaki beş oyuncunun boy uzunlukları şöyledir: Ayça 2,011 m, Beyza 1,755 m, Ceyda 1,84 m, Derya 1,872 m ve Esra 1,856 m. Antrenör, boyu 1,85 m'den kısa olanları oyun kurucu yapacağına göre kaç oyuncu oyun kurucu olabilir?",
+    "options": { "A": "4", "B": "3", "C": "2", "D": "1" },
+    "answer": "C"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Demir yolu hattındaki istasyonlar arası mesafeler eşittir. K treni √2 km aralıklı 15 istasyon, L treni √5 km aralıklı 8 istasyon ve M treni √3 km aralıklı 13 istasyon yol almıştır. Bu trenlerin aldıkları yolların (K, L, M) uzunluk sıralaması hangisidir?",
+    "options": { "A": "K > L > M", "B": "K > M > L", "C": "M > L > K", "D": "M > K > L" },
+    "answer": "D"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "Kenar uzunlukları x metre ve 2x metre olan dikdörtgen parkın her kenarı 2 metre uzatılarak yeni bir plan oluşturuluyor. Yeni alanın eski alandan kaç metrekare fazla olduğunu veren cebirsel ifade hangisidir?",
+    "options": { "A": "6x + 4", "B": "6x + 6", "C": "3x + 2", "D": "3x + 4" },
+    "answer": "A"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Yükseklikleri tam sayı olan kutular üst üste dizilerek 3 blok oluşturulmuştur. Blokların yükseklikleri birbirine eşittir. Bu üç blok üst üste konulup en üstteki kutu alındığında kulenin yüksekliği hangisi olamaz? (Kule toplam yüksekliği 3k formundadır)",
+    "options": { "A": "94", "B": "90", "C": "86", "D": "82" },
+    "answer": "B"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "Rakamların nokta değerleri şöyledir: 1(1), 2(2), 3(3), 4(4), 5(5), 6(4), 7(3), 8(2), 9(1), 0(0). İki basamaklı tüm doğal sayılar kartlara yazılıp torbaya atılıyor. Toplam nokta sayısı 5 olan bir kartın çekilme olasılığı kaçtır?",
+    "options": { "A": "19/90", "B": "1/5", "C": "17/90", "D": "1/6" },
+    "answer": "C"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Kütlesi 3g olan sarı ve 5g olan mavi boncuklarla kolye yapılıyor. Mavi boncukların toplam kütlesi sarılarınkine eşittir. Toplam kütle 230g'dan az olduğuna göre sarı ve mavi boncuk sayıları farkı en fazla kaçtır?",
+    "options": { "A": "14", "B": "15", "C": "28", "D": "30" },
+    "answer": "A"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "Dört farklı renkteki kartların üzerinde √0,09, √0,25, √0,64 ve √1,44 yazmaktadır. Her renkten üçer adet kart vardır. Eymen bu kartları seçip topladığında bir doğal sayı elde ediyorsa en fazla kaç kart seçmiştir?",
+    "options": { "A": "8", "B": "9", "C": "10", "D": "11" },
+    "answer": "C"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "Kenarı 5⁴ cm olan kare içine 12 eş dikdörtgen ve 1 küçük kare çiziliyor. Kırmızıya boyanan 1 küçük kare ve 2 dikdörtgenin toplam alanı kaç cm²'dir?",
+    "options": { "A": "2·5⁷", "B": "5⁷", "C": "2·5⁶", "D": "5⁶" },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Matematik",
+    "question": "Dikdörtgen bir kağıt, alanları 10’dan büyük tam kare sayı olan karesel bölgelere ayrılmıştır. En az sayıda kare kullanılarak oluşturulan bu kağıdın toplam alanı en az kaçtır?",
+    "options": { "A": "168", "B": "255", "C": "364", "D": "392" },
+    "answer": "C"
+  },
+  {
+    "index": 12,
+    "subject": "Matematik",
+    "question": "Alanı 1050 cm² olan kare panoya, kenarları 5 ve 2’nin tam sayı kuvveti olan bir afiş taşmayacak şekilde asılacaktır. Afişin alanı en fazla kaç olabilir?",
+    "options": { "A": "1000", "B": "800", "C": "640", "D": "400" },
+    "answer": "B"
+  },
+  {
+    "index": 13,
+    "subject": "Matematik",
+    "question": "60g tuzun yemeklere dağılımı: Çorba 72°, Pilav 48°, Musakka 60°, Köfte 90°, Taze Fasulye 54°, Makarna 36°. Porsiyon sayıları sırasıyla 10, 4, 4, 10, 6, 5'tir. 3 farklı yemekten birer porsiyon yiyip 5g tuz tüketen müşteri ne yemiştir?",
+    "options": { "A": "Çorba–Pilav–Musakka", "B": "Pilav–Musakka–Köfte", "C": "Çorba–Musakka–Makarna", "D": "Pilav–Taze Fasulye–Köfte" },
+    "answer": "D"
+  },
+  {
+    "index": 14,
+    "subject": "Matematik",
+    "question": "1m x 9m boyutundaki renkli bir halı, renkler bölünmeyecek şekilde ikiye ayrılıyor. Parçalardan birinin alanının diğerinin 2 katı olma olasılığı nedir?",
+    "options": { "A": "1/3", "B": "1/4", "C": "1/8", "D": "1/9" },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Matematik",
+    "question": "Çevresi (2x+2) m olan dikdörtgenler bir yol boyunca bir uzun bir kısa kenar üzerine diziliyor. Kısa kenar üzerine (x+1) kez yerleştirildiğine göre yolun toplam uzunluğu nedir?",
+    "options": { "A": "x²+x+2", "B": "2x²+1", "C": "x²+1", "D": "x²+2x+1" },
+    "answer": "D"
+  },
+  {
+    "index": 16,
+    "subject": "Matematik",
+    "question": "300 MB fotoğrafın günlere göre yüklenme açısı: 1.gün 120°, 2.gün 90°, 3.gün 150°. Buna göre yüklenen miktarların (MB) günlere dağılımı hangi seçenekte doğru verilmiştir?",
+    "options": { "A": "100, 80, 120", "B": "120, 90, 90", "C": "100, 75, 125", "D": "110, 70, 120" },
+    "answer": "C"
+  },
+  {
+    "index": 17,
+    "subject": "Matematik",
+    "question": "1. ünitede dolum 12 sn, değişim 4 sn; 2. ünitede dolum 16 sn, değişim 5 sn sürer. İki ünite aynı anda çalışmaya başladıktan sonra 128. kez aynı anda şişe aldıkları ana kadar kaç dakika geçer?",
+    "options": { "A": "48", "B": "42", "C": "36", "D": "32" },
+    "answer": "B"
+  },
+  {
+    "index": 18,
+    "subject": "Matematik",
+    "question": "Mehmet kartları asal çarpan sayılarına göre kutulara atıyor. 1 asal çarpanı olanlar siyah, 2 olanlar mavi, 3 olanlar kırmızı kutuya gidiyor. Kutularda kart sayıları eşitse kapalı olan kart hangisi olabilir?",
+    "options": { "A": "196", "B": "144", "C": "121", "D": "90" },
+    "answer": "D"
+  },
+  {
+    "index": 19,
+    "subject": "Matematik",
+    "question": "8⁵ m² alanındaki arazi 8 eş parsele ayrılıyor. Her parselin uzun kenarı 4⁴ m olduğuna göre kısa kenarı kaç metredir?",
+    "options": { "A": "2⁵", "B": "2⁴", "C": "2³", "D": "2²" },
+    "answer": "C"
+  },
+  {
+    "index": 20,
+    "subject": "Matematik",
+    "question": "Sarı(8g), Mavi(9g) ve Kırmızı(5g) bilyelerin her birinden dörder adet vardır. Her renkten en az birer tane alınarak 5 bilye seçiliyor. Toplam kütle hangisi olamaz?",
+    "options": { "A": "42", "B": "40", "C": "38", "D": "36" },
+    "answer": "A"
+  },
+  {
+    "index": 21,
+    "subject": "Fen Bilimleri",
+    "question": "21 Haziran tarihinde Güneş ışınları Kuzey Yarım Küre'deki Yengeç Dönencesi'ne dik gelir. Bu tarihte öğle vakti hangi noktada gölge boyu en kısa (sıfır) olur?",
+    "options": { "A": "Yengeç Dönencesi", "B": "Oğlak Dönencesi", "C": "Ekvator", "D": "Güney Kutbu" },
+    "answer": "A"
+  },
+  {
+    "index": 22,
+    "subject": "Fen Bilimleri",
+    "question": "Mor çiçekli iki bezelyenin çaprazlanmasından beyaz çiçekli bezelyeler elde edilebildiğine göre, çaprazlanan bezelyelerin genotipi nedir?",
+    "options": { "A": "Saf Mor x Saf Beyaz", "B": "Saf Mor x Melez Mor", "C": "Melez Mor x Melez Mor", "D": "Saf Beyaz x Saf Beyaz" },
+    "answer": "C"
+  },
+  {
+    "index": 23,
+    "subject": "Fen Bilimleri",
+    "question": "DNA ve Genetik Kod ile ilgili verilen ifadelerden hangisi yanlıştır?",
+    "options": { "A": "Temel yapı birimi nükleotiddir.", "B": "Genler görev birimleridir.", "C": "Tüm canlılarda nükleotid dizilimi aynıdır.", "D": "Kromozomlar protein kılıf içerir." },
+    "answer": "C"
+  },
+  {
+    "index": 24,
+    "subject": "Fen Bilimleri",
+    "question": "Koyu renkli kayalıklarda yaşayan açık renkli farelerin avcılar tarafından yok edilmesi ve zamanla popülasyonda sadece koyu farelerin kalması hangi olaya örnektir?",
+    "options": { "A": "Modifikasyon", "B": "Doğal Seçilim", "C": "Yapay Seçilim", "D": "Mutasyon" },
+    "answer": "B"
+  },
+  {
+    "index": 25,
+    "subject": "Fen Bilimleri",
+    "question": "1. kapta 2h derinliğinde d yoğunluklu sıvı, 2. kapta h derinliğinde 2d yoğunluklu sıvı vardır. Kap tabanındaki sıvı basınçları (P1, P2) arasındaki ilişki nedir?",
+    "options": { "A": "P1 > P2", "B": "P2 > P1", "C": "P1 = P2", "D": "Yoğunluk etkilemez." },
+    "answer": "C"
+  },
+  {
+    "index": 26,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik tabloda 2. periyot 5A grubunda bulunan bir elementin atom numarası kaçtır?",
+    "options": { "A": "5", "B": "7", "C": "10", "D": "15" },
+    "answer": "B"
+  },
+  {
+    "index": 27,
+    "subject": "Fen Bilimleri",
+    "question": "Aşağıdaki olaylardan hangisi maddenin sadece dış görünüşünü değil, iç yapısını da değiştirir (kimyasal değişim)?",
+    "options": { "A": "Buzun erimesi", "B": "Kağıdın yırtılması", "C": "Demirin paslanması", "D": "Şekerin çözünmesi" },
+    "answer": "C"
+  },
+  {
+    "index": 28,
+    "subject": "Fen Bilimleri",
+    "question": "Asit yağmurları hakkında verilen bilgilerden hangisi yanlıştır?",
+    "options": { "A": "Fosil yakıtlar sebep olur.", "B": "Toprağın verimini artırır.", "C": "Heykellere zarar verir.", "D": "Balıklara zarar verir." },
+    "answer": "B"
+  },
+  {
+    "index": 29,
+    "subject": "Fen Bilimleri",
+    "question": "Bir kaldıraçta kuvvet kazancını artırmak için ne yapılmalıdır?",
+    "options": { "A": "Destek yükten uzaklaştırılmalı", "B": "Destek yüke yaklaştırılmalı", "C": "Kuvvet kolu kısaltılmalı", "D": "Yük artırılmalı" },
+    "answer": "B"
+  },
+  {
+    "index": 30,
+    "subject": "Fen Bilimleri",
+    "question": "Besin zincirinde üreticiden son tüketiciye doğru gidildikçe aktarılan enerji miktarı nasıl değişir?",
+    "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Önce artar sonra azalır" },
+    "answer": "B"
+  },
+  {
+    "index": 31,
+    "subject": "Fen Bilimleri",
+    "question": "Işık şiddeti belirli bir seviyeye kadar artırıldığında fotosentez hızı artar, ancak bir noktadan sonra sabit kalır. Bu durumu anlatan grafik hangisidir?",
+    "options": { "A": "Sürekli artan", "B": "Sürekli azalan", "C": "Artıp sonra sabit kalan", "D": "Azalıp sonra artan" },
+    "answer": "C"
+  },
+  {
+    "index": 32,
+    "subject": "Fen Bilimleri",
+    "question": "Pozitif yüklü K küresi nötr M'ye dokunduruluyor. Ardından negatif yüklü L küresi M'ye dokunduruluyor. M'nin son durumu ne olabilir?",
+    "options": { "A": "Kesin Pozitif", "B": "Kesin Negatif", "C": "Kesin Nötr", "D": "Negatif veya Nötr" },
+    "answer": "D"
+  },
+  {
+    "index": 33,
+    "subject": "Fen Bilimleri",
+    "question": "80°C'deki su buharı soğutularak -10°C'de buz haline getiriliyor. Bu süreçte madde kaç kez hal değiştirir?",
+    "options": { "A": "1", "B": "2", "C": "3", "D": "4" },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Fen Bilimleri",
+    "question": "100 N ağırlığındaki bir yükü 50 N kuvvetle dengede tutmak isteyen bir öğrenci hangi makara sistemini kullanmalıdır?",
+    "options": { "A": "1 Sabit makara", "B": "2 Sabit makara", "C": "1 Hareketli makara", "D": "Kuvvet kazancı yoktur." },
+    "answer": "C"
+  },
+  {
+    "index": 35,
+    "subject": "Fen Bilimleri",
+    "question": "Aşağıdakilerden hangisi atmosferdeki karbondioksit miktarını artırarak karbon döngüsünü olumsuz etkiler?",
+    "options": { "A": "Ağaç dikmek", "B": "Fosil yakıt yakmak", "C": "Güneş paneli kurmak", "D": "Geri dönüşüm yapmak" },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Fen Bilimleri",
+    "question": "Oda sıcaklığında gaz halde olan, mat görünümlü ve elektriği iletmeyen bir element periyodik tabloda nerede yer alır?",
+    "options": { "A": "1A Grubu", "B": "2A Grubu", "C": "8A Grubu", "D": "Geçiş Metalleri" },
+    "answer": "C"
+  },
+  {
+    "index": 37,
+    "subject": "Fen Bilimleri",
+    "question": "pH değeri 2 olan bir sıvı ile pH değeri 12 olan bir sıvı karıştırıldığında oluşan tepkimeye ne ad verilir?",
+    "options": { "A": "Nötralleşme", "B": "Yanma", "C": "Mayalanma", "D": "Erime" },
+    "answer": "A"
+  },
+  {
+    "index": 38,
+    "subject": "Fen Bilimleri",
+    "question": "Besin piramidinin en üst basamağındaki canlıda hangisinin miktarı en fazladır?",
+    "options": { "A": "Aktarılan enerji", "B": "Biyolojik birikim (zehir)", "C": "Birey sayısı", "D": "Toplam biyokütle" },
+    "answer": "B"
+  },
+  {
+    "index": 39,
+    "subject": "Fen Bilimleri",
+    "question": "Güney Yarım Küre'de yaz mevsiminin başlangıcı ve en uzun gündüzün yaşandığı tarih hangisidir?",
+    "options": { "A": "21 Haziran", "B": "23 Eylül", "C": "21 Aralık", "D": "21 Mart" },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Fen Bilimleri",
+    "question": "Kapalı bir kapta 10g X ve 20g Y tepkimeye girip 25g Z ve bir miktar T oluşturuyor. Tepkime sonunda kapta hiç X ve Y kalmadığına göre kaç gram T oluşmuştur?",
+    "options": { "A": "5", "B": "10", "C": "15", "D": "30" },
+    "answer": "A"
+  }
+]

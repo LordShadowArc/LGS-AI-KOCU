@@ -1,0 +1,282 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "Uslu Ifadeler: (-2)^4 carpı (2^-2)^3 isleminin sonucu hangisidir?",
+    "options": { "A": "2^-2", "B": "2^2", "C": "-2^2", "D": "-2^-2" },
+    "answer": "A"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "Karekoklu Ifadeler: kok(1,44) - kok(0,36) isleminin sonucu kactir?",
+    "options": { "A": "0,4", "B": "0,6", "C": "0,8", "D": "1,2" },
+    "answer": "B"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Veri Analizi: Bir kitapliktaki kitaplarin %40i roman, geri kalani hikayedir. Romanlar hikayelerden 20 eksik ise toplam kitap kactir?",
+    "options": { "A": "80", "B": "100", "C": "120", "D": "150" },
+    "answer": "B"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Cebirsel Ifadeler: (3x - 4)^2 ifadesinin ozdesi hangisidir?",
+    "options": { "A": "9x^2 - 16", "B": "9x^2 + 16", "C": "9x^2 - 24x + 16", "D": "9x^2 + 24x + 16" },
+    "answer": "C"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "Olasilik: 12 kiz ve 18 erkek arasindan secilen bir baskanin kiz olma olasiligi kactir?",
+    "options": { "A": "2/3", "B": "2/5", "C": "3/5", "D": "1/2" },
+    "answer": "B"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Dogrusal Denklemler: 2x - 3 = 11 ise x kactir?",
+    "options": { "A": "4", "B": "7", "C": "8", "D": "14" },
+    "answer": "B"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "Egim: Koordinat sisteminde y = 3x + 5 dogrusunun egimi kactir?",
+    "options": { "A": "3", "B": "5", "C": "3/5", "D": "-3" },
+    "answer": "A"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Esitsizlikler: 2x + 5 <= 13 esitsizligini saglayan en buyuk tam sayi kactir?",
+    "options": { "A": "3", "B": "4", "C": "5", "D": "6" },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "Ucgenler: Dik kenarlari 8 cm ve 15 cm olan bir dik ucgende hipotenus kactir?",
+    "options": { "A": "13", "B": "17", "C": "19", "D": "23" },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "Benzerlik: Iki benzer ucgenin cevreleri orani 2/3 ise alanlari orani kactir?",
+    "options": { "A": "2/3", "B": "4/6", "C": "4/9", "D": "8/27" },
+    "answer": "C"
+  },
+  {
+    "index": 11,
+    "subject": "Matematik",
+    "question": "Donusum Geometrisi: A(3, -2) noktasi y eksenine gore yansitilirsa yeni koordinat ne olur?",
+    "options": { "A": "(-3, -2)", "B": "(3, 2)", "C": "(-3, 2)", "D": "(-2, 3)" },
+    "answer": "A"
+  },
+  {
+    "index": 12,
+    "subject": "Matematik",
+    "question": "Geometrik Cisimler: Yaricapi 5 cm, yuksekligi 12 cm olan silindirin yanal alani kactir? (pi=3)",
+    "options": { "A": "180", "B": "360", "C": "450", "D": "900" },
+    "answer": "B"
+  },
+  {
+    "index": 13,
+    "subject": "Matematik",
+    "question": "Carpanlar: 48 ve 72 sayilarinin EBOB degeri kactir?",
+    "options": { "A": "12", "B": "24", "C": "36", "D": "48" },
+    "answer": "B"
+  },
+  {
+    "index": 14,
+    "subject": "Matematik",
+    "question": "Bilimsel Gosterim: 450.000.000 sayisinin bilimsel gosterimi hangisidir?",
+    "options": { "A": "45 * 10^7", "B": "4,5 * 10^8", "C": "0,45 * 10^9", "D": "4,5 * 10^-8" },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Matematik",
+    "question": "Karekoklu Carpma: 2kok3 * 3kok6 isleminin sonucu kactir?",
+    "options": { "A": "6kok18", "B": "18kok2", "C": "12kok2", "D": "18" },
+    "answer": "B"
+  },
+  {
+    "index": 16,
+    "subject": "Matematik",
+    "question": "Pisagor: Kenarlari 6 cm ve 8 cm olan dikdortgenin kosegeni kactir?",
+    "options": { "A": "10", "B": "12", "C": "14", "D": "16" },
+    "answer": "A"
+  },
+  {
+    "index": 17,
+    "subject": "Matematik",
+    "question": "Daire Grafigi: Tavuklarin acisi 150 derecedir. Toplam 72 hayvan varsa tavuk sayisi kactir?",
+    "options": { "A": "20", "B": "25", "C": "30", "D": "36" },
+    "answer": "C"
+  },
+  {
+    "index": 18,
+    "subject": "Matematik",
+    "question": "Cebirsel: x^2 - y^2 ifadesinin carpanlari hangisidir?",
+    "options": { "A": "(x-y)^2", "B": "x^2 + y^2", "C": "(x-y)(x+y)", "D": "(x+y)^2" },
+    "answer": "C"
+  },
+  {
+    "index": 19,
+    "subject": "Matematik",
+    "question": "Esitsizlik: x + 2 > 5 ve 3x < 15 sistemini saglayan tam sayilar toplami kactir?",
+    "options": { "A": "4", "B": "7", "C": "9", "D": "12" },
+    "answer": "A"
+  },
+  {
+    "index": 20,
+    "subject": "Matematik",
+    "question": "Koni: Yaricapi 3 cm, ana dogrusu 5 cm olan koninin yuksekligi kactir?",
+    "options": { "A": "2", "B": "4", "C": "6", "D": "8" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "Fen Bilimleri",
+    "question": "Mevsimler: Kuzey Yarim Kurede en uzun gunduz ne zaman yasanir?",
+    "options": { "A": "21 Mart", "B": "21 Haziran", "C": "23 Eylul", "D": "21 Aralik" },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "Fen Bilimleri",
+    "question": "DNA: DNA molekulunde hangi eslesme dogrudur?",
+    "options": { "A": "A-G", "B": "A-U", "C": "A-T", "D": "A-C" },
+    "answer": "C"
+  },
+  {
+    "index": 23,
+    "subject": "Fen Bilimleri",
+    "question": "Kalitim: Dd x Dd caprazlamasinda cekinik (dd) fenotip orani kactir?",
+    "options": { "A": "%25", "B": "%50", "C": "%75", "D": "%100" },
+    "answer": "A"
+  },
+  {
+    "index": 24,
+    "subject": "Fen Bilimleri",
+    "question": "Basinc: Kati basincini artirmak icin hangisi yapilmalidir?",
+    "options": { "A": "Agirligi azaltmak", "B": "Yuzey alanini kucultmek", "C": "Yuzey alanini buyutmek", "D": "Hicbiri" },
+    "answer": "B"
+  },
+  {
+    "index": 25,
+    "subject": "Fen Bilimleri",
+    "question": "Sivi Basinci: Sivilarin basinci hangisine bagli degildir?",
+    "options": { "A": "Yogunluk", "B": "Derinlik", "C": "Kabin sekli", "D": "Yercekimi" },
+    "answer": "C"
+  },
+  {
+    "index": 26,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik Sistem: Soygazlar hangi gruptadir?",
+    "options": { "A": "1A", "B": "2A", "C": "7A", "D": "8A" },
+    "answer": "D"
+  },
+  {
+    "index": 27,
+    "subject": "Fen Bilimleri",
+    "question": "Asit-Baz: pH degeri 10 olan madde hangisidir?",
+    "options": { "A": "Asit", "B": "Baz", "C": "Notr", "D": "Tuz" },
+    "answer": "B"
+  },
+  {
+    "index": 28,
+    "subject": "Fen Bilimleri",
+    "question": "Kimyasal Tepkime: Yanma tepkimesi icin hangi gaz gereklidir?",
+    "options": { "A": "Azot", "B": "Karbondioksit", "C": "Oksijen", "D": "Hidrojen" },
+    "answer": "C"
+  },
+  {
+    "index": 29,
+    "subject": "Fen Bilimleri",
+    "question": "Basit Makineler: Sabit makaralar hangisini saglamaz?",
+    "options": { "A": "Kuvvet kazanci", "B": "Is kolayligi", "C": "Yon degisimi", "D": "Yoldan kayip yok" },
+    "answer": "A"
+  },
+  {
+    "index": 30,
+    "subject": "Fen Bilimleri",
+    "question": "Enerji: Fotosentez en yavas hangi renk isikta olur?",
+    "options": { "A": "Kirmizi", "B": "Mavi", "C": "Yesil", "D": "Mor" },
+    "answer": "C"
+  },
+  {
+    "index": 31,
+    "subject": "Fen Bilimleri",
+    "question": "Besin Zinciri: Ureticiden tuketiciye gidildikce enerji miktari nasil degisir?",
+    "options": { "A": "Artar", "B": "Azalir", "C": "Degismez", "D": "Belirsiz" },
+    "answer": "B"
+  },
+  {
+    "index": 32,
+    "subject": "Fen Bilimleri",
+    "question": "Isi: Oz isisi kucuk olan madde icin hangisi dogrudur?",
+    "options": { "A": "Gec isinir", "B": "Cabuk isinir", "C": "Isinmaz", "D": "Daima soguktur" },
+    "answer": "B"
+  },
+  {
+    "index": 33,
+    "subject": "Fen Bilimleri",
+    "question": "Elektrik: Pozitif yuklu cisim notr elektroskoba yaklasirsa ne olur?",
+    "options": { "A": "Kapanir", "B": "Acilir", "C": "Degismez", "D": "Kopma olur" },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Fen Bilimleri",
+    "question": "Adaptasyon: Bukalemunun renk degistirmesi nedir?",
+    "options": { "A": "Mutasyon", "B": "Modifikasyon", "C": "Adaptasyon", "D": "Varyasyon" },
+    "answer": "C"
+  },
+  {
+    "index": 35,
+    "subject": "Fen Bilimleri",
+    "question": "Madde Dongusu: Bitkilerin CO2 alip O2 vermesi hangi dongudur?",
+    "options": { "A": "Su", "B": "Azot", "C": "Karbon-Oksijen", "D": "Fosfor" },
+    "answer": "C"
+  },
+  {
+    "index": 36,
+    "subject": "Fen Bilimleri",
+    "question": "Egik Duzlem: Kuvvet kazancini artirmak icin hangisi yapilmalidir?",
+    "options": { "A": "Yukseklik artmali", "B": "Boy uzamali", "C": "Yuk azalmasi", "D": "Boy kisalmasi" },
+    "answer": "B"
+  },
+  {
+    "index": 37,
+    "subject": "Fen Bilimleri",
+    "question": "Biyoteknoloji: Hangisi biyoteknolojinin olumsuz etkisidir?",
+    "options": { "A": "Vitamin artisi", "B": "Direncli bitki", "C": "Biyocesitlilikte azalma", "D": "Yeni ilaclar" },
+    "answer": "C"
+  },
+  {
+    "index": 38,
+    "subject": "Fen Bilimleri",
+    "question": "Solunum: Oksijenli solunum nerede gerceklesir?",
+    "options": { "A": "Ribozom", "B": "Mitokondri", "C": "Kloroplast", "D": "Koful" },
+    "answer": "B"
+  },
+  {
+    "index": 39,
+    "subject": "Fen Bilimleri",
+    "question": "Iklim: Sera etkisine neden olan temel gaz hangisidir?",
+    "options": { "A": "Oksijen", "B": "Azot", "C": "Karbondioksit", "D": "Helyum" },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Fen Bilimleri",
+    "question": "Elektrik: Elektrik enerjisinin birimi nedir?",
+    "options": { "A": "Amper", "B": "Volt", "C": "kWh", "D": "Ohm" },
+    "answer": "C"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "Bir kenar uzunlugu 2^4 cm olan kare seklindeki 4 adet karton yan yana getirilerek bir dikdortgen olusturuluyor. Olusan dikdortgenin cevresi kac cm'dir?",
+    "options": { "A": "2^6", "B": "5 * 2^5", "C": "2^7", "D": "3 * 2^6" },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "kok(200) sayisi hangi iki tam sayi arasindadir?",
+    "options": { "A": "13-14", "B": "14-15", "C": "15-16", "D": "16-17" },
+    "answer": "B"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Bir torbadaki ozdes toplarin 1/3u kirmizi, geriye kalanlarin yarisi mavidir. Rastgele secilen bir topun mavi olma olasiligi kactir?",
+    "options": { "A": "1/2", "B": "1/3", "C": "2/3", "D": "1/4" },
+    "answer": "B"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Bir dik ucgende dik kenarlardan biri 5 cm, hipotenus 13 cm ise diger dik kenar kac cm'dir?",
+    "options": { "A": "8", "B": "10", "C": "12", "D": "15" },
+    "answer": "C"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "3x - 5 < 2x + 8 esitsizligini saglayan en buyuk x tam sayisi kactir?",
+    "options": { "A": "11", "B": "12", "C": "13", "D": "14" },
+    "answer": "B"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Yaricapi 4 cm olan bir dairenin alani kac cm2'dir? (pi=3)",
+    "options": { "A": "24", "B": "36", "C": "48", "D": "64" },
+    "answer": "C"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "4x^2 - 12x + 9 ifadesinin carpanlarina ayrilmis hali hangisidir?",
+    "options": { "A": "(2x-3)^2", "B": "(2x+3)^2", "C": "(4x-3)^2", "D": "(x-9)^2" },
+    "answer": "A"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Aralarinda asal iki sayinin carpimi 45 ise bu sayilarin toplami hangisi olabilir?",
+    "options": { "A": "14", "B": "15", "C": "18", "D": "20" },
+    "answer": "A"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "Egimi 2 olan ve (0,4) noktasindan gecen dogrunun denklemi hangisidir?",
+    "options": { "A": "y = 2x + 4", "B": "y = 4x + 2", "C": "y = 2x - 4", "D": "y = x + 2" },
+    "answer": "A"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "Bir silindirin yuksekligi 2 katina cikarilirsa hacmi nasil degisir?",
+    "options": { "A": "Degismez", "B": "2 katina cikar", "C": "4 katina cikar", "D": "Yariya duser" },
+    "answer": "B"
+  },
+  { "index": 11, "subject": "Matematik", "question": "Hangi sayinin 3 katinin 5 eksigi 25'tir?", "options": { "A": "8", "B": "10", "C": "12", "D": "15" }, "answer": "B" },
+  { "index": 12, "subject": "Matematik", "question": "Benzerlik orani 1/4 olan iki ucgenin alanlari orani kactir?", "options": { "A": "1/2", "B": "1/4", "C": "1/8", "D": "1/16" }, "answer": "D" },
+  { "index": 13, "subject": "Matematik", "question": "0,00045 sayisinin bilimsel gosterimi hangisidir?", "options": { "A": "4,5 * 10^-4", "B": "45 * 10^-5", "C": "4,5 * 10^4", "D": "0,45 * 10^-3" }, "answer": "A" },
+  { "index": 14, "subject": "Matematik", "question": "2x + 3y = 12 dogrusunun x eksenini kestigi nokta nedir?", "options": { "A": "(6,0)", "B": "(0,4)", "C": "(4,0)", "D": "(0,6)" }, "answer": "A" },
+  { "index": 15, "subject": "Matematik", "question": "kok(75) + kok(12) isleminin sonucu kactir?", "options": { "A": "kok(87)", "B": "7kok3", "C": "5kok3", "D": "9" }, "answer": "B" },
+  { "index": 16, "subject": "Matematik", "question": "X ve Y dogru orantilidir. X=4 iken Y=10 ise, X=10 iken Y kactir?", "options": { "A": "20", "B": "25", "C": "30", "D": "40" }, "answer": "B" },
+  { "index": 17, "subject": "Matematik", "question": "Bir piramidin kac tane temel elemani vardir?", "options": { "A": "2", "B": "3", "C": "4", "D": "5" }, "answer": "C" },
+  { "index": 18, "subject": "Matematik", "question": "x^2 - 25 = 0 denkleminin kokleri nelerdir?", "options": { "A": "Sadece 5", "B": "5 ve -5", "C": "Sadece 25", "D": "0 ve 5" }, "answer": "B" },
+  { "index": 19, "subject": "Matematik", "question": "Bir veri grubunda en cok tekrar eden sayiya ne denir?", "options": { "A": "Mod", "B": "Medyan", "C": "Aritmetik Ortalama", "D": "Aciklik" }, "answer": "A" },
+  { "index": 20, "subject": "Matematik", "question": "Hipotenusu 10 cm olan bir ikizkenar dik ucgenin bir dik kenari kac cm'dir?", "options": { "A": "5", "B": "5kok2", "C": "10", "D": "10kok2" }, "answer": "B" },
+  { "index": 21, "subject": "Fen Bilimleri", "question": "Dunya Gunese en yakin konumdayken K. Yarim Kurede hangi mevsim yasanir?", "options": { "A": "Yaz", "B": "Kis", "C": "Ilkbahar", "D": "Sonbahar" }, "answer": "B" },
+  { "index": 22, "subject": "Fen Bilimleri", "question": "DNA eşlenirken sitoplazmadaki nukleotid miktari nasil degisir?", "options": { "A": "Artar", "B": "Azalir", "C": "Degismez", "D": "Once artar sonra azalir" }, "answer": "B" },
+  { "index": 23, "subject": "Fen Bilimleri", "question": "Akışkanların basıncı, akış hızının arttığı yerde nasıl değişir?", "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Sıfırlanır" }, "answer": "B" },
+  { "index": 24, "subject": "Fen Bilimleri", "question": "Periyodik tabloda atom numarasi arttikca grup numarasi kesinlikle artar mi?", "options": { "A": "Evet", "B": "Hayir", "C": "Sadece metallerde", "D": "Sadece soygazlarda" }, "answer": "B" },
+  { "index": 25, "subject": "Fen Bilimleri", "question": "Sivi basincini olcen alet hangisidir?", "options": { "A": "Barometre", "B": "Manometre", "C": "Altimetre", "D": "Batimetre" }, "answer": "B" },
+  { "index": 26, "subject": "Fen Bilimleri", "question": "Hangi basit makinede kuvvetten kazanc yoldan kayip vardir?", "options": { "A": "Sabit Makara", "B": "Hareketli Makara", "C": "Tahterevalli (ortada)", "D": "Cimbiz" }, "answer": "B" },
+  { "index": 27, "subject": "Fen Bilimleri", "question": "Fotosentez sirasinda hangisi disaridan alinmaz?", "options": { "A": "Su", "B": "CO2", "C": "Isik", "D": "Glikoz" }, "answer": "D" },
+  { "index": 28, "subject": "Fen Bilimleri", "question": "Asit yagmurlari hangi pH araligindadir?", "options": { "A": "0-5.6", "B": "7-10", "C": "12-14", "D": "7.0" }, "answer": "A" },
+  { "index": 29, "subject": "Fen Bilimleri", "question": "Cikrik duzeneginde kuvvet kolu uzarsa kuvvet kazanci nasil degisir?", "options": { "A": "Artar", "B": "Azalir", "C": "Degismez", "D": "Kuvvet yonu degisir" }, "answer": "A" },
+  { "index": 30, "subject": "Fen Bilimleri", "question": "Besin piramidinde biyolojik birikim (zehir) nerede en fazladır?", "options": { "A": "Ureticiler", "B": "1. Tuketiciler", "C": "En ust basamak", "D": "Hepsi esit" }, "answer": "C" },
+  { "index": 31, "subject": "Fen Bilimleri", "question": "Hangisi fiziksel bir degisimdir?", "options": { "A": "Sutun mayalanmasi", "B": "Mumun erimesi", "C": "Kagidin yanmasi", "D": "Yumurtanin pismesi" }, "answer": "B" },
+  { "index": 32, "subject": "Fen Bilimleri", "question": "LDR (Isiga bagli direnc) hangi devrede kullanilir?", "options": { "A": "Sokak lambalari", "B": "Utu", "C": "Elektrikli supurge", "D": "Zil" }, "answer": "A" },
+  { "index": 33, "subject": "Fen Bilimleri", "question": "Modifikasyon kalitsal midir?", "options": { "A": "Evet", "B": "Hayir", "C": "Sadece hayvanlarda", "D": "Sadece bitkilerde" }, "answer": "B" },
+  { "index": 34, "subject": "Fen Bilimleri", "question": "Bir maddenin sicakligini 1 derece artirmak icin gereken isiya ne denir?", "options": { "A": "Oz isi", "B": "Erime isisi", "C": "Buharlasma isisi", "D": "Isi kapasitesi" }, "answer": "A" },
+  { "index": 35, "subject": "Fen Bilimleri", "question": "Gunes panelleri hangi enerji donusumunu yapar?", "options": { "A": "Isik -> Elektrik", "B": "Isik -> Hareket", "C": "Isi -> Kimyasal", "D": "Elektrik -> Isik" }, "answer": "A" },
+  { "index": 36, "subject": "Fen Bilimleri", "question": "Azot dongusunde havada bulunan azot orani kactir?", "options": { "A": "%21", "B": "%78", "C": "%0,03", "D": "%1" }, "answer": "B" },
+  { "index": 37, "subject": "Fen Bilimleri", "question": "Sivi icindeki bir cisme etki eden kaldirma kuvveti neye baglidir?", "options": { "A": "Sivinin yogunlugu", "B": "Cismin sekli", "C": "Kabin genisligi", "D": "Sivinin derinligi" }, "answer": "A" },
+  { "index": 38, "subject": "Fen Bilimleri", "question": "Nukleer enerji santrallerinin en buyuk avantaji nedir?", "options": { "A": "Atik sorunu yok", "B": "Yuksek enerji verimi", "C": "Her yere kurulabilir", "D": "Cok ucuzdur" }, "answer": "B" },
+  { "index": 39, "subject": "Fen Bilimleri", "question": "Hangi gaz kuresel isinmaya en az etki eder?", "options": { "A": "Metan", "B": "Su buhari", "C": "Azot gazi", "D": "Karbondioksit" }, "answer": "C" },
+  { "index": 40, "subject": "Fen Bilimleri", "question": "Topraklama hangi amacla yapilir?", "options": { "A": "Fazla yuku bosaltmak", "B": "Elektrik uretmek", "C": "Direnci artirmak", "D": "Akimi kesmek" }, "answer": "A" }
+]

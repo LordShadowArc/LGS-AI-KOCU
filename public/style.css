@@ -1,0 +1,322 @@
+body {
+    background: #004d40; /* Cam Böceği Arka Plan */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Ana Layout: Panelleri yanlara iten ve orta alanı ferahlatan kısım */
+.main-layout {
+    display: flex;
+    justify-content: space-between; /* Sol paneli sola, sağ paneli sağa yaslar */
+    width: 95%;
+    max-width: 1600px; /* Geniş ekranlarda panellerin arasını daha çok açar */
+    padding: 30px 0;
+    gap: 20px;
+}
+
+/* Yan Paneller (Soru Hafızası ve Canlı Skor) */
+.sidebar {
+    width: 260px;
+    background: #1a1a1a; /* Siyah Kutu Tasarımı */
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+    border: 1px solid rgba(0, 191, 165, 0.2);
+}
+
+/* Orta Konteyner: Soru ve AI Alanı */
+.container { 
+    width: 100%;
+    max-width: 750px; /* Orta alanı derli toplu tutar */
+}
+
+/* Kategori Seçimi (Sayısal/Sözel) */
+.category-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cat-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.1);
+    font-weight: bold;
+    cursor: pointer;
+    background: #1a1a1a;
+    color: white;
+    transition: 0.3s;
+}
+
+.cat-btn.active {
+    background: #00bfa5; /* Seçili olduğunda Cam Böceği Yeşili */
+    border-color: #00bfa5;
+}
+
+/* Soru Kartı */
+.question-card {
+    background: #00bfa5;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    background: #fdfdfd;
+}
+
+/* Sonraki Soruya Geç Butonu */
+.next-btn {
+    background: #00bfa5;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* AI Kartı ve Chat Alanı */
+.ai-card {
+    background: #1a1a1a;
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.ai-content { 
+    min-height: 100px; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+}
+
+.input-area {
+    display: flex;
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#user-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    outline: none;
+}
+
+#send-btn { 
+    background: #00bfa5; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+/* Soru Navigasyon Izgarası */
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.nav-item {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 10px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Puan Kutusu */
+.score-box { 
+    text-align: center; 
+    margin-top: 20px; 
+    background: #00bfa5; 
+    padding: 15px; 
+    border-radius: 12px; 
+    color: white;
+}
+
+#stat-score { font-size: 32px; margin-top: 5px; }
+
+/* Nokta Renkleri */
+.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.green { background-color: #2ecc71; }
+.red { background-color: #e74c3c; }
+.nav-item.correct { background-color: #2ecc71 !important; color: white; }
+.nav-item.wrong { background-color: #e74c3c !important; color: white; }
+
+/* Yıl Seçimi Konteynırı */
+.year-selection {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 191, 165, 0.3);
+}
+
+.year-selection h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+/* Yıl Buton Izgarası */
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Yıl Butonları - Siyah */
+.year-btn {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s all;
+}
+
+.year-btn:hover {
+    border-color: #00bfa5;
+}
+
+/* Seçili Yıl - Cam Böceği Yeşili */
+.year-btn.active {
+    background: #00bfa5;
+    color: #fff;
+    border-color: #00bfa5;
+    box-shadow: 0 0 10px rgba(0, 191, 165, 0.4);
+}
+
+.section-stats {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.section-stats h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.main-score {
+    margin-bottom: 20px !important;
+    border: 2px solid #00bfa5 !important; /* Daha belirgin yapalım */
+}
+
+.spotify-container {
+    position: fixed; /* Ekranın sağ altına sabitler */
+    bottom: 20px;    /* Alttan 20px boşluk */
+    right: 20px;     /* Sağdan 20px boşluk */
+    width: 300px;
+    background: #111;
+    border: 1px solid #00bfa5;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 9999;   /* Diğer her şeyin üstünde görünmesi için */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+/* Panel kapalıyken sadece başlık görünsün */
+.spotify-container.collapsed {
+    transform: translateY(152px); /* İçeriği aşağıya gizler */
+}
+
+.spotify-header {
+    background: #00bfa5;
+    color: #000;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.spotify-content {
+    height: 152px; /* Spotify widget yüksekliği */
+    background: #000;
+}
+
+#spot-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Panel açıkken butonu döndür */
+.spotify-container:not(.collapsed) #spot-toggle-btn {
+    transform: rotate(180deg);
+}
+
+.spotify-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* En üstte kalsın */
+}
+.spotify-content {
+    height: 352px; /* Iframe boyutuyla aynı olmalı */
+}
+
+.spotify-header {
+    cursor: move; /* Sürüklenebilir olduğunu gösteren imleç */
+    user-select: none; /* Metin seçilmeyi engelle ki sürüklerken çirkin durmasın */
+}
+
+.spotify-container {
+    /* Mevcut özelliklere ek olarak */
+    touch-action: none; /* Mobil cihazlarda çakışmayı önler */
+    transition: transform 0.1s ease-out; /* Sürükleme akıcılığı için */
+}
+
+/* Panel kapalıyken transform çakışmaması için .collapsed durumunu güncelle kanka */
+.spotify-container.collapsed .spotify-content {
+    display: none; /* Katlanmayı translateY yerine display ile yapalım ki sürükleme bozulmasın */
+}
+
+#spotify-player {
+    position: fixed;
+    bottom: 20px; /* Alttan boşluk */
+    left: 160px;   /* Soldan boşluk */
+    z-index: 9999; /* Diğer her şeyin üstünde dursun */
+    transform: translate3d(0px, 0, 0); /* Başlangıç pozisyonu */
+    transition: none; /* Sürükleme sırasında gecikme olmaması için */
+}

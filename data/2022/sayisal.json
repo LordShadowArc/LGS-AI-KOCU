@@ -1,0 +1,282 @@
+[
+  {
+    "index": 1,
+    "subject": "Matematik",
+    "question": "Bir üslü ifade sorusu: Bir kenar uzunluğu 2⁵ mm olan kare şeklindeki 9 adet kağıt, birer kenarları çakışacak şekilde yan yana dizilerek bir dikdörtgen oluşturuluyor. Oluşturulan bu dikdörtgenin çevresi kaç milimetredir?",
+    "options": { "A": "2⁷", "B": "5·2⁷", "C": "2⁸", "D": "5·2⁸" },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Matematik",
+    "question": "Aşağıdaki kutularda üzerlerinde farklı birer tam sayı yazılı olan toplar vardır. 1. kutu: (2, 3, 5), 2. kutu: (4, 6, 8, 9). 1. kutudan rastgele bir top çekilip taban, 2. kutudan rastgele bir top çekilip üs yapılıyor. Elde edilen üslü ifadenin değerinin 100'den büyük olma olasılığı kaçtır?",
+    "options": { "A": "1/4", "B": "1/3", "C": "1/2", "D": "3/4" },
+    "answer": "A"
+  },
+  {
+    "index": 3,
+    "subject": "Matematik",
+    "question": "Kareköklü ifadeler: Bir yüzünün alanı 128 cm² olan kare şeklindeki bir kağıdın köşelerinden, bir kenar uzunluğu √8 cm olan kareler kesilip atılıyor. Kalan şeklin çevresi kaç santimetredir?",
+    "options": { "A": "32√2", "B": "24√2", "C": "16√2", "D": "8√2" },
+    "answer": "A"
+  },
+  {
+    "index": 4,
+    "subject": "Matematik",
+    "question": "Kenar uzunlukları santimetre cinsinden birer tam sayı ve alanı 30 cm² olan kaç farklı dikdörtgen çizilebilir?",
+    "options": { "A": "2", "B": "3", "C": "4", "D": "5" },
+    "answer": "C"
+  },
+  {
+    "index": 5,
+    "subject": "Matematik",
+    "question": "Cebirsel ifadeler: (2x - 3)² ifadesinin özdeşi aşağıdakilerden hangisidir?",
+    "options": { "A": "4x² - 9", "B": "4x² - 6x + 9", "C": "4x² - 12x + 9", "D": "4x² + 12x + 9" },
+    "answer": "C"
+  },
+  {
+    "index": 6,
+    "subject": "Matematik",
+    "question": "Eğim sorusu: Bir dik üçgenin dikey kenarı 12 cm, yatay kenarı 16 cm'dir. Bu üçgenin hipotenüsüne ait eğim yüzde kaçtır?",
+    "options": { "A": "40", "B": "60", "C": "75", "D": "80" },
+    "answer": "C"
+  },
+  {
+    "index": 7,
+    "subject": "Matematik",
+    "question": "Bir veri analizi sorusu: Bir sınıftaki öğrencilerin %40'ı kızdır. Sınıfa 2 kız öğrenci daha gelince kızların oranı %50 olmuştur. Başlangıçta sınıfta kaç öğrenci vardır?",
+    "options": { "A": "8", "B": "10", "C": "12", "D": "15" },
+    "answer": "A"
+  },
+  {
+    "index": 8,
+    "subject": "Matematik",
+    "question": "Doğrusal denklemler: Bir taksinin açılış ücreti 10 TL, her kilometre için alınan ücret 5 TL'dir. Gidilen yol (x) ile ödenecek ücret (y) arasındaki ilişki hangisidir?",
+    "options": { "A": "y = 10x + 5", "B": "y = 5x + 10", "C": "y = 15x", "D": "y = 10x - 5" },
+    "answer": "B"
+  },
+  {
+    "index": 9,
+    "subject": "Matematik",
+    "question": "Eşitsizlikler: 3 katının 4 eksiği 20'den küçük olan doğal sayılar kümesi kaç elemanlıdır?",
+    "options": { "A": "7", "B": "8", "C": "9", "D": "10" },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Matematik",
+    "question": "Üçgen eşitsizliği: Kenar uzunlukları 7 cm ve 10 cm olan bir üçgenin üçüncü kenarının alabileceği en büyük tam sayı değeri kaçtır?",
+    "options": { "A": "16", "B": "17", "C": "18", "D": "19" },
+    "answer": "A"
+  },
+  {
+    "index": 11,
+    "subject": "Matematik",
+    "question": "Pisagor bağıntısı: Koordinat sisteminde A(2, 3) ve B(5, 7) noktaları arasındaki en kısa mesafe kaç birimdir?",
+    "options": { "A": "5", "B": "6", "C": "7", "D": "8" },
+    "answer": "A"
+  },
+  {
+    "index": 12,
+    "subject": "Matematik",
+    "question": "Dairenin alanı: Çevresi 24 cm olan bir dairenin alanı kaç santimetrekaredir? (π=3 alınız)",
+    "options": { "A": "12", "B": "24", "C": "48", "D": "72" },
+    "answer": "C"
+  },
+  {
+    "index": 13,
+    "subject": "Matematik",
+    "question": "Benzerlik: ABC üçgeni benzerdir DEF üçgenine. Benzerlik oranı 1/2'dir. ABC'nin çevresi 15 cm ise DEF'nin çevresi kaç cm'dir?",
+    "options": { "A": "7,5", "B": "15", "C": "30", "D": "45" },
+    "answer": "C"
+  },
+  {
+    "index": 14,
+    "subject": "Matematik",
+    "question": "Silindirin hacmi: Yarıçapı 4 cm, yüksekliği 10 cm olan dik dairesel silindirin hacmi kaç cm³'tür? (π=3)",
+    "options": { "A": "120", "B": "240", "C": "480", "D": "960" },
+    "answer": "C"
+  },
+  {
+    "index": 15,
+    "subject": "Matematik",
+    "question": "Çarpanlar ve katlar: Aralarında asal olan iki sayının EBOB'u ile EKOK'unun toplamı 61'dir. Bu sayılardan biri 5 ise diğeri kaçtır?",
+    "options": { "A": "10", "B": "12", "C": "15", "D": "20" },
+    "answer": "B"
+  },
+  {
+    "index": 16,
+    "subject": "Matematik",
+    "question": "Bir olasılık sorusu: Bir sınıfta 12 erkek, 18 kız öğrenci vardır. Erkeklerin 4'ü, kızların 6'sı gözlüklüdür. Sınıftan rastgele seçilen birinin gözlüklü bir kız olma olasılığı nedir?",
+    "options": { "A": "1/5", "B": "1/4", "C": "1/3", "D": "2/5" },
+    "answer": "A"
+  },
+  {
+    "index": 17,
+    "subject": "Matematik",
+    "question": "Kareköklü sayılarda sıralama: a = 3√2, b = 2√5, c = 4√1. Sayılarının doğru sıralanışı hangisidir?",
+    "options": { "A": "c < a < b", "B": "c < b < a", "C": "a < b < c", "D": "b < a < c" },
+    "answer": "A"
+  },
+  {
+    "index": 18,
+    "subject": "Matematik",
+    "question": "Özdeşlikler: x² - y² = 40 ve x + y = 10 ise x - y kaçtır?",
+    "options": { "A": "4", "B": "5", "C": "6", "D": "8" },
+    "answer": "A"
+  },
+  {
+    "index": 19,
+    "subject": "Matematik",
+    "question": "Dönüşüm geometrisi: A(-2, 5) noktası 3 birim sağa, 2 birim aşağı ötelenirse yeni koordinatlar ne olur?",
+    "options": { "A": "(1, 3)", "B": "(-5, 3)", "C": "(1, 7)", "D": "(-5, 7)" },
+    "answer": "A"
+  },
+  {
+    "index": 20,
+    "subject": "Matematik",
+    "question": "Dik dairesel koninin ana doğrusu 10 cm, yüksekliği 8 cm ise taban yarıçapı kaç cm'dir?",
+    "options": { "A": "4", "B": "6", "C": "8", "D": "12" },
+    "answer": "B"
+  },
+  {
+    "index": 21,
+    "subject": "Fen Bilimleri",
+    "question": "Mevsimlerin oluşumu ile ilgili olarak: Dünya'nın Güneş etrafındaki dolanımı sırasında eksen eğikliği nedeniyle güneş ışınlarının düşme açısı değişir. 21 Aralık'ta Güney Yarım Küre'de hangi mevsim başlar?",
+    "options": { "A": "İlkbahar", "B": "Yaz", "C": "Sonbahar", "D": "Kış" },
+    "answer": "B"
+  },
+  {
+    "index": 22,
+    "subject": "Fen Bilimleri",
+    "question": "DNA'nın yapısı ile ilgili hangisi yanlıştır?",
+    "options": { "A": "Çift zincirli sarmal yapıdadır.", "B": "Kalıtsal bilgileri taşır.", "C": "Adenin karşısına Guanin gelir.", "D": "Yapı birimi nükleotiddir." },
+    "answer": "C"
+  },
+  {
+    "index": 23,
+    "subject": "Fen Bilimleri",
+    "question": "Mutasyon ve modifikasyon farkı düşünüldüğünde; hangisi bir modifikasyon örneğidir?",
+    "options": { "A": "Altı parmaklılık", "B": "Albino hastalığı", "C": "Çuha çiçeğinin sıcaklığa göre renk değiştirmesi", "D": "Down sendromu" },
+    "answer": "C"
+  },
+  {
+    "index": 24,
+    "subject": "Fen Bilimleri",
+    "question": "Katı basıncı; ağırlıkla doğru, yüzey alanıyla ters orantılıdır. Bir tuğla dar yüzeyi üzerine değil de geniş yüzeyi üzerine yatırılırsa yere yaptığı basınç nasıl değişir?",
+    "options": { "A": "Artar", "B": "Azalır", "C": "Değişmez", "D": "Sıfır olur" },
+    "answer": "B"
+  },
+  {
+    "index": 25,
+    "subject": "Fen Bilimleri",
+    "question": "Sıvı basıncı; derinlik ve yoğunluğa bağlıdır. Hangi durumda bir barajın tabanına etki eden su basıncı en fazla olur?",
+    "options": { "A": "Baraj boşken", "B": "Su derinliği azken", "C": "Su derinliği en fazlayken", "D": "Su sıcaklığı artınca" },
+    "answer": "C"
+  },
+  {
+    "index": 26,
+    "subject": "Fen Bilimleri",
+    "question": "Periyodik tabloda metaller için hangisi söylenemez?",
+    "options": { "A": "Isı ve elektriği iyi iletirler.", "B": "Yüzeyleri mattır.", "C": "Tel ve levha haline gelebilirler.", "D": "Oda sıcaklığında (cıva hariç) katıdırlar." },
+    "answer": "B"
+  },
+  {
+    "index": 27,
+    "subject": "Fen Bilimleri",
+    "question": "Kimyasal tepkimelerle ilgili hangisi yanlıştır?",
+    "options": { "A": "Atom sayısı ve türü korunur.", "B": "Maddelerin kimlikleri değişir.", "C": "Toplam kütle korunur.", "D": "Fiziksel bir olaydır." },
+    "answer": "D"
+  },
+  {
+    "index": 28,
+    "subject": "Fen Bilimleri",
+    "question": "Asitler ve Bazlar: Bir çözeltinin pH değeri 3 ise bu madde için hangisi doğrudur?",
+    "options": { "A": "Kuvvetli bazdır.", "B": "Zayıf bazdır.", "C": "Asidiktir.", "D": "Nötrdür." },
+    "answer": "C"
+  },
+  {
+    "index": 29,
+    "subject": "Fen Bilimleri",
+    "question": "Basit makineler: Bir eğik düzlemde kuvvet kazancını artırmak için ne yapılmalıdır?",
+    "options": { "A": "Düzlemin boyu uzatılmalı", "B": "Düzlemin yüksekliği artırılmalı", "C": "Yük artırılmalı", "D": "Düzlemin boyu kısaltılmalı" },
+    "answer": "A"
+  },
+  {
+    "index": 30,
+    "subject": "Fen Bilimleri",
+    "question": "Besin zinciri: Ot -> Çekirge -> Kurbağa -> Yılan. Bu zincirde yılan sayısının azalması durumunda hangi canlı sayısında artış görülür?",
+    "options": { "A": "Ot", "B": "Çekirge", "C": "Kurbağa", "D": "Hepsi azalır" },
+    "answer": "C"
+  },
+  {
+    "index": 31,
+    "subject": "Fen Bilimleri",
+    "question": "Fotosentez hızını etkileyen faktörlerden 'Karbondioksit miktarı' grafiği nasıldır?",
+    "options": { "A": "Sürekli artan", "B": "Sürekli azalan", "C": "Belirli noktaya kadar artıp sonra sabit kalan", "D": "Önce azalıp sonra artan" },
+    "answer": "C"
+  },
+  {
+    "index": 32,
+    "subject": "Fen Bilimleri",
+    "question": "Madde ve Isı: Öz ısıları farklı (c_su > c_yağ) eşit kütleli su ve zeytinyağı özdeş ısıtıcılarla ısıtılıyor. Hangi sıvının sıcaklığı daha hızlı artar?",
+    "options": { "A": "Su", "B": "Zeytinyağı", "C": "Eşit artar", "D": "Kütleye bağlıdır" },
+    "answer": "B"
+  },
+  {
+    "index": 33,
+    "subject": "Fen Bilimleri",
+    "question": "Statik Elektrik: Nötr bir elektroskoba negatif yüklü bir cisim dokundurulursa elektroskobun yaprakları için ne söylenir?",
+    "options": { "A": "Kapanır", "B": "Biraz açılır", "C": "Değişmez", "D": "Önce kapanır sonra açılır" },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Fen Bilimleri",
+    "question": "Elektrik enerjisinin dönüşümü: Hangisi elektrik enerjisini ısı enerjisine dönüştürmek amacıyla kullanılmaz?",
+    "options": { "A": "Ütü", "B": "Elektrikli soba", "C": "Vantilatör", "D": "Su ısıtıcısı" },
+    "answer": "C"
+  },
+  {
+    "index": 35,
+    "subject": "Fen Bilimleri",
+    "question": "Sürdürülebilir kalkınma için hangisi yapılmamalıdır?",
+    "options": { "A": "Geri dönüşüme önem verilmeli", "B": "Fosil yakıt kullanımı artırılmalı", "C": "Enerji tasarrufu yapılmalı", "D": "Yenilenebilir enerji kaynakları kullanılmalı" },
+    "answer": "B"
+  },
+  {
+    "index": 36,
+    "subject": "Fen Bilimleri",
+    "question": "Güneş tutulması olayı sırasında Ay, Dünya ve Güneş'in konumu nasıldır?",
+    "options": { "A": "Dünya, Ay ile Güneş arasındadır.", "B": "Ay, Dünya ile Güneş arasındadır.", "C": "Güneş, Dünya ile Ay arasındadır.", "D": "Hepsi farklı doğrultudadır." },
+    "answer": "B"
+  },
+  {
+    "index": 37,
+    "subject": "Fen Bilimleri",
+    "question": "Solunum olayı tüm canlılarda ne üretmek amacıyla gerçekleşir?",
+    "options": { "A": "Besin", "B": "Oksijen", "C": "Enerji (ATP)", "D": "Su" },
+    "answer": "C"
+  },
+  {
+    "index": 38,
+    "subject": "Fen Bilimleri",
+    "question": "Kalıtım: Saf döl sarı tohumlu bezelye (SS) ile yeşil tohumlu bezelye (ss) çaprazlanırsa F1 dölünün genotipi ne olur?",
+    "options": { "A": "SS", "B": "Ss", "C": "ss", "D": "%50 SS, %50 ss" },
+    "answer": "B"
+  },
+  {
+    "index": 39,
+    "subject": "Fen Bilimleri",
+    "question": "Küresel iklim değişikliğinin sonuçları arasında hangisi yer almaz?",
+    "options": { "A": "Buzulların erimesi", "B": "Deniz seviyesinin yükselmesi", "C": "Biyoçeşitliliğin artması", "D": "Kuraklık ve sel baskınları" },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Fen Bilimleri",
+    "question": "Bir kimyasal değişim örneği olan 'yanma' tepkimesi için hangisi gereklidir?",
+    "options": { "A": "Azot", "B": "Hidrojen", "C": "Oksijen", "D": "Karbondioksit" },
+    "answer": "C"
+  }
+]

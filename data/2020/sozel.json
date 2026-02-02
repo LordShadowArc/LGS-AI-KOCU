@@ -1,0 +1,602 @@
+[
+  {
+    "index": 1,
+    "subject": "Türkçe",
+    "question": "Bu metinde altı çizili olan 'dünyayı güneşin etrafında döndürmek' ifadesiyle yazarın anlatmak istediği aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Zorluklara karşı göğüs germek",
+      "B": "İmkânsız gibi görünen işleri başarmak",
+      "C": "Sürekli bir değişim ve gelişim içinde olmak",
+      "D": "Hayatı tüm yönleriyle kabullenmek"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 2,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde 'açmak' sözcüğünün anlamı ile kullanımı birbirine uymamaktadır?",
+    "options": {
+      "A": "Bir şeyi engel olmaktan kurtarmak: Tıkalı boruyu açtı.",
+      "B": "Bir toplantıyı başlatmak: Kurul toplantısını müdür açtı.",
+      "C": "Hacmini genişletmek: Üstündeki ceketi biraz açtı.",
+      "D": "Kullanılır duruma getirmek: Yeni yapılan yolu trafiğe açtılar."
+    },
+    "answer": "C"
+  },
+  {
+    "index": 3,
+    "subject": "Türkçe",
+    "question": "Sıfır Atık projesine ait infografikteki verilere göre: '1 ton kağıt 17 ağacı kurtarır. 1 ton cam 100 litre petrol tasarrufu sağlar. 1 ton metal 1.3 ton hammaddeyi korur.' Bu bilgilere göre aşağıdakilerden hangisi söylenemez?",
+    "options": {
+      "A": "Atıkların geri dönüşümü ekonomiye katkı sağlar.",
+      "B": "Geri dönüşüm doğal kaynakların korunmasında etkilidir.",
+      "C": "Tüm atık türleri aynı oranda enerji tasarrufu sağlar.",
+      "D": "Kağıt geri dönüşümü orman varlığını korumaya yardımcıdır."
+    },
+    "answer": "C"
+  },
+  {
+    "index": 4,
+    "subject": "Türkçe",
+    "question": "Bu metnin dil ve anlatımıyla ilgili aşağıdakilerden hangisi söylenemez?",
+    "options": {
+      "A": "Tanımlamaya yer verilmiştir.",
+      "B": "Karşılaştırma yapılmıştır.",
+      "C": "Örneklendirmeden yararlanılmıştır.",
+      "D": "Kişileştirme yapılmıştır."
+    },
+    "answer": "D"
+  },
+  {
+    "index": 5,
+    "subject": "Türkçe",
+    "question": "Derya, Arda, Erdem ve Murat adlı kişiler; A, B, C ve D markalı spor ayakkabılardan birer tane almıştır. Bilinenler şunlardır: Erdem A markasını almamıştır. Murat C markasını almıştır. Derya ve Arda'nın markaları alfabetik olarak peş peşe gelmektedir. Buna göre hangisi kesinlikle yanlıştır?",
+    "options": {
+      "A": "Arda B markasını almıştır.",
+      "B": "Derya A markasını almıştır.",
+      "C": "Erdem D markasını almıştır.",
+      "D": "Arda D markasını almıştır."
+    },
+    "answer": "D"
+  },
+  {
+    "index": 6,
+    "subject": "Türkçe",
+    "question": "Bu metinde boş bırakılan yerlere sırasıyla hangi noktalama işaretleri getirilmelidir?",
+    "options": {
+      "A": "(,) (;) (.)",
+      "B": "(;) (,) (...)",
+      "C": "(,) (,) (.)",
+      "D": "(;) (;) (.)"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 7,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?",
+    "options": {
+      "A": "Sende mi bizimle geliyorsun?",
+      "B": "Birçok öğrenci bu soruyu çözemedi.",
+      "C": "Her şey vaktinde güzeldir.",
+      "D": "15 Temmuz 2020 Çarşamba günü buluşalım."
+    },
+    "answer": "A"
+  },
+  {
+    "index": 8,
+    "subject": "Türkçe",
+    "question": "Bu parçada asıl anlatılmak istenen (ana fikir) aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Tecrübenin her zaman doğru yol göstermediği",
+      "B": "Sanatın toplumu değiştirmek için bir araç olduğu",
+      "C": "Gerçek başarının sabır ve çalışmayla geleceği",
+      "D": "Eleştirinin sanatçıyı her zaman geliştirdiği"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 9,
+    "subject": "Türkçe",
+    "question": "Bu metne göre aşağıdakilerden hangisi 'öz eleştiri' içeren bir cümledir?",
+    "options": {
+      "A": "Keşke bu kitabı daha önce okusaydım.",
+      "B": "Yazılarımda hep aynı kelimeleri kullandığımı fark ettim.",
+      "C": "Arkadaşımın uyarısını dikkate almalıydım.",
+      "D": "Yeni projem için çok heyecanlıyım."
+    },
+    "answer": "B"
+  },
+  {
+    "index": 10,
+    "subject": "Türkçe",
+    "question": "Metindeki 'Gözlerinde şimşekler çakıyordu' deyimiyle anlatılmak istenen duygu hangisidir?",
+    "options": {
+      "A": "Çok mutlu olmak",
+      "B": "Aşırı öfkelenmek",
+      "C": "Çok şaşırmak",
+      "D": "Korkuya kapılmak"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 11,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde fiilimsi (eylemsi) kullanılmamıştır?",
+    "options": {
+      "A": "Gülmek sana çok yakışıyor.",
+      "B": "Koşarak yanıma geldi.",
+      "C": "Dün akşam eve geç geldim.",
+      "D": "Görülecek çok yerimiz var."
+    },
+    "answer": "C"
+  },
+  {
+    "index": 12,
+    "subject": "Türkçe",
+    "question": "Bu metindeki altı çizili sözcüklerden hangisi zarf-fiil görevindedir?",
+    "options": {
+      "A": "Bilinçli",
+      "B": "Okudukça",
+      "C": "Anlatılan",
+      "D": "Düşünce"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 13,
+    "subject": "Türkçe",
+    "question": "Bu parçanın anlatım biçimi aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Betimleme",
+      "B": "Öyküleme",
+      "C": "Tartışma",
+      "D": "Açıklama"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 14,
+    "subject": "Türkçe",
+    "question": "Bu metin iki paragrafa ayrılmak istense ikinci paragraf numaralanmış cümlelerin hangisiyle başlar?",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "4",
+      "D": "5"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 15,
+    "subject": "Türkçe",
+    "question": "Bu metinde geçen 'kabuğuna çekilmek' deyimiyle anlatılmak istenen nedir?",
+    "options": {
+      "A": "Kimseyle görüşmeyip tek başına kalmak",
+      "B": "Hatalarını kabul etmek",
+      "C": "Korkup saklanmak",
+      "D": "Sorumluluktan kaçmak"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 16,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde yüklem yanlış gösterilmiştir?",
+    "options": {
+      "A": "En sevdiği şey / kitap okumaktı.",
+      "B": "Dün gece / kar yağdı.",
+      "C": "Pencerenin önünde / kuşlar ötüyordu.",
+      "D": "Bahçedeki çiçekleri / dün suladım."
+    },
+    "answer": "A"
+  },
+  {
+    "index": 17,
+    "subject": "Türkçe",
+    "question": "Bu görselde (Afişte) yer alan bilgilerden hareketle aşağıdakilerden hangisine ulaşılamaz?",
+    "options": {
+      "A": "Etkinliğin nerede yapılacağına",
+      "B": "Katılım için ücret ödenip ödenmeyeceğine",
+      "C": "Etkinliğin kaç gün süreceğine",
+      "D": "Hangi yaş grubuna hitap ettiğine"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 18,
+    "subject": "Türkçe",
+    "question": "Aşağıdaki cümlelerin hangisinde özne ve yüklemden oluşan en temel öge dizilişi vardır?",
+    "options": {
+      "A": "Çocuk, hızlıca koştu.",
+      "B": "Annem, lezzetli yemekler yapar.",
+      "C": "Gökyüzü, masmaviydi.",
+      "D": "Kitapları rafa dizdim."
+    },
+    "answer": "C"
+  },
+  {
+    "index": 19,
+    "subject": "Türkçe",
+    "question": "Bu metne göre yazarın okura önerisi nedir?",
+    "options": {
+      "A": "Daha fazla seyahat etmesi",
+      "B": "Hayatı olduğu gibi kabullenmesi",
+      "C": "Kendi yeteneklerinin farkına varması",
+      "D": "Başkalarının fikirlerine değer vermesi"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 20,
+    "subject": "Türkçe",
+    "question": "Metinde geçen 'Ateş olmayan yerden duman çıkmaz' atasözüyle vurgulanan durum nedir?",
+    "options": {
+      "A": "Her olayın bir sebebi vardır.",
+      "B": "Dedikodu zararlıdır.",
+      "C": "Önlem almak önemlidir.",
+      "D": "Yalan er geç ortaya çıkar."
+    },
+    "answer": "A"
+  },
+  {
+    "index": 21,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Birinci Dünya Savaşı'nda Osmanlı Devleti'nin Kafkas ve Kanal cephelerinde taarruzda; Çanakkale ve Irak cephelerinde savunmada olduğu bilinmektedir. Ayrıca Galiçya'da sınır dışı yardım yapmıştır. Bu bilgilerle hangisine ulaşılamaz?",
+    "options": {
+      "A": "Osmanlı Devleti geniş alanda savaşmıştır.",
+      "B": "Farklı amaçlarla cepheler açılmıştır.",
+      "C": "Müttefiklerine yardım göndermiştir.",
+      "D": "Tüm savaşları kazanarak topraklarını büyütmüştür."
+    },
+    "answer": "D"
+  },
+  {
+    "index": 22,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mustafa Kemal'in Şam'da 'Vatan ve Hürriyet Cemiyeti'ni kurması, onun hangi kişilik özelliğini ön plana çıkarır?",
+    "options": {
+      "A": "İleri görüşlülüğü",
+      "B": "Teşkilatçılığı ve liderliği",
+      "C": "Eğitimciliği",
+      "D": "Sanat sevgisi"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 23,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Mondros Ateşkes Antlaşması'nın 'İtilaf Devletleri güvenliklerini tehdit eden bir durum ortaya çıkarsa stratejik bir noktayı işgal edebilecektir.' maddesinin amacı nedir?",
+    "options": {
+      "A": "Osmanlı'nın güvenliğini sağlamak",
+      "B": "İşgallere hukuki zemin hazırlamak",
+      "C": "Ticareti geliştirmek",
+      "D": "Eğitimi modernize etmek"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 24,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Sivas Kongresi'nde tüm cemiyetlerin tek bir isim altında birleştirilmesinin temel amacı nedir?",
+    "options": {
+      "A": "Milli mücadeleyi tek merkezden yönetmek",
+      "B": "Saltanatı korumak",
+      "C": "Düzenli orduyu dağıtmak",
+      "D": "Yabancı devletlerle ittifak kurmak"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 25,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Misak-ı Milli'de yer alan 'Siyasi, adli ve mali gelişmemize engel olan sınırlamalar kaldırılamaz.' maddesi neye karşı bir duruştur?",
+    "options": {
+      "A": "Kapitülasyonlara",
+      "B": "Düzenli orduya",
+      "C": "Milli eğitime",
+      "D": "Dış yardımlara"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 26,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Amasya Genelgesi'nde yer alan 'Milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır.' maddesi neyin göstergesidir?",
+    "options": {
+      "A": "Milli mücadelenin yönteminin belirlendiği",
+      "B": "Padişahın yetkilerinin artırıldığı",
+      "C": "Savaşın sona erdiği",
+      "D": "Dış borçların ödeneceği"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 27,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Erzurum Kongresi'nin 'Manda ve himaye kabul edilemez.' kararı neyi hedeflemektedir?",
+    "options": {
+      "A": "Sömürge altında yaşamayı",
+      "B": "Tam bağımsızlığı",
+      "C": "Tarımı geliştirmeyi",
+      "D": "Yeni bir alfabe kurmayı"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 28,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Kütahya-Eskişehir Savaşları sırasında Mustafa Kemal'in 'Maarif Kongresi'ni toplaması onun neye verdiği önemi gösterir?",
+    "options": {
+      "A": "Ekonomik büyümeye",
+      "B": "Milli eğitim ve kültüre",
+      "C": "Eski eserlerin korunmasına",
+      "D": "Askeri mühimmat üretimine"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 29,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Lozan Antlaşması ile yeni Türk devletinin bağımsızlığı uluslararası alanda tescillenmiştir. Aşağıdakilerden hangisi Lozan'da kesin olarak kaldırılmıştır?",
+    "options": {
+      "A": "Kapitülasyonlar",
+      "B": "Hatay sorunu",
+      "C": "Musul meselesi",
+      "D": "Dış borçların tamamı"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 30,
+    "subject": "T.C. İnkılap Tarihi",
+    "question": "Atatürk ilke ve inkılaplarının temel amacı nedir?",
+    "options": {
+      "A": "Türkiye'yi çağdaş uygarlık düzeyine çıkarmak",
+      "B": "Ekonomiyi sadece tarıma dayalı yapmak",
+      "C": "Geleneksel eğitim sistemini korumak",
+      "D": "Siyasi partileri kapatmak"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 31,
+    "subject": "Din Kültürü",
+    "question": "'Kim iyi bir iş yaparsa kendi lehinedir, kim de kötülük yaparsa kendi aleyhinedir.' (Fussilet, 46). Bu ayet aşağıdakilerden hangisiyle doğrudan ilgilidir?",
+    "options": {
+      "A": "İnsanın iradesi ve sorumluluğu",
+      "B": "Rızkın miktarı",
+      "C": "Ecel ve ömür",
+      "D": "Evrenin yasaları"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 32,
+    "subject": "Din Kültürü",
+    "question": "Allah'ın her şeyi bir ölçüye ve nizama göre yaratması aşağıdakilerden hangisiyle ifade edilir?",
+    "options": {
+      "A": "Kader",
+      "B": "Zekat",
+      "C": "İhlas",
+      "D": "Hicret"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 33,
+    "subject": "Din Kültürü",
+    "question": "Zekat ibadetiyle ilgili verilen bilgilerden hangisi yanlıştır?",
+    "options": {
+      "A": "Toplumsal dayanışmayı artırır.",
+      "B": "Sadece Ramazan ayında verilir.",
+      "C": "Zenginlerin fakirlere karşı sorumluluğudur.",
+      "D": "Malın temizlenmesini sağlar."
+    },
+    "answer": "B"
+  },
+  {
+    "index": 34,
+    "subject": "Din Kültürü",
+    "question": "Hz. Muhammed'in (s.a.v.) 'Emaneti emin olana veriniz.' sözü onun hangi özelliğini vurgular?",
+    "options": {
+      "A": "Dürüstlük ve güvenilirlik",
+      "B": "Cesaret",
+      "C": "Merhamet",
+      "D": "Sabır"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 35,
+    "subject": "Din Kültürü",
+    "question": "Dinin temel gayesi nedir?",
+    "options": {
+      "A": "İnsanların dünya ve ahiret mutluluğunu sağlamak",
+      "B": "Sadece ekonomik refahı artırmak",
+      "C": "İnsanları birbirinden uzaklaştırmak",
+      "D": "Bilimsel çalışmaları engellemek"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 36,
+    "subject": "Din Kültürü",
+    "question": "Kişinin üzerine düşen görevleri yaptıktan sonra Allah'a güvenmesine ne denir?",
+    "options": {
+      "A": "Tevekkül",
+      "B": "İbadet",
+      "C": "Kaza",
+      "D": "Sadaka"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 37,
+    "subject": "Din Kültürü",
+    "question": "Aşağıdakilerden hangisi İslam'ın korunmasını istediği beş temel haktan biri değildir?",
+    "options": {
+      "A": "Canın korunması",
+      "B": "Malın korunması",
+      "C": "Makamın korunması",
+      "D": "Aklın korunması"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 38,
+    "subject": "Din Kültürü",
+    "question": "Hz. Yusuf kıssasında öne çıkan temel ahlaki erdem hangisidir?",
+    "options": {
+      "A": "Sabır ve affedicilik",
+      "B": "Savaşçılık",
+      "C": "Zenginlik",
+      "D": "Kibir"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 39,
+    "subject": "Din Kültürü",
+    "question": "Zekat verilecek mallar arasında 'altın'ın oranı nedir?",
+    "options": {
+      "A": "1/10",
+      "B": "1/20",
+      "C": "1/40",
+      "D": "1/5"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 40,
+    "subject": "Din Kültürü",
+    "question": "Maun Suresi'nde eleştirilen insan tipi aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Yardımlaşmayı engelleyen ve gösteriş yapanlar",
+      "B": "Çok çalışanlar",
+      "C": "Dürüst tacirler",
+      "D": "Bilim insanları"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 41,
+    "subject": "English",
+    "question": "Secretary: 'Hello, this is Green Company. How can I help you?' \nCustomer: 'Hi, can I speak to Mr. Parker, please?' \nSecretary: 'I'm afraid he is busy now. ----?'",
+    "options": {
+      "A": "Can you call back later",
+      "B": "Would you like to leave a message",
+      "C": "Is he at home",
+      "D": "What is his phone number"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 42,
+    "subject": "English",
+    "question": "Alice: 'I am organizing a surprise birthday party for my sister on Sunday. Would you like to join us?' \nTom: '----. I have to study for my exams.'",
+    "options": {
+      "A": "I'd love to, but I can't",
+      "B": "That sounds awesome",
+      "C": "Sure, I will be there",
+      "D": "Why not"
+    },
+    "answer": "A"
+  },
+  {
+    "index": 43,
+    "subject": "English",
+    "question": "A recipe list shows these steps: \n1. Peel the potatoes. \n2. Slice them. \n3. Fry them in a pan. \nWhich tool do you NOT need for this recipe according to the steps?",
+    "options": {
+      "A": "A knife",
+      "B": "A pan",
+      "C": "An oven",
+      "D": "A peeler"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 44,
+    "subject": "English",
+    "question": "Sarah: 'I spend most of my time on the Net. I usually check my emails and read the news.' \nAccording to the sentence, Sarah uses the Internet for ----.",
+    "options": {
+      "A": "playing online games",
+      "B": "doing homework",
+      "C": "communication and information",
+      "D": "buying something"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 45,
+    "subject": "English",
+    "question": "Which of the following is related to 'Internet Safety'?",
+    "options": {
+      "A": "Don't share your password with anyone.",
+      "B": "Spend 10 hours a day online.",
+      "C": "Believe all the news on the Net.",
+      "D": "Meet your online friends alone."
+    },
+    "answer": "A"
+  },
+  {
+    "index": 46,
+    "subject": "English",
+    "question": "David: 'I love extreme sports because I like testing my limits.' \nDavid is a ---- person.",
+    "options": {
+      "A": "boring",
+      "B": "cautious",
+      "C": "adventurous",
+      "D": "lazy"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 47,
+    "subject": "English",
+    "question": "Waitress: 'Welcome. What would you like to have?' \nJack: 'I'd like to have a grilled chicken.' \nWaitress: '----?' \nJack: 'An apple juice, please.'",
+    "options": {
+      "A": "Would you like a dessert",
+      "B": "Anything to drink",
+      "C": "Is that all",
+      "D": "How much is it"
+    },
+    "answer": "B"
+  },
+  {
+    "index": 48,
+    "subject": "English",
+    "question": "Look at the list: \n- Take out the garbage \n- Vacuum the floor \n- Wash the dishes \nThese are all ----.",
+    "options": {
+      "A": "school rules",
+      "B": "outdoor activities",
+      "C": "household chores",
+      "D": "hobbies"
+    },
+    "answer": "C"
+  },
+  {
+    "index": 49,
+    "subject": "English",
+    "question": "Which sentence is CORRECT about 'Adventure'?",
+    "options": {
+      "A": "Skydiving is more dangerous than trekking.",
+      "B": "I prefer staying at home to going rafting.",
+      "C": "Extreme sports are not exciting.",
+      "D": "He doesn't like being in nature."
+    },
+    "answer": "A"
+  },
+  {
+    "index": 50,
+    "subject": "English",
+    "question": "A brochure says: 'Join our summer camp! You can swim, hike and sit by the fire. It is between 10th and 20th July.' \nThere is NO information about ----.",
+    "options": {
+      "A": "activities",
+      "B": "the date",
+      "C": "the price",
+      "D": "the location"
+    },
+    "answer": "C"
+  }
+]
