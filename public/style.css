@@ -1,4 +1,4 @@
-/* --- 1. GENEL AYARLAR --- */
+/* --- 1. GENEL VE RESET AYARLARI --- */
 :root {
     --cam-bocegi: #00bfa5;
     --arka-plan: #004d40;
@@ -7,29 +7,31 @@
 }
 
 body {
-    overflow-x: hidden;
-    touch-action: pan-y;
+    overflow-x: hidden; /* Sağ kaymayı kökten bitirir */
+    touch-action: pan-y; /* Sadece dikey kaydırmaya izin ver (zoom'u engeller) */
     background: var(--arka-plan);
     font-family: Arial, sans-serif;
     font-weight: bold;
     margin: 0;
-    width: 100%; /* Bunu ekle, ekranı tam kaplasın */
+    width: 100%;
     min-height: 100vh;
     color: white;
 }
-/* --- 2. UNIVERSAL LAYOUT (PC, TABLET, MOBİL UYUMLU) --- */
+
+/* --- 2. LAYOUT (PC'DE YAN YANA / MOBİLDE ALT ALTA) --- */
 .main-layout {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
-    padding: 10px;
-    width: 95%; /* %100'den %95'e çektik (PC için) */
+    padding: 30px 20px;
+    width: 95%; /* PC'de yanlarda boşluk bırakır */
     max-width: 1600px;
     margin: 0 auto;
     box-sizing: border-box;
 }
-/* Yan Paneller */
+
+/* Yan Paneller (Soru Hafızası ve Skor) */
 .sidebar {
     flex: 1 1 var(--side-width);
     max-width: 350px;
@@ -41,16 +43,18 @@ body {
     position: sticky;
     top: 20px;
     border: 1px solid rgba(0, 191, 165, 0.2);
+    box-sizing: border-box;
 }
 
 /* Orta Soru Alanı */
 .container { 
     flex: 2 1 500px;
-    max-width: 800px;
+    max-width: 750px;
     min-width: 320px;
+    box-sizing: border-box;
 }
 
-/* --- 3. SORU VE ŞIKLARIN TASARIMI --- */
+/* --- 3. BİLEŞEN TASARIMLARI --- */
 .question-card {
     background: var(--cam-bocegi);
     border-radius: 20px;
@@ -66,37 +70,23 @@ body {
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
     color: #ffffff !important;
     font-weight: 850 !important;
     font-size: 1.1rem !important;
     cursor: pointer;
-    transition: all 0.2s ease-in-out !important;
-    backdrop-filter: blur(5px);
     text-align: left;
+    transition: all 0.2s ease;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.option-btn:hover {
-    transform: scale(1.02);
-    filter: brightness(1.2);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
+.option-btn:hover { transform: scale(1.02); filter: brightness(1.2); }
 
-/* --- NEON EFEKTLERİ --- */
-.option-btn.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
-    border: 2px solid #2ecc71 !important;
-}
+/* Şık Neonları */
+.option-btn.correct { background-color: #2ecc71 !important; box-shadow: 0 0 20px #2ecc71 !important; }
+.option-btn.wrong { background-color: #e74c3c !important; box-shadow: 0 0 20px #e74c3c !important; }
 
-.option-btn.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
-    border: 2px solid #e74c3c !important;
-}
-
-/* --- 4. SPOTIFY PLAYER (HYBRID DRAGGING SUPPORT) --- */
+/* --- 4. SPOTIFY SÜRÜKLENEBİLİR PLAYER --- */
 #spotify-player {
     position: fixed;
     bottom: 20px;
@@ -107,97 +97,54 @@ body {
     border-radius: 12px;
     overflow: hidden;
     z-index: 9999;
+    touch-action: none; /* Sürükleme için şart */
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    touch-action: none; /* Mobilde sürüklemeyi sağlar */
 }
 
 .spotify-header {
     background: var(--cam-bocegi);
     color: #000;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
     cursor: move;
     font-weight: bold;
-    user-select: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-.spotify-content {
-    height: 352px;
-    background: #000;
-    transition: height 0.3s ease;
-}
+.spotify-content { height: 352px; transition: 0.3s; }
+#spotify-player.collapsed .spotify-content { display: none; }
 
-#spotify-player.collapsed .spotify-content {
-    display: none; /* Kapalıyken yer kaplamasın */
-}
-
-/* --- 5. DİĞER BİLEŞENLER --- */
-.nav-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-}
-
-.nav-item {
-    background: #333;
-    border: none;
-    color: white;
-    padding: 10px 5px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.score-box { 
-    text-align: center;
-    background: var(--cam-bocegi);
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-/* --- 6. RESPONSIVE (EKRAN AYARLARI) --- */
+/* --- 5. MOBİL FİX (SAĞA KAYMAYI ÖNLEYEN SİHİRLİ DOKUNUŞ) --- */
 @media (max-width: 1100px) {
     .main-layout {
-        flex-direction: column !important; /* Alt alta diz */
+        flex-direction: column !important; /* Mobilde alt alta diz */
         align-items: center !important;
-        width: 100% !important;
+        width: 100% !important; /* Ekranı tam kapla */
         padding: 10px !important;
-        gap: 15px !important;
     }
 
     .sidebar, .container {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        margin: 0 0 15px 0 !important; /* Aralarına boşluk bırak */
-    }
-
-    .sidebar {
+        margin: 0 0 20px 0 !important;
         position: relative !important;
         top: 0 !important;
-        order: -1; /* Soru hafızasını en üste al */
     }
+
+    .sidebar-left { order: 2; } /* Hafızayı aşağı al (isteğe bağlı) */
+    .container { order: 1; }    /* Soruyu en üste çıkar */
+    .sidebar-right { order: 3; } /* Skoru en alta koy */
 
     #spotify-player {
         width: 90% !important;
         left: 5% !important;
         right: 5% !important;
-        bottom: 20px !important;
+        bottom: 10px !important;
     }
 }
 
-/* --- KÜÇÜK TELEFONLAR İÇİN YAZI BOYUTU --- */
 @media (max-width: 480px) {
-    .option-btn { 
-        font-size: 0.9rem !important; 
-        padding: 10px !important; 
-    }
-    #question-text { 
-        font-size: 1rem !important; 
-    }
-    .category-selection button {
-        padding: 8px 12px !important;
-        font-size: 0.8rem !important;
-    }
+    .question-card { padding: 20px; }
+    .option-btn { font-size: 1rem !important; }
 }
