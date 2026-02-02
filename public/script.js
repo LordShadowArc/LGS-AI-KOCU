@@ -1,5 +1,5 @@
 /**
- * LGS AI-KOÇU - MASTER SCRIPT v4.0 ULTRA
+ * LGS AI-KOÇU - MASTER SCRIPT v4.0 ULTRA (FIXED)
  * index.html ve server.js ile %100 Senkronize Versiyon
  */
 
@@ -61,7 +61,6 @@ async function loadQuestion(index) {
     qText.innerHTML = '<span class="loading">Soru Yükleniyor... 🔥</span>';
 
     try {
-        // SERVER.JS BURAYI BEKLİYOR: /api/question?year=2025&category=sayisal&index=1
         const response = await fetch(`/api/question?year=${currentYear}&category=${currentCategory.toLowerCase()}&index=${index}`);
         
         if (!response.ok) throw new Error("Soru bulunamadı kanka!");
@@ -85,17 +84,14 @@ function renderQuestionUI() {
     document.getElementById('opt-C').innerText = currentQuestion.options.C;
     document.getElementById('opt-D').innerText = currentQuestion.options.D;
     
-    // AI kutusunu resetle
     document.getElementById('ai-response').innerHTML = "Soruyu çözünce analiz burada görünecek...";
     chatHistory = [];
 
-    // Butonları temizle
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.classList.remove('correct', 'wrong');
         btn.disabled = false;
     });
 
-    // Daha önce çözüldü mü kontrol et
     const qKey = `${currentYear}-${currentCategory}-${currentQuestionIndex}`;
     if (examData.userAnswers[qKey]) {
         applyLockedState(examData.userAnswers[qKey].selected, currentQuestion.answer);
@@ -122,7 +118,6 @@ async function checkAnswer(selected) {
     calculateLGSScore();
     localStorage.setItem('lgs_progress', JSON.stringify(examData));
 
-    // AI Analizi Tetikle
     if (!isCorrect) {
         askAI(null, selected, correctAnswer);
     } else {
@@ -134,7 +129,6 @@ async function checkAnswer(selected) {
 function applyLockedState(selected, correct) {
     const options = ['A', 'B', 'C', 'D'];
     options.forEach(opt => {
-        // HTML'deki onclick yapısına göre butonu seçiyoruz
         const btn = document.querySelector(`.option-btn[onclick="checkAnswer('${opt}')"]`);
         if (btn) {
             btn.disabled = true;
@@ -196,6 +190,69 @@ async function askAI(customMsg = null, selected = "", correct = "") {
     }
 }
 
+// --- 7. NAVİGASYON VE SKOR ---
+function setupNav() {
+    const navGrid = document.getElementById('question-nav');
+    if (!navGrid) return;
+    navGrid.innerHTML = "";
+    const count = currentCategory === 'sayisal' ? 40 : 50;
+    for (let i = 1; i <= count; i++) {
+        const btn = document.createElement('button');
+        const qKey = `${currentYear}-${currentCategory}-${i}`;
+        btn.id = `nav-${qKey}`;
+        btn.className = 'nav-item';
+        btn.innerText = i;
+        if (examData.userAnswers[qKey]) {
+            btn.classList.add(examData.userAnswers[qKey].isCorrect ? 'correct' : 'wrong');
+        }
+        btn.onclick = () => loadQuestion(i);
+        navGrid.appendChild(btn);
+    }
+}
+
+function calculateLGSScore() {
+    const s = examData.stats.sayisal;
+    const sz = examData.stats.sozel;
+    const sNet = Math.max(0, s.correct - (s.wrong / 3));
+    const szNet = Math.max(0, sz.correct - (sz.wrong / 3));
+    
+    examData.stats.totalNet = sNet + szNet;
+    const sPuan = sNet * 3.75;
+    const szPuan = szNet * 3.0;
+    examData.stats.totalScore = 200 + sPuan + szPuan;
+
+    updateStatsUI(sNet, szNet, sPuan, szPuan);
+}
+
+function updateStatsUI(sn = 0, szn = 0, sp = 0, szp = 0) {
+    document.getElementById('stat-score').innerText = examData.stats.totalScore.toFixed(2);
+    document.getElementById('stat-net').innerText = examData.stats.totalNet.toFixed(2);
+    document.getElementById('sayisal-net').innerText = sn.toFixed(2);
+    document.getElementById('sozel-net').innerText = szn.toFixed(2);
+    document.getElementById('sayisal-contribution').innerText = sp.toFixed(2);
+    document.getElementById('sozel-contribution').innerText = szp.toFixed(2);
+    document.getElementById('stat-correct').innerText = examData.stats.sayisal.correct + examData.stats.sozel.correct;
+    document.getElementById('stat-wrong').innerText = examData.stats.sayisal.wrong + examData.stats.sozel.wrong;
+}
+
+// --- 8. DİĞER FONKSİYONLAR ---
+function getNewQuestion() {
+    const max = (currentCategory === 'sayisal' ? 40 : 50);
+    if (currentQuestionIndex < max) {
+        loadQuestion(currentQuestionIndex + 1);
+    } else {
+        alert("Bölüm bitti kanka!");
+    }
+}
+
+function handleSend() {
+    const input = document.getElementById('user-input');
+    if (input.value.trim()) {
+        askAI(input.value.trim());
+        input.value = "";
+    }
+}
+
 function toggleSpotify() {
     const player = document.getElementById('spotify-player');
     player.classList.toggle('collapsed');
@@ -205,7 +262,7 @@ function updatePlaylist() {
     const input = document.getElementById('spotify-link-input');
     const iframe = document.getElementById('spotify-iframe');
     if (input.value.includes('spotify.com')) {
-        let link = input.value.replace('open.spotify.com/', 'open.spotify.com/embed/');
+        let link = input.value; // Spotify link işleme mantığı
         iframe.src = link;
         localStorage.setItem('userPlaylist', link);
     }
