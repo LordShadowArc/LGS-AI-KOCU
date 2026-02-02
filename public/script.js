@@ -1,9 +1,8 @@
 /**
- * LGS AI-KOÇU - MASTER SCRIPT v3.0
- * HTML yapısına tam entegre, Neon Efekt Korumalı, Sürükle-Bırak Aktif.
+ * LGS AI-KOÇU - MASTER SCRIPT v3.1 (Fixed)
  */
 
-// --- 1. GLOBAL STATE (DURUM YÖNETİMİ) ---
+// --- 1. GLOBAL STATE ---
 let currentQuestion = null;
 let currentQuestionIndex = 1;
 let currentCategory = 'sayisal';
@@ -11,7 +10,6 @@ let currentYear = 2025;
 let chatHistory = [];
 let isAiLoading = false;
 
-// Veri Güvenliği: Eğer localStorage boşsa varsayılanı kullan
 let examData = {
     userAnswers: {},
     stats: {
@@ -24,19 +22,11 @@ let examData = {
 
 // --- 2. SİSTEM BAŞLATICI ---
 window.onload = async () => {
-    console.log("🛠️ Sistem HTML yapısına göre senkronize ediliyor...");
-    
-    // Verileri Yükle
+    console.log("🛠️ Sistem senkronize ediliyor...");
     const savedData = localStorage.getItem('lgs_progress');
     if (savedData) {
-        try {
-            examData = JSON.parse(savedData);
-        } catch (e) {
-            console.error("Veri okuma hatası, sıfırlanıyor...");
-        }
+        try { examData = JSON.parse(savedData); } catch (e) { console.error("Veri hatası!"); }
     }
-
-    // UI Bileşenlerini Hazırla
     setupNav();
     await loadQuestion(1);
     updateStatsUI();
@@ -48,27 +38,22 @@ window.onload = async () => {
 async function setCategory(cat) {
     if (currentCategory === cat) return;
     currentCategory = cat;
-
-    // Buton aktifliklerini değiştir
     document.getElementById('btn-sayisal').classList.toggle('active', cat === 'sayisal');
     document.getElementById('btn-sozel').classList.toggle('active', cat === 'sozel');
-
     setupNav();
     await loadQuestion(1);
 }
 
 async function setYear(year) {
     currentYear = year;
-    // Tüm yıl butonlarını tara ve aktif olanı işaretle
     document.querySelectorAll('.year-btn').forEach(btn => {
         btn.classList.toggle('active', parseInt(btn.innerText) === year);
     });
-
     setupNav();
     await loadQuestion(1);
 }
 
-// --- 4. SORU MOTORU (CORE ENGINE) ---
+// --- 4. SORU MOTORU ---
 async function loadQuestion(index) {
     currentQuestionIndex = index;
     const qText = document.getElementById('question-text');
@@ -77,40 +62,31 @@ async function loadQuestion(index) {
     try {
         const response = await fetch(`/api/question?year=${currentYear}&category=${currentCategory.toLowerCase()}&index=${index}`);
         if (!response.ok) throw new Error("Soru bulunamadı");
-        
         currentQuestion = await response.json();
-        
-        // Arayüzü Güncelle
         renderQuestionUI();
         updateNavHighlight();
     } catch (err) {
-        qText.innerText = "Hata: Soru verisi alınamadı. Lütfen internetini veya API'yi kontrol et kanka.";
+        qText.innerText = "Hata: Soru verisi alınamadı.";
         console.error(err);
     }
 }
 
 function renderQuestionUI() {
     if (!currentQuestion) return;
-
-    // Soru ve Şık Metinlerini Bas
     document.getElementById('question-text').innerText = currentQuestion.question;
     document.getElementById('opt-A').innerText = currentQuestion.options.A;
     document.getElementById('opt-B').innerText = currentQuestion.options.B;
     document.getElementById('opt-C').innerText = currentQuestion.options.C;
     document.getElementById('opt-D').innerText = currentQuestion.options.D;
 
-    // AI Alanını Temizle
     document.getElementById('ai-response').innerHTML = "Soruyu çözünce analiz burada görünecek...";
     chatHistory = [];
 
-    // Şık Butonlarını Sıfırla (Neonları Temizle)
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.classList.remove('correct', 'wrong');
         btn.disabled = false;
-        btn.style.backgroundColor = ""; // ÖNEMLİ: CSS neonlarının çalışması için boş olmalı
     });
 
-    // Eğer soru önceden çözüldüyse kilitle ve neonları yak
     const qKey = `${currentYear}-${currentCategory}-${currentQuestionIndex}`;
     if (examData.userAnswers[qKey]) {
         applyLockedState(examData.userAnswers[qKey].selected, currentQuestion.answer);
@@ -120,12 +96,11 @@ function renderQuestionUI() {
 // --- 5. CEVAP KONTROLÜ VE NEON SİSTEMİ ---
 async function checkAnswer(selected) {
     const qKey = `${currentYear}-${currentCategory}-${currentQuestionIndex}`;
-    if (examData.userAnswers[qKey]) return; // Zaten çözüldüyse dur
+    if (examData.userAnswers[qKey]) return;
 
     const correctAnswer = currentQuestion.answer;
     const isCorrect = (selected === correctAnswer);
 
-    // İstatistik Güncelleme
     examData.userAnswers[qKey] = { isCorrect, selected };
     if (isCorrect) {
         examData.stats[currentCategory].correct++;
@@ -133,50 +108,39 @@ async function checkAnswer(selected) {
         examData.stats[currentCategory].wrong++;
     }
 
-    // Neon Efektlerini Uygula
     applyLockedState(selected, correctAnswer);
     
-    // Sol Menü (Soru Hafızası) Neonunu Yak
     const navBtn = document.getElementById(`nav-${qKey}`);
     if (navBtn) navBtn.classList.add(isCorrect ? 'correct' : 'wrong');
 
-    // Skor ve Kayıt
     calculateLGSScore();
     localStorage.setItem('lgs_progress', JSON.stringify(examData));
 
-    // AI Analizi
-// ... (checkAnswer fonksiyonunun üst kısmı aynı kalacak) ...
-// ... (üstteki kodların devamı)
     if (!isCorrect) {
         askAI(null, selected, correctAnswer);
     } else {
         document.getElementById('ai-response').innerHTML = 
             "<b style='color:#00ffa5; text-shadow:0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
     }
-} // <--- BU PARANTEZİ EKLE (checkAnswer'ı kapatır)
+}
 
-function applyLockedState(selected, correct) { //
-    // ... (bu fonksiyonun geri kalanı zaten sende var)
+function applyLockedState(selected, correct) {
     const options = ['A', 'B', 'C', 'D'];
     options.forEach(opt => {
         const btn = document.querySelector(`.option-btn[onclick="checkAnswer('${opt}')"]`);
         if (btn) {
             btn.disabled = true;
-            if (opt === correct) {
-                btn.classList.add('correct');
-            } else if (opt === selected) {
-                btn.classList.add('wrong');
-            }
+            if (opt === correct) btn.classList.add('correct');
+            else if (opt === selected) btn.classList.add('wrong');
         }
     });
 }
 
-// --- 6. SORU HAFIZASI (SIDEBAR) NAVİGASYONU ---
+// --- 6. SORU HAFIZASI ---
 function setupNav() {
     const navGrid = document.getElementById('question-nav');
     if (!navGrid) return;
     navGrid.innerHTML = "";
-    
     const count = currentCategory === 'sayisal' ? 40 : 50;
     for (let i = 1; i <= count; i++) {
         const btn = document.createElement('button');
@@ -184,12 +148,9 @@ function setupNav() {
         btn.id = `nav-${qKey}`;
         btn.className = 'nav-item';
         btn.innerText = i;
-        
-        // Eski sonuçları yükle (Neonlar)
         if (examData.userAnswers[qKey]) {
             btn.classList.add(examData.userAnswers[qKey].isCorrect ? 'correct' : 'wrong');
         }
-        
         btn.onclick = () => loadQuestion(i);
         navGrid.appendChild(btn);
     }
@@ -207,31 +168,16 @@ function updateNavHighlight() {
     }
 }
 
-function getNewQuestion() {
-    const max = currentCategory === 'sayisal' ? 40 : 50;
-    if (currentQuestionIndex < max) {
-        loadQuestion(currentQuestionIndex + 1);
-    } else {
-        alert("Bu bölüm bitti kanka! Diğer bölüme geçebilirsin.");
-    }
-}
-
-// --- 7. PUANLAMA VE İSTATİSTİK ---
+// --- 7. PUANLAMA ---
 function calculateLGSScore() {
     const s = examData.stats.sayisal;
     const sz = examData.stats.sozel;
-    
-    // Net = Doğru - (Yanlış / 3)
     const sNet = Math.max(0, s.correct - (s.wrong / 3));
     const szNet = Math.max(0, sz.correct - (sz.wrong / 3));
-    
     examData.stats.totalNet = sNet + szNet;
-    
-    // Katsayılar: Sayısal 3.75, Sözel 3.0 (Örnek)
     const sPuan = sNet * 3.75;
     const szPuan = szNet * 3.0;
     examData.stats.totalScore = Math.min(500, 200 + sPuan + szPuan);
-
     updateStatsUI(sNet, szNet, sPuan, szPuan);
 }
 
@@ -240,30 +186,14 @@ function updateStatsUI(sn = 0, szn = 0, sp = 0, szp = 0) {
     document.getElementById('stat-net').innerText = examData.stats.totalNet.toFixed(2);
     document.getElementById('stat-correct').innerText = examData.stats.sayisal.correct + examData.stats.sozel.correct;
     document.getElementById('stat-wrong').innerText = examData.stats.sayisal.wrong + examData.stats.sozel.wrong;
-    
-    document.getElementById('sayisal-net').innerText = sn.toFixed(2);
-    document.getElementById('sozel-net').innerText = szn.toFixed(2);
-    document.getElementById('sayisal-contribution').innerText = sp.toFixed(2);
-    document.getElementById('sozel-contribution').innerText = szp.toFixed(2);
 }
 
-// --- 8. AI ÖĞRETMEN SOHBET ---
+// --- 8. AI ÖĞRETMEN ---
 async function askAI(customMsg = null, selected = "", correct = "") {
-    if (isAiLoading) return;
-    
-    // KRİTİK KONTROL: Eğer soru yüklenmemişse kullanıcıyı uyar
-    if (!currentQuestion) {
-        document.getElementById('ai-response').innerHTML = "Kanka önce bir soru yüklemelisin ki sana yardımcı olabileyim! 😉";
-        return;
-    }
-
+    if (isAiLoading || !currentQuestion) return;
     isAiLoading = true;
     const aiBox = document.getElementById('ai-response');
-    
-    // Eğer kullanıcı bir şey sormadıysa (otomatik analizse) "analiz ediliyor" yazısını göster
-    if (!customMsg) {
-        aiBox.innerHTML = "<div class='loading'>AI Öğretmen analiz ediyor... ✨</div>";
-    }
+    if (!customMsg) aiBox.innerHTML = "<div class='loading'>AI Öğretmen analiz ediyor... ✨</div>";
 
     try {
         const response = await fetch('/api/explain', {
@@ -271,42 +201,30 @@ async function askAI(customMsg = null, selected = "", correct = "") {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 question: currentQuestion.question,
-                selected: selected || "",
+                selected: selected,
                 correct: correct || currentQuestion.answer,
                 userMessage: customMsg,
                 history: chatHistory
             })
         });
-
         const data = await response.json();
         const reply = data.reply.replace(/\n/g, '<br>');
         if (customMsg) {
-            // Kullanıcı soru sorduysa mesajı altına ekle
             aiBox.innerHTML += `<div style='margin-top:15px; color:#00bfa5'><b>Sen:</b> ${customMsg}</div>`;
             aiBox.innerHTML += `<div style='margin-top:5px'><b>Hoca:</b> ${reply}</div>`;
         } else {
-            // İlk yanlış yapıldığında gelen analiz
             aiBox.innerHTML = `<div>${reply}</div>`;
         }
-        
         chatHistory.push({ role: 'user', content: customMsg || "Analiz yap." }, { role: 'assistant', content: reply });
         aiBox.scrollTop = aiBox.scrollHeight;
     } catch (err) {
-        aiBox.innerHTML = "Hocaya ulaşılamıyor kanka, teknik bir arıza var.";
+        aiBox.innerHTML = "Hocaya ulaşılamıyor kanka.";
     } finally {
         isAiLoading = false;
     }
 }
 
-function handleSend() {
-    const input = document.getElementById('user-input');
-    if (input.value.trim()) {
-        askAI(input.value.trim());
-        input.value = "";
-    }
-}
-
-// --- 9. SPOTIFY & SÜRÜKLE-BIRAK ---
+// --- 9. SPOTIFY & UTILS ---
 function toggleSpotify() {
     const player = document.getElementById('spotify-player');
     const btn = document.getElementById('spot-toggle-btn');
@@ -315,12 +233,13 @@ function toggleSpotify() {
 }
 
 function updatePlaylist() {
-    const input = document.getElementById('spotify-link-input').value.trim();
+    const input = document.getElementById('spotify-link-input');
     const iframe = document.getElementById('spotify-iframe');
-    if (input.includes('spotify.com')) {
-        iframe.src = input;
-        localStorage.setItem('userPlaylist', input);
-        alert("Liste güncellendi kanka!");
+    let url = input.value.trim();
+    if (url) {
+        iframe.src = url;
+        localStorage.setItem('userPlaylist', url);
+        input.value = "";
     }
 }
 
@@ -331,138 +250,33 @@ function loadSavedPlaylist() {
 
 function setupSpotifyDragging() {
     const el = document.getElementById('spotify-player');
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    
     const header = document.querySelector('.spotify-header');
-    header.onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
+    if (!el || !header) return;
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    header.onmousedown = (e) => {
         e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        el.style.top = (el.offsetTop - pos2) + "px";
-        el.style.left = (el.offsetLeft - pos1) + "px";
-        el.style.bottom = "auto";
-        el.style.right = "auto";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
+        pos3 = e.clientX; pos4 = e.clientY;
+        document.onmouseup = () => {
+            document.onmouseup = null; document.onmousemove = null;
+            document.getElementById('spotify-iframe').style.pointerEvents = "auto";
+        };
+        document.onmousemove = (e) => {
+            e.preventDefault();
+            pos1 = pos3 - e.clientX; pos2 = pos4 - e.clientY;
+            pos3 = e.clientX; pos4 = e.clientY;
+            el.style.top = (el.offsetTop - pos2) + "px";
+            el.style.left = (el.offsetLeft - pos1) + "px";
+            el.style.bottom = "auto"; el.style.right = "auto";
+        };
+        document.getElementById('spotify-iframe').style.pointerEvents = "none";
+    };
 }
 
-// --- 10. SIFIRLAMA ---
-function resetProgress() {
-    if (confirm("Tüm verilerin silinecek, emin misin kanka?")) {
-        localStorage.removeItem('lgs_progress');
-        location.reload();
-    }
+function handleSend() {
+    const input = document.getElementById('user-input');
+    if (input.value.trim()) { askAI(input.value.trim()); input.value = ""; }
 }
 
-// Enter tuşu ile mesaj gönderme
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && document.activeElement.id === 'user-input') handleSend();
 });
-
-// --- SPOTIFY SİSTEMİ (GÜNCELLENDİ) ---
-
-function toggleSpotify() {
-    const player = document.getElementById('spotify-player');
-    const btn = document.getElementById('spot-toggle-btn');
-    if (!player) return;
-    
-    player.classList.toggle('collapsed');
-    // Buton ikonunu değiştir
-    btn.innerText = player.classList.contains('collapsed') ? "▲" : "▼";
-}
-
-function updatePlaylist() {
-    const input = document.getElementById('spotify-link-input');
-    const iframe = document.getElementById('spotify-iframe');
-    
-    if (!input || !iframe) return;
-
-    let url = input.value.trim();
-    
-    // Eğer kullanıcı direkt link yapıştırdıysa embed formatına çevir
-    if (url.includes('open.spotify.com')) {
-        url = url.replace('open.spotify.com/', 'open.spotify.com/embed/');
-        // Linkteki gereksiz parametreleri temizle (?si=... gibi)
-        if (url.includes('?')) {
-            url = url.split('?')[0];
-        }
-    }
-
-    if (url) {
-        iframe.src = url;
-        localStorage.setItem('userPlaylist', url);
-        input.value = ""; // Kutuyu temizle
-        console.log("Spotify linki güncellendi: ", url);
-    } else {
-        alert("Lütfen geçerli bir Spotify linki gir kanka!");
-    }
-}
-
-function loadSavedPlaylist() {
-    const saved = localStorage.getItem('userPlaylist');
-    const iframe = document.getElementById('spotify-iframe');
-    // Eğer kaydedilmiş link varsa onu yükle, yoksa varsayılanı bırak
-    if (saved && iframe) {
-        iframe.src = saved;
-    }
-}
-
-// --- SÜRÜKLE BIRAK FIX (IFRAME ÇAKIŞMASINI ENGELLER) ---
-function setupSpotifyDragging() {
-    const el = document.getElementById('spotify-player');
-    const header = document.querySelector('.spotify-header');
-    if (!el || !header) return;
-
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    
-    header.onmousedown = dragMouseDown;
-
-    function dragMouseDown(e) {
-        e.preventDefault();
-        // Mouse pozisyonunu al
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-        
-        // Sürüklerken iframe'in fareyi yutmasını engellemek için pointer-events kapat
-        document.getElementById('spotify-iframe').style.pointerEvents = "none";
-    }
-
-    function elementDrag(e) {
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        
-        el.style.top = (el.offsetTop - pos2) + "px";
-        el.style.left = (el.offsetLeft - pos1) + "px";
-        // Alttaki sabit pozisyonu boz
-        el.style.bottom = "auto";
-        el.style.right = "auto";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-        // Sürükleme bitince iframe'i tekrar tıklanabilir yap
-        document.getElementById('spotify-iframe').style.pointerEvents = "auto";
-    }
-}
