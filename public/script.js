@@ -144,21 +144,30 @@ function applyLockedState(selected, correct) {
 }
 
 // --- 6. AI ÖĞRETMEN SOHBET (SERVER.JS POST SYNC) ---
+async function askAI(customMsg = null, selected = "", correct = "") {// --- 6. AI ÖĞRETMEN SOHBET (GÜNCEL AKIŞ FİX) ---
 async function askAI(customMsg = null, selected = "", correct = "") {
     if (isAiLoading || !currentQuestion) return;
     
     isAiLoading = true;
     const aiBox = document.getElementById('ai-response');
-    if (!customMsg) aiBox.innerHTML = "<div class='ai-typing'>Hoca analiz ediyor... 🧐</div>";
+    
+    // Soru ile AI kutusu arasına 25px boşluk ekler
+    aiBox.style.marginTop = "25px";
+    aiBox.style.display = "flex";
+    aiBox.style.flexDirection = "column";
+
+    if (!customMsg) {
+        aiBox.innerHTML = "<div class='ai-typing'>Hoca analiz ediyor... 🧐</div>";
+    }
 
     try {
         const response = await fetch('/api/explain', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                questionText: currentQuestion.question, // SERVER.JS BURAYI BEKLİYOR
-                userAnswer: selected || "Belirtilmedi", // SERVER.JS BURAYI BEKLİYOR
-                correctAnswer: correct || currentQuestion.answer, // SERVER.JS BURAYI BEKLİYOR
+                questionText: currentQuestion.question,
+                userAnswer: selected || "Belirtilmedi",
+                correctAnswer: correct || currentQuestion.answer,
                 userMessage: customMsg,
                 chatHistory: chatHistory
             })
@@ -168,21 +177,29 @@ async function askAI(customMsg = null, selected = "", correct = "") {
         const reply = data.reply.replace(/\n/g, '<br>');
 
         if (customMsg) {
-            aiBox.innerHTML += `<div class='user-msg'><b>Sen:</b> ${customMsg}</div>`;
-            aiBox.innerHTML += `<div class='ai-msg'><b>Hoca:</b> ${reply}</div>`;
+            // Yeni mesajları kutunun altına ekler ve araya çizgi çeker
+            aiBox.innerHTML += `
+                <div class='msg-pair' style='border-top: 1px solid #333; padding: 10px 0; margin-top: 10px;'>
+                    <div class='user-msg' style='color:#00ffa5;'><b>Sen:</b> ${customMsg}</div>
+                    <div class='ai-msg' style='margin-top:5px;'><b>Hoca:</b> ${reply}</div>
+                </div>`;
+            
+            // Otomatik aşağı kaydır
+            aiBox.scrollTo({ top: aiBox.scrollHeight, behavior: 'smooth' });
         } else {
+            // İlk analiz geldiğinde kutuyu temizle ve en ÜSTTEN başlat
             aiBox.innerHTML = `<div class='ai-msg'>${reply}</div>`;
+            aiBox.scrollTop = 0; 
         }
         
         chatHistory.push({ role: 'user', text: customMsg || "Bu soruyu anlat." }, { role: 'assistant', text: reply });
-        aiBox.scrollTop = aiBox.scrollHeight;
+        
     } catch (err) {
         aiBox.innerHTML = "⚠️ Hocaya ulaşılamıyor, interneti kontrol et kanka.";
     } finally {
         isAiLoading = false;
     }
 }
-
 // --- 7. NAVİGASYON VE SKOR ---
 function setupNav() {
     const navGrid = document.getElementById('question-nav');
