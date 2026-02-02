@@ -400,46 +400,26 @@ button:active, .option-btn:active {
     transform: scale(0.98);
 }
 
-/* Şık butonlarını (A, B, C, D) sıfırla butonu gibi biraz daha modern yapalım */
+/* Şıkların genel görünümü ve kalınlığı */
 .option-btn {
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(5px);
-}
-
-/* 1. Şık Yazılarını Mermi Gibi Kalın ve Beyaz Yapar */
-.option-btn {
-    font-weight: 850 !important; /* İnce görünümü bitiren ana satır */
-    font-size: 1.1rem !important;
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important; /* Okunabilirliği artırır */
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(5px);
+    color: #ffffff !important;
+    font-weight: 850 !important; /* Kalınlık buraya geldi */
+    font-size: 1.1rem !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* 2. Soru Hafızasındaki (Sol Panel) Numaraları NEON Yapar */
-.nav-item.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.8) !important; /* Yeşil Parlama */
-    border: 1px solid #2ecc71 !important;
-    color: white !important;
-}
-
-.nav-item.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 15px rgba(231, 76, 60, 0.8) !important; /* Kırmızı Parlama */
-    border: 1px solid #e74c3c !important;
-    color: white !important;
-}
-
-/* 3. Tıkladığın Şıkkın (A, B, C, D) Kendisini de NEON Yapar */
+/* Şıklar seçilince yanacak NEONLAR */
 .option-btn.correct {
     background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
-    color: white !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
+    border-color: #2ecc71 !important;
 }
 
 .option-btn.wrong {
     background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
-    color: white !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
+    border-color: #e74c3c !important;
 }
