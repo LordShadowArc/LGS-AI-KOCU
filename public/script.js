@@ -36,7 +36,7 @@ function updatePlaylist() {
     if (input.includes('spotify.com')) {
         let embedLink = input;
         if (!embedLink.includes('/embed/')) {
-            embedLink = embedLink.replace('open.spotify.com/', 'open.spotify.com/embed/');
+            embedLink = embedLink.replace('open.spotify.com', 'open.spotify.com/embed');
         }
         if (embedLink.includes('?')) {
             embedLink = embedLink.split('?')[0];
@@ -49,12 +49,16 @@ function updatePlaylist() {
         alert('Geçerli bir Spotify linki yapıştır kanka!');
     }
 }
-// --- SÜRÜKLEME ÖZELLİĞİ (MOBİL VE PC) ---
-const playlistContainer = document.querySelector('.playlist-container');
+
+// --- SÜRÜKLEME ÖZELLİĞİ (HEM MOBİL HEM PC) ---
+const playlistContainer = document.getElementById('spotify-player');
 let isDragging = false;
 let currentX, currentY, initialX, initialY, xOffset = 0, yOffset = 0;
 
 function dragStart(e) {
+    // Toggle butonuna basınca sürükleme olmasın
+    if (e.target.id === "spot-toggle-btn") return;
+
     if (e.type === "touchstart") {
         initialX = e.touches[0].clientX - xOffset;
         initialY = e.touches[0].clientY - yOffset;
@@ -62,7 +66,8 @@ function dragStart(e) {
         initialX = e.clientX - xOffset;
         initialY = e.clientY - yOffset;
     }
-    if (e.target === playlistContainer || playlistContainer.contains(e.target)) {
+    
+    if (e.target.closest('.spotify-header') || e.target === playlistContainer) {
         isDragging = true;
     }
 }
@@ -89,14 +94,15 @@ function drag(e) {
     }
 }
 
-// Event Listeners
-playlistContainer.addEventListener("touchstart", dragStart, false);
-playlistContainer.addEventListener("touchend", dragEnd, false);
-playlistContainer.addEventListener("touchmove", drag, false);
+// Sürükleme Dinleyicileri
+playlistContainer.addEventListener("touchstart", dragStart, {passive: false});
+window.addEventListener("touchend", dragEnd);
+window.addEventListener("touchmove", drag, {passive: false});
 
-playlistContainer.addEventListener("mousedown", dragStart, false);
-playlistContainer.addEventListener("mouseup", dragEnd, false);
-playlistContainer.addEventListener("mousemove", drag, false);
+playlistContainer.addEventListener("mousedown", dragStart);
+window.addEventListener("mouseup", dragEnd);
+window.addEventListener("mousemove", drag);
+
 function loadSavedPlaylist() {
     const saved = localStorage.getItem('userLgsPlaylist');
     const iframe = document.getElementById('spotify-iframe');
@@ -124,6 +130,7 @@ async function setCategory(cat) {
 
 function setupNav() {
     const navGrid = document.getElementById('question-nav');
+    if(!navGrid) return;
     navGrid.innerHTML = ""; 
     const totalQuestions = currentCategory === 'sayisal' ? 40 : 50;
     
@@ -142,17 +149,15 @@ function setupNav() {
     }
 }
 
-// ASIL DEĞİŞİKLİK BURADA: Artık year bilgisini de gönderiyoruz
 async function loadQuestion(index) {
     currentQuestionIndex = index;
     try {
         const response = await fetch(`/api/question?year=${currentYear}&category=${currentCategory.toLowerCase()}&index=${index}`);
         
         if (!response.ok) {
-            // Soru yoksa butonları ve ekranı temizle
             currentQuestion = null; 
             resetOptionButtons(); 
-            document.getElementById('question-text').innerText = `${currentYear} / ${currentCategory.toUpperCase()} dosyası veya ${index}. soru bulunamadı kanka.`;
+            document.getElementById('question-text').innerText = `${currentYear} dosyası veya ${index}. soru bulunamadı kanka.`;
             ['A','B','C','D'].forEach(l => document.getElementById(`opt-${l}`).innerText = "");
             return;
         }
@@ -162,7 +167,7 @@ async function loadQuestion(index) {
         updateNavHighlight(); 
     } catch (err) { 
         console.error("Soru yüklenemedi:", err);
-        resetOptionButtons(); // Hata anında yeşillikleri temizle
+        resetOptionButtons();
     }
 }
 
@@ -260,10 +265,9 @@ function highlightButtons(selected, correct) {
 
 function lockButtonsForSolvedQuestion(key) {
     const data = examData.userAnswers[key];
-    highlightButtons(data.selected, currentQuestion.answer);
+    if(currentQuestion) highlightButtons(data.selected, currentQuestion.answer);
 }
 
-// --- AI ÖZELLİĞİ ---
 async function askAI(customMessage = null, userAnswer = "", correctAnswer = "") {
     if (!currentQuestion) return;
     const aiBox = document.getElementById('ai-response');
@@ -318,42 +322,11 @@ async function getNewQuestion() {
     if (currentQuestionIndex < maxQ) {
         loadQuestion(currentQuestionIndex + 1);
     } else {
-        const digerBolum = currentCategory === 'sayisal' ? 'Sözel' : 'Sayısal';
-        const digerKategoriKey = currentCategory === 'sayisal' ? 'sozel' : 'sayisal';
-        const onay = confirm(`${currentCategory.toUpperCase()} bitti! ${digerBolum} bölüme geçelim mi kanka?`);
-        if (onay) setCategory(digerKategoriKey);
+        const onay = confirm(`${currentCategory.toUpperCase()} bitti! Diğer bölüme geçelim mi kanka?`);
+        if (onay) setCategory(currentCategory === 'sayisal' ? 'sozel' : 'sayisal');
     }
 }
 
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && document.activeElement.id === 'user-input') handleSend();
 });
-
-// --- SÜRÜKLEME ÖZELLİĞİ ---
-const spotifyPanel = document.getElementById('spotify-player');
-const spotifyHeader = spotifyPanel.querySelector('.spotify-header');
-let isDragging = false, currentX, currentY, initialX, initialY, xOffset = 0, yOffset = 0;
-
-spotifyHeader.addEventListener("mousedown", dragStart);
-window.addEventListener("mousemove", drag);
-window.addEventListener("mouseup", dragEnd);
-
-function dragStart(e) {
-    if (e.target.id === "spot-toggle-btn") return;
-    initialX = e.clientX - xOffset;
-    initialY = e.clientY - yOffset;
-    isDragging = true;
-}
-function drag(e) {
-    if (isDragging) {
-        e.preventDefault();
-        currentX = e.clientX - initialX;
-        currentY = e.clientY - initialY;
-        xOffset = currentX;
-        yOffset = currentY;
-        spotifyPanel.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
-    }
-}
-function dragEnd() {
-    initialX = currentX; initialY = currentY; isDragging = false;
-}
