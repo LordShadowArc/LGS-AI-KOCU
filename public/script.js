@@ -181,11 +181,15 @@ function resetOptionButtons() {
 
 function displayQuestion() {
     if (!currentQuestion) return;
+    
+    // Soru metni
     document.getElementById('question-text').innerText = currentQuestion.question;
-    document.getElementById('opt-A').innerText = "A) " + currentQuestion.options.A;
-    document.getElementById('opt-B').innerText = "B) " + currentQuestion.options.B;
-    document.getElementById('opt-C').innerText = "C) " + currentQuestion.options.C;
-    document.getElementById('opt-D').innerText = "D) " + currentQuestion.options.D;
+    
+    // Şıklar (Sadece bunlar kalsın, çift harf olmaması için tertemiz hali)
+    document.getElementById('opt-A').innerText = currentQuestion.options.A;
+    document.getElementById('opt-B').innerText = currentQuestion.options.B;
+    document.getElementById('opt-C').innerText = currentQuestion.options.C;
+    document.getElementById('opt-D').innerText = currentQuestion.options.D;
 
     chatHistory = [];
     document.getElementById('ai-response').innerHTML = "<div>Soruyu çözünce analiz burada görünecek...</div>";
