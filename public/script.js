@@ -279,7 +279,6 @@ async function askAI(customMsg = null, selected = "", correct = "") {
 
         const data = await response.json();
         const reply = data.reply.replace(/\n/g, '<br>');
-
         if (customMsg) {
             // Kullanıcı soru sorduysa mesajı altına ekle
             aiBox.innerHTML += `<div style='margin-top:15px; color:#00bfa5'><b>Sen:</b> ${customMsg}</div>`;
