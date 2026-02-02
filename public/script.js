@@ -155,13 +155,27 @@ async function loadQuestion(index) {
         const response = await fetch(`/api/question?year=${currentYear}&category=${currentCategory.toLowerCase()}&index=${index}`);
         
         if (!response.ok) {
-            currentQuestion = null; 
-            function resetOptionButtons() {
+            currentQuestion = null;
+            return;
+        }
+
+        currentQuestion = await response.json();
+        resetOptionButtons(); // Butonları her yeni soruda temizle
+        displayQuestion();
+        updateNavHighlight();
+    } catch (err) {
+        console.error("Soru yüklenemedi:", err);
+    }
+}
+
+function resetOptionButtons() {
     const options = ['A', 'B', 'C', 'D'];
     options.forEach(opt => {
         const btn = document.getElementById(`opt-${opt}`);
-        btn.classList.remove('correct', 'wrong'); // Eski neonları temizle
-        btn.disabled = false;
+        if (btn) {
+            btn.classList.remove('correct', 'wrong'); // Neon renkleri temizle
+            btn.disabled = false;
+        }
     });
 }
 
