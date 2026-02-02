@@ -227,6 +227,16 @@ async function checkAnswer(selected) {
     }
     calculateLGSScore();
     localStorage.setItem('lgs_progress', JSON.stringify(examData));
+    // Soruyu çözünce yılın bitip bitmediğini kontrol et
+    const category = currentCategory.toLowerCase();
+    const allQuestionsInYear = Object.keys(questionsData[currentYear][category]).length;
+    const solvedQuestionsInYear = Object.keys(examData.userAnswers).filter(key => key.startsWith(`${currentYear}-`)).length;
+
+    if (solvedQuestionsInYear === allQuestionsInYear) {
+        setTimeout(() => {
+            showFinishScreen(); // Bütün sorular bittiyse sonuç ekranını aç
+        }, 1200);
+    }
 }
 
 function calculateLGSScore() {
@@ -399,67 +409,55 @@ function highlightButtons(selected, correct) {
         }
     });
 }
-
 function showFinishScreen() {
-    // 1. Ekrandaki her şeyi temizle (Container'ı bul ve sınıf ekle)
-    const scoreCard = document.querySelector('.score-card').parentElement; 
-    document.body.innerHTML = ''; // Sayfayı komple boşalt
-    document.body.classList.add('exam-finished-mode');
-
-    // 2. Sadece skor kartını ve paylaş butonunu geri getir
-    const finishHTML = `
-        <div class="score-card" style="text-align: center;">
-            <h2 style="color: #00ffa5; margin-bottom: 20px;">🏆 DENEME BİTTİ! 🏆</h2>
-            ${document.querySelector('.score-card').innerHTML}
-            <button class="share-btn" onclick="shareScore()">SONUCU WHATSAPP'TA PAYLAŞ</button>
-            <button class="share-btn" style="background: #555; margin-top: 10px;" onclick="location.reload()">YENİDEN BAŞLA</button>
-        </div>
-    `;
-    document.body.innerHTML = finishHTML;
-}
-
-function shareScore() {
-    const score = document.getElementById('total-score').innerText;
-    const net = document.getElementById('total-net').innerText;
-    const text = `Kanka LGS AI Koçu ile denemeyi bitirdim! Puanım: ${score}, Netim: ${net}. Bakalım sen beni geçebilecek misin? 🔥`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-}
-
-function showFinishScreen() {
-    // Mevcut yılları tanımlayalım
     const years = [2020, 2021, 2022, 2023, 2024, 2025];
     let currentIndex = years.indexOf(parseInt(currentYear));
     
-    // Ekranı temizle ve hazırlık yap
+    // 1. Ekranı temizle ve karart
     document.body.innerHTML = ''; 
     document.body.classList.add('exam-finished-mode');
 
-    // Butonları hazırlayalım (Sadece varsa görünecekler)
+    // 2. Akıllı Butonlar: Sadece varsa önceki ve sonraki yıl butonlarını ayarla
     let prevBtn = currentIndex > 0 ? 
-        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex-1]})">⬅️ ${years[currentIndex-1]} Denemesi</button>` : '';
+        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex-1]})">⬅️ ${years[currentIndex-1]} Denemesi</button>` : '<span></span>';
     
     let nextBtn = currentIndex < years.length - 1 ? 
-        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex+1]})">${years[currentIndex+1]} Denemesi ➡️</button>` : '';
+        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex+1]})">${years[currentIndex+1]} Denemesi ➡️</button>` : '<span></span>';
 
+    // 3. Dev Skor Tablosu ve Paylaşım Alanı
     const finishHTML = `
-        <div class="score-card finish-container" style="text-align: center;">
-            <h2 style="color: #00ffa5; margin-bottom: 20px; text-shadow: 0 0 10px #00ffa5;">🏆 DENEME SONUCUN 🏆</h2>
-            ${document.querySelector('.score-card').innerHTML} 
-            
-            <button class="share-btn" onclick="shareScore()">SONUCU WHATSAPP'TA PAYLAŞ</button>
-            
-            <div class="finish-navigation" style="margin-top: 20px; display: flex; justify-content: space-between; gap: 10px;">
-                ${prevBtn}
-                ${nextBtn}
+        <div class="exam-finished-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+            <div class="score-card finish-container" style="text-align: center; width: 450px; padding: 40px; border: 2px solid #00ffa5; box-shadow: 0 0 30px rgba(0, 255, 165, 0.3); border-radius: 20px; background: rgba(10, 25, 30, 0.9);">
+                <h2 style="color: #00ffa5; margin-bottom: 25px; text-shadow: 0 0 15px #00ffa5; font-weight: 900; font-size: 2rem;">🏆 DENEME BİTTİ! 🏆</h2>
+                
+                <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; margin-bottom: 25px; border: 1px solid rgba(0,255,165,0.2);">
+                    <p style="font-size: 1.8rem; font-weight: 900; color: #fff; margin: 0;">Puan: <span style="color: #00ffa5;">${examData.stats.totalScore.toFixed(2)}</span></p>
+                    <p style="font-size: 1.3rem; color: #aaa; margin-top: 10px;">Toplam Net: ${examData.stats.totalNet.toFixed(2)}</p>
+                </div>
+                
+                <button class="share-btn" onclick="shareScore()" style="width: 100%; padding: 18px; background: #25d366; color: white; border-radius: 12px; font-weight: 900; border: none; cursor: pointer; margin-bottom: 25px; font-size: 1.1rem;">WHATSAPP'TA PAYLAŞ</button>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px;">
+                    ${prevBtn}
+                    ${nextBtn}
+                </div>
+                
+                <button onclick="location.reload()" style="background: none; border: 1px solid #444; color: #666; margin-top: 30px; cursor: pointer; padding: 10px 20px; border-radius: 8px; font-weight: 600;">Anasayfaya Dön</button>
             </div>
-            <button class="share-btn" style="background: #444; margin-top: 15px;" onclick="location.reload()">Anasayfaya Dön</button>
         </div>
     `;
+    
     document.body.innerHTML = finishHTML;
 }
 
-// Yeni yıla geçiş fonksiyonu
+// Yıl değiştirme motoru
 function goToYear(year) {
-    localStorage.setItem('selectedYear', year); // Seçimi kaydet
-    location.reload(); // Sayfayı yenileyerek yeni yılı yükle
+    localStorage.setItem('selectedYear', year);
+    location.reload();
+}
+
+// WhatsApp paylaşım motoru
+function shareScore() {
+    const text = `Kanka LGS AI Koçu ile ${currentYear} denemesini bitirdim! Puanım: ${examData.stats.totalScore.toFixed(2)}, Netim: ${examData.stats.totalNet.toFixed(2)}. Bakalım sen beni geçebilecek misin? 🔥`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
 }
