@@ -1,62 +1,58 @@
-/* --- 1. ANA DEĞİŞKENLER VE GÖVDE --- */
+/* --- 1. GLOBAL AYARLAR --- */
 :root {
     --cam-bocegi: #00bfa5;
     --arka-plan: #004d40;
     --siyah-kutu: #1a1a1a;
-    --beyaz-metin: #ffffff;
+    --koyu-gri: #252525;
 }
 
 body {
     background-color: var(--arka-plan);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    color: var(--beyaz-metin);
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* --- 2. LAYOUT: PC'DE YAN YANA DÜZEN --- */
+/* --- 2. LAYOUT (PC'de 3'lü Yan Yana) --- */
 .main-layout {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    width: 100%;
-    max-width: 1600px; /* PC'de geniş durması için */
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
-/* Yan Paneller (Hafıza ve Skor) */
 .sidebar {
     flex: 1;
-    min-width: 300px;
-    max-width: 350px;
+    min-width: 280px;
+    max-width: 320px;
     background: var(--siyah-kutu);
-    padding: 20px;
     border-radius: 20px;
+    padding: 20px;
     height: fit-content;
 }
 
-/* Orta Soru Alanı */
 .container {
     flex: 2;
     min-width: 400px;
     max-width: 800px;
 }
 
-/* --- 3. KAYBOLAN BUTONLAR VE BÖLÜM SEÇİMİ --- */
+/* --- 3. KATEGORİ BUTONLARI (Sayısal/Sözel) --- */
 .category-selection {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .cat-btn {
     flex: 1;
-    padding: 12px;
+    padding: 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background: var(--siyah-kutu);
     color: white;
     font-weight: bold;
@@ -69,36 +65,70 @@ body {
     color: #000;
 }
 
-/* Sonraki Soru Butonu */
-.next-btn {
+/* --- 4. SORU KARTI VE ŞIKLAR --- */
+.question-card {
+    background: var(--cam-bocegi);
+    color: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.option-btn {
     width: 100%;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* --- 5. SONRAKİ SORU BUTONU --- */
+.next-btn {
+    width: 100%;
+    padding: 16px;
     background: var(--cam-bocegi);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
     font-weight: 900;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* --- 4. AI ANALİZ KUTUSU DÜZENLEME --- */
+/* --- 6. AI ANALİZ KUTUSU VE GİRİŞ ALANI --- */
 .ai-card {
     background: var(--siyah-kutu);
-    padding: 20px;
+    padding: 25px;
     border-radius: 20px;
-    margin-top: 20px;
     border: 1px solid rgba(0, 191, 165, 0.3);
+}
+
+.ai-content {
+    min-height: 60px;
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #ddd;
 }
 
 .input-area {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
-    background: #252525;
-    padding: 10px;
+    background: var(--koyu-gri);
+    padding: 8px;
     border-radius: 12px;
+    gap: 10px;
 }
 
 #user-input {
@@ -106,47 +136,55 @@ body {
     background: transparent;
     border: none;
     color: white;
+    padding: 10px;
     outline: none;
 }
 
 #send-btn {
     background: var(--cam-bocegi);
+    color: #000;
     border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
 }
 
-/* --- 5. SORU KARTI VE ŞIKLAR --- */
-.question-card {
-    background: var(--cam-bocegi);
-    color: #1a1a1a;
-    padding: 30px;
-    border-radius: 20px;
+/* --- 7. DİĞER BİLEŞENLER (Nav, Year, Spotify) --- */
+.nav-grid, .year-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
 }
 
-.option-btn {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.1);
+.year-btn {
+    background: #252525;
     color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: 600;
 }
 
-/* --- 6. MOBİL UYUMLULUK --- */
-@media (max-width: 1024px) {
-    .main-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-    .sidebar, .container {
-        width: 100%;
-        max-width: 500px;
-    }
+.year-btn.active { background: var(--cam-bocegi); color: #000; }
+
+.spotify-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+    background: var(--siyah-kutu);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--cam-bocegi);
+}
+
+/* --- 8. MOBİL UYUM --- */
+@media (max-width: 1100px) {
+    .main-layout { flex-direction: column; align-items: center; }
+    .sidebar, .container { width: 100% !important; max-width: 100%; }
+    .sidebar-left { order: 2; }
+    .container { order: 1; }
+    .sidebar-right { order: 3; }
 }
