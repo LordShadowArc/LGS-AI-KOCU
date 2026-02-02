@@ -268,8 +268,12 @@ function lockButtonsForSolvedQuestion(key) {
     if(currentQuestion) highlightButtons(data.selected, currentQuestion.answer);
 }
 
+let isAiLoading = false; // Üst üste istek gitmesini engeller
+
 async function askAI(customMessage = null, userAnswer = "", correctAnswer = "") {
-    if (!currentQuestion) return;
+    if (!currentQuestion || isAiLoading) return; 
+    
+    isAiLoading = true;
     const aiBox = document.getElementById('ai-response');
     
     try {
@@ -286,6 +290,13 @@ async function askAI(customMessage = null, userAnswer = "", correctAnswer = "") 
         });
         
         const data = await response.json();
+        
+        // Eğer API kota hatası verirse kullanıcıya bildir
+        if (response.status === 429) {
+            aiBox.innerHTML = "<div><b>Hocan şu an çay molasında kanka, birazdan tekrar dene!</b></div>";
+            return;
+        }
+
         const formattedReply = data.reply.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>');
         
         if (customMessage) {
@@ -297,7 +308,12 @@ async function askAI(customMessage = null, userAnswer = "", correctAnswer = "") 
         
         aiBox.scrollTop = aiBox.scrollHeight;
         chatHistory.push({ role: 'assistant', text: data.reply });
-    } catch (err) { console.error("AI Hatası:", err); }
+    } catch (err) { 
+        console.error("AI Hatası:", err); 
+        aiBox.innerHTML = "<div>Bağlantıda bir sorun oldu kanka, bir sonraki soruda tekrar deneriz!</div>";
+    } finally {
+        isAiLoading = false; // Her durumda kilidi aç ki sistem kilitlenmesin
+    }
 }
 
 function resetOptionButtons() {
