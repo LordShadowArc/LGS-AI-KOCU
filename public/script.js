@@ -254,13 +254,16 @@ function updateNavHighlight() {
 }
 
 function highlightButtons(selected, correct) {
-    const buttons = document.querySelectorAll('.option-btn');
-    const letters = ['A', 'B', 'C', 'D'];
-    buttons.forEach((btn, index) => {
-        btn.disabled = true;
-        const btnLetter = letters[index];
-        if (btnLetter === correct) btn.style.backgroundColor = "#2ecc71";
-        if (btnLetter === selected && selected !== correct) btn.style.backgroundColor = "#e74c3c";
+    const options = ['A', 'B', 'C', 'D'];
+    options.forEach(opt => {
+        const btn = document.getElementById(`opt-${opt}`);
+        if (opt === correct) {
+            // Doğru şıkkı yeşil neon yapar
+            btn.classList.add('correct');
+        } else if (opt === selected && selected !== correct) {
+            // Yanlış seçilen şıkkı kırmızı neon yapar
+            btn.classList.add('wrong');
+        }
     });
 }
 
