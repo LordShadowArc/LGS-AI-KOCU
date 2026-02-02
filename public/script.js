@@ -145,15 +145,16 @@ async function checkAnswer(selected) {
     localStorage.setItem('lgs_progress', JSON.stringify(examData));
 
     // AI Analizi
-    // AI Analizi
+// ... (checkAnswer fonksiyonunun üst kısmı aynı kalacak) ...
     if (!isCorrect) {
         // Yanlış cevapta parametreleri (null, seçilen, doğru) eksiksiz gönderiyoruz
         askAI(null, selected, correctAnswer);
     } else {
         // Doğru cevapta image_38cc23.png'deki gibi tebrik mesajı
         document.getElementById('ai-response').innerHTML = 
-            "<b style='color:#00ffa5; text-shadow: 0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
+            "<b style='color:#00ffa5; text-shadow:0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
     }
+} // <--- BU PARANTEZ checkAnswer FONKSİYONUNU KAPATIR. BU EKSİK OLABİLİR!
 
 function applyLockedState(selected, correct) {
     const options = ['A', 'B', 'C', 'D'];
@@ -162,9 +163,9 @@ function applyLockedState(selected, correct) {
         if (btn) {
             btn.disabled = true;
             if (opt === correct) {
-                btn.classList.add('correct'); // YEŞİL NEON
+                btn.classList.add('correct');
             } else if (opt === selected) {
-                btn.classList.add('wrong'); // KIRMIZI NEON
+                btn.classList.add('wrong');
             }
         }
     });
