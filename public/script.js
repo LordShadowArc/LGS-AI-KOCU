@@ -68,6 +68,7 @@ async function loadQuestion(index) {
         
         currentQuestion = await response.json();
         renderQuestionUI();
+        document.getElementById('ai-response').scrollTop = 0;
         updateNavHighlight();
     } catch (err) {
         console.error(err);
