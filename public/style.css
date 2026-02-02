@@ -1,173 +1,69 @@
-/* --- 1. GLOBAL AYARLAR --- */
 :root {
     --cam-bocegi: #00bfa5;
-    --arka-plan: #0b2d27;
-    --siyah-kutu: #121212;
-    --neon-yesil: #00ffa5;
-    --neon-kirmizi: #ff4b2b;
+    --arka-plan: #004d40;
+    --koyu: #121212;
 }
-
-* { box-sizing: border-box; }
 
 body {
-    background-color: var(--arka-plan);
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
+    background: var(--arka-plan);
     color: white;
-    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* --- 2. LAYOUT --- */
 .main-layout {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
     padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .sidebar {
-    flex: 1;
-    min-width: 280px;
-    max-width: 320px;
-    background: var(--siyah-kutu);
-    border-radius: 20px;
+    width: 300px;
+    background: var(--koyu);
     padding: 20px;
+    border-radius: 15px;
     height: fit-content;
-    border: 1px solid rgba(0, 191, 165, 0.2);
 }
 
 .container {
-    flex: 2;
-    min-width: 400px;
-    max-width: 850px;
-}
-
-/* --- 3. KATEGORİ BUTONLARI --- */
-.category-selection {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.cat-btn {
     flex: 1;
-    padding: 15px;
-    background: var(--siyah-kutu);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: white;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.cat-btn.active {
-    background: var(--cam-bocegi);
-    color: #000;
-    border-color: var(--cam-bocegi);
-}
-
-/* --- 4. SORU KARTI VE ŞIKLAR --- */
+/* ŞIKLAR - KAYA GİBİ */
 .question-card {
     background: var(--cam-bocegi);
-    color: #1a1a1a;
-    padding: 30px;
+    color: #000;
+    padding: 25px;
     border-radius: 20px;
     margin-bottom: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .option-btn {
     width: 100%;
-    padding: 18px;
+    padding: 15px;
     margin-top: 10px;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.1);
     background: rgba(255,255,255,0.2);
-    color: #1a1a1a;
-    text-align: left;
-    font-weight: 850; /* KAYA GİBİ */
+    font-weight: 850;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: 0.2s;
+    text-align: left;
 }
 
-.option-btn:hover { background: rgba(255,255,255,0.4); }
+.option-btn.correct { background: #2ecc71 !important; color: white; }
+.option-btn.wrong { background: #e74c3c !important; color: white; }
 
-.option-btn.correct { background: var(--neon-yesil) !important; color: #000; font-weight: 900; }
-.option-btn.wrong { background: var(--neon-kirmizi) !important; color: #fff; }
-
-/* --- 5. AI VE SKOR --- */
-.ai-card {
-    background: var(--siyah-kutu);
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(0, 191, 165, 0.3);
-}
-
-.ai-content {
-    min-height: 80px;
-    max-height: 250px;
-    overflow-y: auto;
-    background: #000;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.score-box {
-    background: var(--cam-bocegi);
-    color: #000;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 15px 0;
-}
-
-#stat-score { font-size: 2.2rem; font-weight: 900; }
-
-.nav-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-}
-
-.nav-item {
-    padding: 8px;
-    background: #252525;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.nav-item.correct { background: var(--neon-yesil) !important; color: #000; }
-.nav-item.wrong { background: var(--neon-kirmizi) !important; }
-
-/* --- 6. MOBİL UYUM (ZIRHLI) --- */
-@media screen and (max-width: 1100px) {
+/* MOBİL AYARLAR */
+@media (max-width: 1000px) {
     .main-layout { flex-direction: column; align-items: center; }
-    .container, .sidebar { width: 100% !important; max-width: 100%; }
-    .container { order: 1; }
-    .sidebar-left { order: 2; }
-    .sidebar-right { order: 3; }
-    .option-btn { font-size: 1rem; padding: 15px; }
+    .sidebar, .container { width: 100% !important; }
+    .container { order: 1; } /* Soru en üstte */
 }
 
-/* SPOTIFY */
-.spotify-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background: var(--siyah-kutu);
-    border: 1px solid var(--cam-bocegi);
-    border-radius: 15px;
-    overflow: hidden;
-    z-index: 1000;
-}
-.spotify-header { background: var(--cam-bocegi); color: #000; padding: 10px; display: flex; justify-content: space-between; font-weight: bold; }
+.spotify-container { position: fixed; bottom: 10px; right: 10px; width: 300px; background: #000; border-radius: 10px; overflow: hidden; }
+.spotify-header { background: var(--cam-bocegi); color: #000; padding: 10px; cursor: pointer; font-weight: bold; }
