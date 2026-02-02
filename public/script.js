@@ -399,3 +399,28 @@ function highlightButtons(selected, correct) {
         }
     });
 }
+
+function showFinishScreen() {
+    // 1. Ekrandaki her şeyi temizle (Container'ı bul ve sınıf ekle)
+    const scoreCard = document.querySelector('.score-card').parentElement; 
+    document.body.innerHTML = ''; // Sayfayı komple boşalt
+    document.body.classList.add('exam-finished-mode');
+
+    // 2. Sadece skor kartını ve paylaş butonunu geri getir
+    const finishHTML = `
+        <div class="score-card" style="text-align: center;">
+            <h2 style="color: #00ffa5; margin-bottom: 20px;">🏆 DENEME BİTTİ! 🏆</h2>
+            ${document.querySelector('.score-card').innerHTML}
+            <button class="share-btn" onclick="shareScore()">SONUCU WHATSAPP'TA PAYLAŞ</button>
+            <button class="share-btn" style="background: #555; margin-top: 10px;" onclick="location.reload()">YENİDEN BAŞLA</button>
+        </div>
+    `;
+    document.body.innerHTML = finishHTML;
+}
+
+function shareScore() {
+    const score = document.getElementById('total-score').innerText;
+    const net = document.getElementById('total-net').innerText;
+    const text = `Kanka LGS AI Koçu ile denemeyi bitirdim! Puanım: ${score}, Netim: ${net}. Bakalım sen beni geçebilecek misin? 🔥`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
