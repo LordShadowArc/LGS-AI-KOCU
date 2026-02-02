@@ -246,10 +246,20 @@ function updateStatsUI(sn = 0, szn = 0, sp = 0, szp = 0) {
 // --- 8. AI ÖĞRETMEN SOHBET ---
 async function askAI(customMsg = null, selected = "", correct = "") {
     if (isAiLoading) return;
-    isAiLoading = true;
     
+    // KRİTİK KONTROL: Eğer soru yüklenmemişse kullanıcıyı uyar
+    if (!currentQuestion) {
+        document.getElementById('ai-response').innerHTML = "Kanka önce bir soru yüklemelisin ki sana yardımcı olabileyim! 😉";
+        return;
+    }
+
+    isAiLoading = true;
     const aiBox = document.getElementById('ai-response');
-    if (!customMsg) aiBox.innerHTML = "<div class='loading'>AI Öğretmen analiz ediyor... ✨</div>";
+    
+    // Eğer kullanıcı bir şey sormadıysa (otomatik analizse) "analiz ediliyor" yazısını göster
+    if (!customMsg) {
+        aiBox.innerHTML = "<div class='loading'>AI Öğretmen analiz ediyor... ✨</div>";
+    }
 
     try {
         const response = await fetch('/api/explain', {
@@ -268,13 +278,15 @@ async function askAI(customMsg = null, selected = "", correct = "") {
         const reply = data.reply.replace(/\n/g, '<br>');
 
         if (customMsg) {
+            // Kullanıcı soru sorduysa mesajı altına ekle
             aiBox.innerHTML += `<div style='margin-top:15px; color:#00bfa5'><b>Sen:</b> ${customMsg}</div>`;
             aiBox.innerHTML += `<div style='margin-top:5px'><b>Hoca:</b> ${reply}</div>`;
         } else {
+            // İlk yanlış yapıldığında gelen analiz
             aiBox.innerHTML = `<div>${reply}</div>`;
         }
         
-        chatHistory.push({ role: 'user', content: customMsg }, { role: 'assistant', content: reply });
+        chatHistory.push({ role: 'user', content: customMsg || "Analiz yap." }, { role: 'assistant', content: reply });
         aiBox.scrollTop = aiBox.scrollHeight;
     } catch (err) {
         aiBox.innerHTML = "Hocaya ulaşılamıyor kanka, teknik bir arıza var.";
