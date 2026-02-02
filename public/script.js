@@ -294,50 +294,18 @@ function resetProgress() {
 function setupSpotifyDragging() {
     const el = document.getElementById('spotify-player');
     const header = document.querySelector('.spotify-header');
-    if (!el || !header) return;
-
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-    const dragStart = (e) => {
-        // Hem tıklamayı hem dokunmayı algıla
-        const event = e.type === 'touchstart' ? e.touches[0] : e;
-        pos3 = event.clientX;
-        pos4 = event.clientY;
-        
-        document.onmouseup = dragEnd;
-        document.ontouchend = dragEnd;
-        document.onmousemove = dragMove;
-        document.ontouchmove = dragMove;
+    header.onmousedown = (e) => {
+        pos3 = e.clientX; pos4 = e.clientY;
+        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
+        document.onmousemove = (e) => {
+            pos1 = pos3 - e.clientX; pos2 = pos4 - e.clientY;
+            pos3 = e.clientX; pos4 = e.clientY;
+            el.style.top = (el.offsetTop - pos2) + "px";
+            el.style.left = (el.offsetLeft - pos1) + "px";
+            el.style.bottom = "auto"; el.style.right = "auto";
+        };
     };
-
-    const dragMove = (e) => {
-        const event = e.type === 'touchmove' ? e.touches[0] : e;
-        pos1 = pos3 - event.clientX;
-        pos2 = pos4 - event.clientY;
-        pos3 = event.clientX;
-        pos4 = event.clientY;
-        
-        // Elemanın yeni pozisyonunu hesapla
-        let newTop = el.offsetTop - pos2;
-        let newLeft = el.offsetLeft - pos1;
-
-        // Ekran dışına çıkmasını engelle (opsiyonel)
-        el.style.top = newTop + "px";
-        el.style.left = newLeft + "px";
-        el.style.bottom = "auto";
-        el.style.right = "auto";
-    };
-
-    const dragEnd = () => {
-        document.onmouseup = null;
-        document.ontouchend = null;
-        document.onmousemove = null;
-        document.ontouchmove = null;
-    };
-
-    // Dinleyicileri ekle
-    header.onmousedown = dragStart;
-    header.ontouchstart = dragStart;
 }
 
 document.getElementById('user-input').addEventListener('keypress', (e) => {
