@@ -70,25 +70,43 @@ body {
     color: #333;
 }
 
-/* Şık butonlarını (A, B, C, D) neon ve şeffaf yaparken renkleri koru */
+/* Şık butonlarının (A, B, C, D) temel neon tasarımı */
 .option-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #333; /* Soru kartı içindeki yazı rengiyle uyumlu olsun diye */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-    /* Arkaplanı !important yapmıyoruz ki JS ile gelen renk görünebilsin */
-    background: rgba(255, 255, 255, 0.05); 
+    text-align: left;
 }
 
-/* Doğru ve Yanlış renklerinin neon efektini güçlendirelim */
+/* Üstüne gelince büyüme ve parlama */
+.option-btn:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Doğru bildiğinde yanacak yeşil neon */
 .option-btn.correct {
-    background-color: #2ecc71 !important; /* Yeşil */
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
+    background-color: #2ecc71 !important;
     color: white !important;
+    border-color: #2ecc71 !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
 }
 
+/* Yanlış bildiğinde yanacak kırmızı neon */
 .option-btn.wrong {
-    background-color: #e74c3c !important; /* Kırmızı */
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
+    background-color: #e74c3c !important;
     color: white !important;
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
 }
 
 /* Sonraki Soruya Geç Butonu */
