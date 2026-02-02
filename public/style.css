@@ -476,3 +476,31 @@ button:active, .option-btn:active {
     width: 100%;
     cursor: pointer;
 }
+
+/* Bitiş Ekranındaki Neon Butonlar */
+.neon-btn {
+    background: rgba(0, 255, 165, 0.1) !important;
+    border: 1px solid #00ffa5 !important;
+    color: #00ffa5 !important;
+    font-weight: 800 !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ffa5;
+    box-shadow: 0 0 10px rgba(0, 255, 165, 0.2);
+}
+
+.neon-btn:hover {
+    background: #00ffa5 !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 0 20px #00ffa5 !important;
+}
+
+/* Skor kartını dev yapma */
+.finish-container {
+    width: 450px !important;
+    padding: 30px !important;
+    border: 2px solid #00ffa5 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 165, 0.3) !important;
+}
