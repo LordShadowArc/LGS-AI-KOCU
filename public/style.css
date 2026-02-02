@@ -573,18 +573,63 @@ button:active, .option-btn:active {
         font-size: 16px;
     }
 
-    /* Spotify Mobilde Sürüklenemez Olduğu İçin Sabitleyelim */
-    .spotify-container {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        bottom: 20px !important;
-        top: auto !important; /* Mobilde tepede asılı kalmasın */
-        position: fixed;
-    }
-
     /* AI Kutusu mobilde çok dar kalmasın */
     .ai-card {
         margin-bottom: 100px; /* Spotify arkasında kalmasın diye boşluk */
     }
+}
+
+/* --- EVRENSEL ESNEK TASARIM --- */
+:root {
+    --side-width: 280px;
+}
+
+.main-layout {
+    display: flex;
+    flex-wrap: wrap; /* Ekran daralınca alt satıra geçişi sağlar */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Yan panelleri (Soru hafızası ve Skor) esnek yap */
+.sidebar {
+    flex: 1 1 var(--side-width); /* En az 280px olsun, yer varsa büyüsün */
+    max-width: 350px;
+    min-width: 250px;
+}
+
+/* Ana soru alanı */
+.container {
+    flex: 2 1 500px; /* Soru kartı merkezde kalsın ve daha geniş olsun */
+    max-width: 800px;
+    min-width: 320px;
+}
+
+/* Mobil ve Tablet için ince ayar */
+@media (max-width: 1100px) {
+    .main-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sidebar, .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Mobilde yazı boyutlarını hafif küçült ki her şey sığsın */
+    #question-text { font-size: 1.1rem; }
+}
+
+/* Spotify her zaman sürüklenebilir olduğu için başlangıç konumu */
+.spotify-container {
+    z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    touch-action: none; /* Mobilde tarayıcı kaydırmasını engeller, sürüklemeyi önceler */
 }
