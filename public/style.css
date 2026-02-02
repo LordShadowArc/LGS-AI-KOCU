@@ -7,6 +7,8 @@
 }
 
 body {
+    overflow-x: hidden; /* Sağa kaymayı engeller */
+touch-action: pan-y; /* Sadece dikey kaydırmaya izin verir */
     background: var(--arka-plan);
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -20,15 +22,15 @@ body {
 /* --- 2. UNIVERSAL LAYOUT (PC, TABLET, MOBİL UYUMLU) --- */
 .main-layout {
     display: flex;
-    flex-wrap: wrap; /* Ekran daralınca alt alta geçer */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    width: 95%;
+    padding: 10px; /* Mobilde taşma yapmaması için 20'den 10'a düşürdük */
+    width: 100%; /* %95'ten %100'e çektik */
     max-width: 1600px;
     margin: 0 auto;
+    box-sizing: border-box; /* Padding'in dışarı taşmasını engeller */
 }
-
 /* Yan Paneller */
 .sidebar {
     flex: 1 1 var(--side-width);
@@ -181,4 +183,19 @@ body {
 @media (max-width: 480px) {
     .option-btn { font-size: 1rem !important; padding: 12px; }
     #question-text { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+    .sidebar, .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+    
+    #spotify-player {
+        width: 90% !important; /* Mobilde ekranı kaplamasın */
+        right: 5% !important;
+        left: 5% !important;
+    }
 }
