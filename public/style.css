@@ -70,18 +70,25 @@ body {
     color: #333;
 }
 
+/* Şık butonlarını (A, B, C, D) neon ve şeffaf yaparken renkleri koru */
 .option-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: left;
-    background: #fdfdfd;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+    /* Arkaplanı !important yapmıyoruz ki JS ile gelen renk görünebilsin */
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+/* Doğru ve Yanlış renklerinin neon efektini güçlendirelim */
+.option-btn.correct {
+    background-color: #2ecc71 !important; /* Yeşil */
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
+    color: white !important;
+}
+
+.option-btn.wrong {
+    background-color: #e74c3c !important; /* Kırmızı */
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
+    color: white !important;
 }
 
 /* Sonraki Soruya Geç Butonu */
