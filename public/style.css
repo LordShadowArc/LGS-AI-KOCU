@@ -70,20 +70,21 @@ body {
     color: #333;
 }
 
-/* Şık butonlarının (A, B, C, D) temel neon tasarımı */
 .option-btn {
     width: 100%;
     margin-bottom: 10px;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05) !important;
-    color: #333; /* Soru kartı içindeki yazı rengiyle uyumlu olsun diye */
-    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important; /* Yazı rengi bembeyaz olsun */
+    font-weight: 850 !important; /* İŞTE BU SATIR KALINLAŞTIRIR */
+    font-size: 1.15rem !important; /* Biraz daha büyük ve heybetli */
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     text-align: left;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Yazıya derinlik katar, daha net okunur */
 }
 
 /* Üstüne gelince büyüme ve parlama */
