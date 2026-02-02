@@ -145,12 +145,15 @@ async function checkAnswer(selected) {
     localStorage.setItem('lgs_progress', JSON.stringify(examData));
 
     // AI Analizi
+    // AI Analizi
     if (!isCorrect) {
+        // Yanlış cevapta parametreleri (null, seçilen, doğru) eksiksiz gönderiyoruz
         askAI(null, selected, correctAnswer);
     } else {
-        document.getElementById('ai-response').innerHTML = "<b style='color:#00ffa5; text-shadow:0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
+        // Doğru cevapta image_38cc23.png'deki gibi tebrik mesajı
+        document.getElementById('ai-response').innerHTML = 
+            "<b style='color:#00ffa5; text-shadow: 0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
     }
-}
 
 function applyLockedState(selected, correct) {
     const options = ['A', 'B', 'C', 'D'];
