@@ -314,15 +314,23 @@ function setupSpotifyDragging() {
     const header = document.querySelector('.spotify-header');
     if (!el || !header) return;
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    
     header.onmousedown = (e) => {
-        pos3 = e.clientX; pos4 = e.clientY;
-        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
+        pos3 = e.clientX; 
+        pos4 = e.clientY;
+        document.onmouseup = () => { 
+            document.onmouseup = null; 
+            document.onmousemove = null; 
+        };
         document.onmousemove = (e) => {
-            pos1 = pos3 - e.clientX; pos2 = pos4 - e.clientY;
-            pos3 = e.clientX; pos4 = e.clientY;
+            pos1 = pos3 - e.clientX; 
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX; 
+            pos4 = e.clientY;
             el.style.top = (el.offsetTop - pos2) + "px";
             el.style.left = (el.offsetLeft - pos1) + "px";
-            el.style.bottom = "auto"; el.style.right = "auto";
+            el.style.bottom = "auto"; 
+            el.style.right = "auto";
         };
     };
 }
