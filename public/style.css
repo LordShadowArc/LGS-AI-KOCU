@@ -23,11 +23,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 10px; /* Mobilde taşma yapmaması için 20'den 10'a düşürdük */
-    width: 100%; /* %95'ten %100'e çektik */
+    padding: 10px;
+    width: 95%; /* %100'den %95'e çektik (PC için) */
     max-width: 1600px;
     margin: 0 auto;
-    box-sizing: border-box; /* Padding'in dışarı taşmasını engeller */
+    box-sizing: border-box;
 }
 /* Yan Paneller */
 .sidebar {
