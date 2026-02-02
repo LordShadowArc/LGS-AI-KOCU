@@ -504,3 +504,29 @@ button:active, .option-btn:active {
     border: 2px solid #00ffa5 !important;
     box-shadow: 0 0 30px rgba(0, 255, 165, 0.3) !important;
 }
+
+/* --- ŞIKLARIN NEON PARLAMALARI --- */
+
+/* 1. Doğru Şık (Yeşil Neon) */
+.option-btn.correct {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
+    border: 2px solid #2ecc71 !important;
+    color: white !important;
+    font-weight: 900 !important;
+}
+
+/* 2. Yanlış Şık (Kırmızı Neon) */
+.option-btn.wrong {
+    background-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
+    border: 2px solid #e74c3c !important;
+    color: white !important;
+    font-weight: 900 !important;
+}
+
+/* 3. Şıkların Genel Yazı Kalınlığı (Daha net okunsun diye) */
+.option-btn {
+    font-weight: 800 !important;
+    transition: all 0.3s ease !important;
+}
