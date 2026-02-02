@@ -320,3 +320,20 @@ body {
     transform: translate3d(0px, 0, 0); /* Başlangıç pozisyonu */
     transition: none; /* Sürükleme sırasında gecikme olmaması için */
 }
+
+@media screen and (max-width: 768px) {
+    /* Çalma listesi kutusunu mobilde daha küçük ve saydam yap */
+    .playlist-container {
+        position: relative !important; /* Ekranı kaplamasın, akışa katılsın */
+        width: 100% !important;
+        max-height: 150px; /* Çok yer kaplamasın */
+        overflow: hidden;
+        z-index: 10;
+        margin-top: 20px;
+    }
+
+    /* Sayfanın geri kalanını engellememesi için dokunma ayarı */
+    .playlist-container iframe {
+        pointer-events: auto; /* Sadece widget içine dokunulabilsin */
+    }
+}
