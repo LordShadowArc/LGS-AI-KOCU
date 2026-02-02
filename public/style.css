@@ -12,7 +12,7 @@ body {
 .main-layout {
     display: flex;
     justify-content: space-between; /* Sol paneli sola, sağ paneli sağa yaslar */
-    width: 100%;
+    width: 95%;
     max-width: 1600px; /* Geniş ekranlarda panellerin arasını daha çok açar */
     padding: 30px 0;
     gap: 20px;
@@ -542,49 +542,4 @@ button:active, .option-btn:active {
     background-color: #e74c3c !important;
     box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
     color: white !important;
-}
-
-/* --- MOBİL ÖZEL AYARLAR --- */
-@media screen and (max-width: 768px) {
-    .main-layout {
-        flex-direction: column; /* Yan yana olan panelleri alt alta diz */
-        height: auto;
-        padding: 10px;
-    }
-
-    .sidebar {
-        width: 100% !important; /* Yan panelleri tam genişlik yap */
-        position: relative;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0;
-    }
-
-    .question-card {
-        padding: 15px;
-    }
-
-    .option-btn {
-        padding: 15px; /* Parmakla basmak kolay olsun diye büyüt */
-        font-size: 16px;
-    }
-
-    /* Spotify Mobilde Sürüklenemez Olduğu İçin Sabitleyelim */
-    .spotify-container {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        bottom: 20px !important;
-        top: auto !important; /* Mobilde tepede asılı kalmasın */
-        position: fixed;
-    }
-
-    /* AI Kutusu mobilde çok dar kalmasın */
-    .ai-card {
-        margin-bottom: 100px; /* Spotify arkasında kalmasın diye boşluk */
-    }
 }
