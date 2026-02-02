@@ -1,4 +1,4 @@
-    body {
+body {
     background: #004d40; /* Cam Böceği Arka Plan */
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -12,7 +12,7 @@
 .main-layout {
     display: flex;
     justify-content: space-between; /* Sol paneli sola, sağ paneli sağa yaslar */
-    width: 100%;
+    width: 95%;
     max-width: 1600px; /* Geniş ekranlarda panellerin arasını daha çok açar */
     padding: 30px 0;
     gap: 20px;
