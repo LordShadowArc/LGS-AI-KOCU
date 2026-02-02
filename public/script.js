@@ -143,6 +143,7 @@ function applyLockedState(selected, correct) {
         }
     });
 }
+
 // --- 6. AI ÖĞRETMEN SOHBET (GÜNCEL AKIŞ FİX) ---
 async function askAI(customMsg = null, selected = "", correct = "") {
     if (isAiLoading || !currentQuestion) return;
@@ -150,7 +151,6 @@ async function askAI(customMsg = null, selected = "", correct = "") {
     isAiLoading = true;
     const aiBox = document.getElementById('ai-response');
     
-    // Görsel düzenlemeler
     aiBox.style.marginTop = "25px";
     aiBox.style.display = "flex";
     aiBox.style.flexDirection = "column";
@@ -176,16 +176,13 @@ async function askAI(customMsg = null, selected = "", correct = "") {
         const reply = data.reply.replace(/\n/g, '<br>');
 
         if (customMsg) {
-            // Mesaj çifti oluşturma
             aiBox.innerHTML += `
                 <div class='msg-pair' style='border-top: 1px dashed #444; padding: 10px 0; margin-top: 10px;'>
                     <div class='user-msg' style='color:#00ffa5;'><b>Sen:</b> ${customMsg}</div>
                     <div class='ai-msg' style='margin-top:5px;'><b>Hoca:</b> ${reply}</div>
                 </div>`;
-            
             aiBox.scrollTo({ top: aiBox.scrollHeight, behavior: 'smooth' });
         } else {
-            // İlk hoca cevabı
             aiBox.innerHTML = `<div class='ai-msg'>${reply}</div>`;
             aiBox.scrollTop = 0; 
         }
@@ -222,6 +219,7 @@ async function askAI(customMsg = null, selected = "", correct = "") {
         isAiLoading = false;
     }
 }
+
 // --- 7. NAVİGASYON VE SKOR ---
 function setupNav() {
     const navGrid = document.getElementById('question-nav');
