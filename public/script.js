@@ -346,3 +346,24 @@ async function getNewQuestion() {
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && document.activeElement.id === 'user-input') handleSend();
 });
+
+// Sayfa açıldığında eski verileri yükle
+window.addEventListener('load', () => {
+    const savedData = localStorage.getItem('lgs_progress');
+    if (savedData) {
+        examData = JSON.parse(savedData);
+        updateStatsUI();
+        setupNav();
+    }
+});
+
+// Her doğru/yanlış cevaptan sonra veriyi kaydet
+// Bu satırı mevcut checkAnswer fonksiyonunun en sonuna eklemelisin:
+// localStorage.setItem('lgs_progress', JSON.stringify(examData));
+
+function resetProgress() {
+    if(confirm("Tüm skorların ve çözdüğün sorular silinecek. Emin misin kanka?")) {
+        localStorage.removeItem('lgs_progress');
+        location.reload(); // Sayfayı yenileyerek her şeyi tertemiz yapar
+    }
+}
