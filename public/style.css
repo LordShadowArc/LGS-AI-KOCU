@@ -406,3 +406,19 @@ button:active, .option-btn:active {
     background: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(5px);
 }
+
+/* Soru hafızasındaki DOĞRU (Yeşil) Neon */
+.nav-item.correct {
+    background-color: #2ecc71 !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.7) !important;
+    border: 1px solid #2ecc71 !important;
+}
+
+/* Soru hafızasındaki YANLIŞ (Kırmızı) Neon */
+.nav-item.wrong {
+    background-color: #e74c3c !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.7) !important;
+    border: 1px solid #e74c3c !important;
+}
