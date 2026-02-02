@@ -407,18 +407,39 @@ button:active, .option-btn:active {
     backdrop-filter: blur(5px);
 }
 
-/* Soru hafızasındaki DOĞRU (Yeşil) Neon */
-.nav-item.correct {
-    background-color: #2ecc71 !important;
-    color: white !important;
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.7) !important;
-    border: 1px solid #2ecc71 !important;
+/* 1. Şık Yazılarını Mermi Gibi Kalın ve Beyaz Yapar */
+.option-btn {
+    font-weight: 850 !important; /* İnce görünümü bitiren ana satır */
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important; /* Okunabilirliği artırır */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Soru hafızasındaki YANLIŞ (Kırmızı) Neon */
+/* 2. Soru Hafızasındaki (Sol Panel) Numaraları NEON Yapar */
+.nav-item.correct {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.8) !important; /* Yeşil Parlama */
+    border: 1px solid #2ecc71 !important;
+    color: white !important;
+}
+
 .nav-item.wrong {
     background-color: #e74c3c !important;
-    color: white !important;
-    box-shadow: 0 0 15px rgba(231, 76, 60, 0.7) !important;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.8) !important; /* Kırmızı Parlama */
     border: 1px solid #e74c3c !important;
+    color: white !important;
+}
+
+/* 3. Tıkladığın Şıkkın (A, B, C, D) Kendisini de NEON Yapar */
+.option-btn.correct {
+    background-color: #2ecc71 !important;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
+    color: white !important;
+}
+
+.option-btn.wrong {
+    background-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
+    color: white !important;
 }
