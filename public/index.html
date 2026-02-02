@@ -1,159 +1,107 @@
-gene aynı soru kanka son birkez index ve server dosyalarını atıyorum sen script dosyasını tam haliyle FİNAL sürümüyle FUL FONKSİYONLU halde yazıyosun ok bu script şuanda elimizde bulunan en iyi script senden istediğim bunu <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGS AI Koçu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS AI Koçu - Master Edition</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <div class="main-layout">
-        
-        <aside class="sidebar sidebar-left">
-            <h3>📝 Soru Hafızası</h3>
-            <div id="question-nav" class="nav-grid"></div>
-            <div class="nav-info">
-                <small><span class="dot green"></span> Doğru</small>
-                <small><span class="dot red"></span> Yanlış</small>
-            </div>
-        </aside>
+<body> 
+    <div class="main-layout">
+        
+        <aside class="sidebar sidebar-left">
+            <h3>📝 Soru Hafızası</h3>
+            <div id="question-nav" class="nav-grid"></div>
+            <div class="nav-info">
+                <small><span class="dot green"></span> Doğru</small>
+                <small><span class="dot red"></span> Yanlış</small>
+            </div>
+            
+            <div class="year-selection">
+                <h3>📅 Sınav Arşivi</h3>
+                <div class="year-grid">
+                    <button onclick="setYear(2020)" class="year-btn">2020</button>
+                    <button onclick="setYear(2021)" class="year-btn">2021</button>
+                    <button onclick="setYear(2022)" class="year-btn">2022</button>
+                    <button onclick="setYear(2023)" class="year-btn">2023</button>
+                    <button onclick="setYear(2024)" class="year-btn">2024</button>
+                    <button onclick="setYear(2025)" class="year-btn active">2025</button>
+                </div>
+            </div>
+        </aside>
 
-        <div class="container">
-            <div class="category-selection">
-                <button onclick="setCategory('sayisal')" id="btn-sayisal" class="cat-btn active">Sayısal Bölüm</button>
-                <button onclick="setCategory('sozel')" id="btn-sozel" class="cat-btn">Sözel Bölüm</button>
-            </div>
+        <div class="container">
+            <div class="category-selection">
+                <button onclick="setCategory('sayisal')" id="btn-sayisal" class="cat-btn active">Sayısal Bölüm</button>
+                <button onclick="setCategory('sozel')" id="btn-sozel" class="cat-btn">Sözel Bölüm</button>
+            </div>
 
-            <div class="question-card">
-                <h2 id="question-text">Soru yükleniyor...</h2>
-                <div class="options">
-                    <button class="option-btn" onclick="checkAnswer('A')">A) <span id="opt-A"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('B')">B) <span id="opt-B"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('C')">C) <span id="opt-C"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('D')">D) <span id="opt-D"></span></button>
-                </div>
-            </div>
+            <div class="question-card">
+                <h2 id="question-text">Soru yükleniyor...</h2>
+                <div class="options">
+                    <button class="option-btn" onclick="checkAnswer('A')">A) <span id="opt-A"></span></button>
+                    <button class="option-btn" onclick="checkAnswer('B')">B) <span id="opt-B"></span></button>
+                    <button class="option-btn" onclick="checkAnswer('C')">C) <span id="opt-C"></span></button>
+                    <button class="option-btn" onclick="checkAnswer('D')">D) <span id="opt-D"></span></button>
+                </div>
+            </div>
 
-            <button onclick="getNewQuestion()" class="next-btn">Sonraki Soruya Geç ➔</button>
+            <button onclick="getNewQuestion()" class="next-btn">Sonraki Soruya Geç ➔</button>
 
-            <div class="ai-card">
-                <h3>🤖 AI Öğretmen Analizi</h3>
-                <div id="ai-response" class="ai-content">Soruyu çözünce analiz burada görünecek...</div>
-                
-                <div class="input-area">
-                    <input type="text" id="user-input" placeholder="Anlamadığın yeri sor ve Enter'a bas...">
-                    <button onclick="handleSend()" id="send-btn">Gönder</button>
-                </div>
-            </div>
-        </div>
+            <div class="ai-card">
+                <h3>🤖 AI Öğretmen Analizi</h3>
+                <div id="ai-response" class="ai-content">Analiz burada görünecek...</div>
+                
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Hocaya sor...">
+                    <button onclick="handleSend()" id="send-btn">Gönder</button>
+                </div>
+            </div>
+        </div>
 
-        <aside class="sidebar sidebar-right">
-            <h3>📊 Canlı Skor</h3>
-            <div class="stats-container">
-                <div class="score-box">
-                    <small>Toplam LGS Puanı</small>
-                    <div id="stat-score">200.00</div>
-                    <div class="total-net-label">Toplam Net: <span id="stat-net">0.00</span></div>
-                </div>
+        <aside class="sidebar sidebar-right">
+            <h3>📊 Canlı Skor</h3>
+            <div class="score-box">
+                <small>Toplam LGS Puanı</small>
+                <div id="stat-score">200.00</div>
+                <div class="total-net-label">Toplam Net: <span id="stat-net">0.00</span></div>
+            </div>
 
-                <div class="section-stats">
-                    <div class="section-header">📐 Sayısal Bölüm</div>
-                    <div class="stat-row">
-                        <span>Net:</span>
-                        <span id="sayisal-net" class="val">0.00</span>
-                    </div>
-                    <div class="stat-row contribution">
-                        <span>Puan:</span>
-                        <span id="sayisal-contribution">0.00</span>
-                    </div>
-                </div>
+            <div class="section-stats">
+                <div class="section-header">📐 Sayısal Bölüm</div>
+                <div class="stat-row">Net: <span id="sayisal-net">0.00</span></div>
+                <div class="stat-row">Puan: <span id="sayisal-contribution">0.00</span></div>
+            </div>
 
-                <div class="section-stats">
-                    <div class="section-header">📚 Sözel Bölüm</div>
-                    <div class="stat-row">
-                        <span>Net:</span>
-                        <span id="sozel-net" class="val">0.00</span>
-                    </div>
-                    <div class="stat-row contribution">
-                        <span>Puan:</span>
-                        <span id="sozel-contribution">0.00</span>
-                    </div>
-                </div>
+            <div class="section-stats">
+                <div class="section-header">📚 Sözel Bölüm</div>
+                <div class="stat-row">Net: <span id="sozel-net">0.00</span></div>
+                <div class="stat-row">Puan: <span id="sozel-contribution">0.00</span></div>
+            </div>
 
-                <div class="general-info">
-                    <small>Toplam Doğru: <span id="stat-correct">0</span></small>
-                    <small>Toplam Yanlış: <span id="stat-wrong">0</span></small>
-                </div>
-            </div>
+            <div class="general-info">
+                <small>Doğru: <span id="stat-correct">0</span></small> | 
+                <small>Yanlış: <span id="stat-wrong">0</span></small>
+            </div>
 
-            <div style="margin-bottom: 20px;">
-    <div style="margin-bottom: 25px; padding: 0 10px;">
-    <button id="reset-btn" onclick="resetProgress()" 
-        style="width: 100%; 
-               background: linear-gradient(135deg, #ff5252 0%, #b33939 100%); 
-               color: white; 
-               border: none; 
-               padding: 14px; 
-               border-radius: 12px; 
-               cursor: pointer; 
-               font-weight: 800; 
-               text-transform: uppercase;
-               letter-spacing: 1px;
-               box-shadow: 0 4px 15px rgba(255, 82, 82, 0.3);
-               transition: all 0.3s ease;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               gap: 10px;">
-        <span style="font-size: 1.2rem;">🔄</span> İLERLEMEYİ SIFIRLA
-    </button>
-</div>
-</div>
-            <div class="year-selection">
-                <h3>📅 Sınav Arşivi</h3>
-                <div class="year-grid">
-                    <button onclick="setYear(2020)" class="year-btn">2020</button>
-                    <button onclick="setYear(2021)" class="year-btn">2021</button>
-                    <button onclick="setYear(2022)" class="year-btn">2022</button>
-                    <button onclick="setYear(2023)" class="year-btn">2023</button>
-                    <button onclick="setYear(2024)" class="year-btn">2024</button>
-                    <button onclick="setYear(2025)" class="year-btn active">2025</button>
-                </div>
-            </div>
-        </aside>
+            <button id="reset-btn" onclick="resetProgress()" class="reset-button-style">🔄 İLERLEMEYİ SIFIRLA</button>
+        </aside>
 
-        <div class="spotify-container" id="spotify-player">
-            <div class="spotify-header" onclick="toggleSpotify()">
-                <span>🎵 Çalma Listesi</span>
-                <button id="spot-toggle-btn">▲</button>
-            </div>
-            <div class="spotify-content">
-                <div class="spotify-config" style="padding: 10px; background: #1a1a1a; display: flex; gap: 5px; border-bottom: 1px solid #333;">
-                    <input type="text" id="spotify-link-input" placeholder="Spotify Çalma Listesi Linkini Yapıştır..." 
-                           style="flex:1; padding: 6px; border-radius: 4px; border: 1px solid #00bfa5; background: #000; color: #fff; font-size: 11px;">
-                    <button onclick="updatePlaylist()" 
-                            style="background: #00bfa5; color: #000; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; font-weight: bold;">
-                        Kur
-                    </button>
-                </div>
-                <iframe 
-                    id="spotify-iframe"
-                    data-testid="embed-iframe" 
-                    style="border-radius:0px" 
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Ueb9Cj9YmR" 
-                    width="100%" 
-                    height="352" 
-                    frameBorder="0" 
-                    allowfullscreen="" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
+        <div class="spotify-container collapsed" id="spotify-player">
+            <div class="spotify-header">
+                <span>🎵 Çalma Listesi</span>
+                <button id="spot-toggle-btn" onclick="toggleSpotify()">▲</button>
+            </div>
+            <div class="spotify-content">
+                <div class="spotify-config">
+                    <input type="text" id="spotify-link-input" placeholder="Link yapıştır...">
+                    <button onclick="updatePlaylist()">Kur</button>
+                </div>
+                <iframe id="spotify-iframe" width="100%" height="352" frameborder="0" loading="lazy"></iframe>
+            </div>
+        </div>
 
-    </div>
-    <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
