@@ -359,3 +359,95 @@ function resetProgress() {
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && document.activeElement.id === 'user-input') handleSend();
 });
+
+// --- SPOTIFY SİSTEMİ (GÜNCELLENDİ) ---
+
+function toggleSpotify() {
+    const player = document.getElementById('spotify-player');
+    const btn = document.getElementById('spot-toggle-btn');
+    if (!player) return;
+    
+    player.classList.toggle('collapsed');
+    // Buton ikonunu değiştir
+    btn.innerText = player.classList.contains('collapsed') ? "▲" : "▼";
+}
+
+function updatePlaylist() {
+    const input = document.getElementById('spotify-link-input');
+    const iframe = document.getElementById('spotify-iframe');
+    
+    if (!input || !iframe) return;
+
+    let url = input.value.trim();
+    
+    // Eğer kullanıcı direkt link yapıştırdıysa embed formatına çevir
+    if (url.includes('open.spotify.com')) {
+        url = url.replace('open.spotify.com/', 'open.spotify.com/embed/');
+        // Linkteki gereksiz parametreleri temizle (?si=... gibi)
+        if (url.includes('?')) {
+            url = url.split('?')[0];
+        }
+    }
+
+    if (url) {
+        iframe.src = url;
+        localStorage.setItem('userPlaylist', url);
+        input.value = ""; // Kutuyu temizle
+        console.log("Spotify linki güncellendi: ", url);
+    } else {
+        alert("Lütfen geçerli bir Spotify linki gir kanka!");
+    }
+}
+
+function loadSavedPlaylist() {
+    const saved = localStorage.getItem('userPlaylist');
+    const iframe = document.getElementById('spotify-iframe');
+    // Eğer kaydedilmiş link varsa onu yükle, yoksa varsayılanı bırak
+    if (saved && iframe) {
+        iframe.src = saved;
+    }
+}
+
+// --- SÜRÜKLE BIRAK FIX (IFRAME ÇAKIŞMASINI ENGELLER) ---
+function setupSpotifyDragging() {
+    const el = document.getElementById('spotify-player');
+    const header = document.querySelector('.spotify-header');
+    if (!el || !header) return;
+
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    
+    header.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        e.preventDefault();
+        // Mouse pozisyonunu al
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        
+        // Sürüklerken iframe'in fareyi yutmasını engellemek için pointer-events kapat
+        document.getElementById('spotify-iframe').style.pointerEvents = "none";
+    }
+
+    function elementDrag(e) {
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        
+        el.style.top = (el.offsetTop - pos2) + "px";
+        el.style.left = (el.offsetLeft - pos1) + "px";
+        // Alttaki sabit pozisyonu boz
+        el.style.bottom = "auto";
+        el.style.right = "auto";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+        // Sürükleme bitince iframe'i tekrar tıklanabilir yap
+        document.getElementById('spotify-iframe').style.pointerEvents = "auto";
+    }
+}
