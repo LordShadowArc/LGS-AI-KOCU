@@ -146,17 +146,17 @@ async function checkAnswer(selected) {
 
     // AI Analizi
 // ... (checkAnswer fonksiyonunun üst kısmı aynı kalacak) ...
+// ... (üstteki kodların devamı)
     if (!isCorrect) {
-        // Yanlış cevapta parametreleri (null, seçilen, doğru) eksiksiz gönderiyoruz
         askAI(null, selected, correctAnswer);
     } else {
-        // Doğru cevapta image_38cc23.png'deki gibi tebrik mesajı
         document.getElementById('ai-response').innerHTML = 
             "<b style='color:#00ffa5; text-shadow:0 0 10px #00ffa5'>✔️ DOĞRU! Harikasın kanka.</b>";
     }
-} // <--- BU PARANTEZ checkAnswer FONKSİYONUNU KAPATIR. BU EKSİK OLABİLİR!
+} // <--- BU PARANTEZİ EKLE (checkAnswer'ı kapatır)
 
-function applyLockedState(selected, correct) {
+function applyLockedState(selected, correct) { //
+    // ... (bu fonksiyonun geri kalanı zaten sende var)
     const options = ['A', 'B', 'C', 'D'];
     options.forEach(opt => {
         const btn = document.querySelector(`.option-btn[onclick="checkAnswer('${opt}')"]`);
