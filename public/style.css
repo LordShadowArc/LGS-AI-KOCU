@@ -337,3 +337,10 @@ body {
         pointer-events: auto; /* Sadece widget içine dokunulabilsin */
     }
 }
+
+.playlist-container {
+    touch-action: none; /* Mobilde sayfa kaymasını engeller, kutuyu özgür bırakır */
+    user-select: none;  /* Sürüklerken yazıların seçilmesini engeller */
+    position: fixed;    /* Ekranda istediğin yere gidebilmesi için şart */
+    z-index: 9999;      /* Diğer her şeyin üstünde kalsın */
+}
