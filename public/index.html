@@ -30,14 +30,14 @@
             </div>
         </aside>
 
-        <div class="container">
+        <main class="container">
             <div class="category-selection">
                 <button onclick="setCategory('sayisal')" id="btn-sayisal" class="cat-btn active">Sayısal Bölüm</button>
                 <button onclick="setCategory('sozel')" id="btn-sozel" class="cat-btn">Sözel Bölüm</button>
             </div>
 
             <div class="question-card">
-                <h2 id="question-text">Soru yükleniyor...</h2>
+                <h2 id="question-text">Soru Hazırlanıyor... 🔥</h2>
                 <div class="options">
                     <button class="option-btn" onclick="checkAnswer('A')">A) <span id="opt-A"></span></button>
                     <button class="option-btn" onclick="checkAnswer('B')">B) <span id="opt-B"></span></button>
@@ -51,13 +51,12 @@
             <div class="ai-card">
                 <h3>🤖 AI Öğretmen Analizi</h3>
                 <div id="ai-response" class="ai-content">Analiz burada görünecek...</div>
-                
                 <div class="input-area">
-                    <input type="text" id="user-input" placeholder="Hocaya sor...">
+                    <input type="text" id="user-input" placeholder="Anlamadığın yeri sor ve Enter'a bas...">
                     <button onclick="handleSend()" id="send-btn">Gönder</button>
                 </div>
             </div>
-        </div>
+        </main>
 
         <aside class="sidebar sidebar-right">
             <h3>📊 Canlı Skor</h3>
@@ -71,31 +70,27 @@
                 <div class="section-header">📐 Sayısal Bölüm</div>
                 <div class="stat-row">Net: <span id="sayisal-net">0.00</span></div>
                 <div class="stat-row">Puan: <span id="sayisal-contribution">0.00</span></div>
-            </div>
-
-            <div class="section-stats">
                 <div class="section-header">📚 Sözel Bölüm</div>
                 <div class="stat-row">Net: <span id="sozel-net">0.00</span></div>
                 <div class="stat-row">Puan: <span id="sozel-contribution">0.00</span></div>
             </div>
 
             <div class="general-info">
-                <small>Doğru: <span id="stat-correct">0</span></small> | 
-                <small>Yanlış: <span id="stat-wrong">0</span></small>
+                <small>Toplam Doğru: <span id="stat-correct">0</span></small><br>
+                <small>Toplam Yanlış: <span id="stat-wrong">0</span></small>
             </div>
-
             <button id="reset-btn" onclick="resetProgress()" class="reset-button-style">🔄 İLERLEMEYİ SIFIRLA</button>
         </aside>
 
-        <div class="spotify-container collapsed" id="spotify-player">
+        <div class="spotify-container" id="spotify-player">
             <div class="spotify-header">
                 <span>🎵 Çalma Listesi</span>
-                <button id="spot-toggle-btn" onclick="toggleSpotify()">▲</button>
+                <button onclick="toggleSpotify()">▲</button>
             </div>
             <div class="spotify-content">
                 <div class="spotify-config">
-                    <input type="text" id="spotify-link-input" placeholder="Link yapıştır...">
-                    <button onclick="updatePlaylist()">Kur</button>
+                    <input type="text" id="spotify-link-input" placeholder="Spotify Linki Yapıştır...">
+                    <button onclick="updatePlaylist()" class="kur-btn">Kur</button>
                 </div>
                 <iframe id="spotify-iframe" width="100%" height="352" frameborder="0" loading="lazy"></iframe>
             </div>
