@@ -353,3 +353,30 @@ body {
 #reset-btn:active {
     transform: translateY(1px);
 }
+
+/* Bütün butonlar için genel neon ve büyüme ayarı */
+button, .option-btn, .year-btn, #reset-btn, .nav-btn {
+    transition: all 0.2s ease-in-out !important; /* Yumuşak geçiş */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Üstüne gelince (Hover) yapılacaklar */
+button:hover, .option-btn:hover, .year-btn:hover, #reset-btn:hover, .nav-btn:hover {
+    transform: scale(1.03); /* Yaklaşık 2mm büyüme efekti */
+    filter: brightness(1.2); /* Neon parlama efekti */
+    box-shadow: 0 0 15px rgba(0, 191, 165, 0.5); /* Hafif RGB/Neon gölgesi */
+    cursor: pointer;
+}
+
+/* Tıklayınca hafifçe içine çökme efekti */
+button:active, .option-btn:active {
+    transform: scale(0.98);
+}
+
+/* Şık butonlarını (A, B, C, D) sıfırla butonu gibi biraz daha modern yapalım */
+.option-btn {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(5px);
+}
