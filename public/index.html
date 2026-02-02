@@ -1,158 +1,190 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>LGS AI Koçu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
-</head>
-<body> 
-    <div class="main-layout">
-        
-        <aside class="sidebar sidebar-left">
-            <h3>📝 Soru Hafızası</h3>
-            <div id="question-nav" class="nav-grid"></div>
-            <div class="nav-info">
-                <small><span class="dot green"></span> Doğru</small>
-                <small><span class="dot red"></span> Yanlış</small>
-            </div>
-        </aside>
+/* --- 1. GLOBAL AYARLAR --- */
+:root {
+    --cam-bocegi: #00bfa5;
+    --arka-plan: #004d40;
+    --siyah-kutu: #1a1a1a;
+    --koyu-gri: #252525;
+}
 
-        <div class="container">
-            <div class="category-selection">
-                <button onclick="setCategory('sayisal')" id="btn-sayisal" class="cat-btn active">Sayısal Bölüm</button>
-                <button onclick="setCategory('sozel')" id="btn-sozel" class="cat-btn">Sözel Bölüm</button>
-            </div>
+body {
+    background-color: var(--arka-plan);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+}
 
-            <div class="question-card">
-                <h2 id="question-text">Soru yükleniyor...</h2>
-                <div class="options">
-                    <button class="option-btn" onclick="checkAnswer('A')">A) <span id="opt-A"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('B')">B) <span id="opt-B"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('C')">C) <span id="opt-C"></span></button>
-                    <button class="option-btn" onclick="checkAnswer('D')">D) <span id="opt-D"></span></button>
-                </div>
-            </div>
+/* --- 2. LAYOUT (PC'de 3'lü Yan Yana) --- */
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
-            <button onclick="getNewQuestion()" class="next-btn">Sonraki Soruya Geç ➔</button>
+.sidebar {
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    background: var(--siyah-kutu);
+    border-radius: 20px;
+    padding: 20px;
+    height: fit-content;
+}
 
-            <div class="ai-card">
-                <h3>🤖 AI Öğretmen Analizi</h3>
-                <div id="ai-response" class="ai-content">Soruyu çözünce analiz burada görünecek...</div>
-                
-                <div class="input-area">
-                    <input type="text" id="user-input" placeholder="Anlamadığın yeri sor ve Enter'a bas...">
-                    <button onclick="handleSend()" id="send-btn">Gönder</button>
-                </div>
-            </div>
-        </div>
+.container {
+    flex: 2;
+    min-width: 400px;
+    max-width: 800px;
+}
 
-        <aside class="sidebar sidebar-right">
-            <h3>📊 Canlı Skor</h3>
-            <div class="stats-container">
-                <div class="score-box">
-                    <small>Toplam LGS Puanı</small>
-                    <div id="stat-score">200.00</div>
-                    <div class="total-net-label">Toplam Net: <span id="stat-net">0.00</span></div>
-                </div>
+/* --- 3. KATEGORİ BUTONLARI (Sayısal/Sözel) --- */
+.category-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
-                <div class="section-stats">
-                    <div class="section-header">📐 Sayısal Bölüm</div>
-                    <div class="stat-row">
-                        <span>Net:</span>
-                        <span id="sayisal-net" class="val">0.00</span>
-                    </div>
-                    <div class="stat-row contribution">
-                        <span>Puan:</span>
-                        <span id="sayisal-contribution">0.00</span>
-                    </div>
-                </div>
+.cat-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: var(--siyah-kutu);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-                <div class="section-stats">
-                    <div class="section-header">📚 Sözel Bölüm</div>
-                    <div class="stat-row">
-                        <span>Net:</span>
-                        <span id="sozel-net" class="val">0.00</span>
-                    </div>
-                    <div class="stat-row contribution">
-                        <span>Puan:</span>
-                        <span id="sozel-contribution">0.00</span>
-                    </div>
-                </div>
+.cat-btn.active {
+    background: var(--cam-bocegi);
+    color: #000;
+}
 
-                <div class="general-info">
-                    <small>Toplam Doğru: <span id="stat-correct">0</span></small>
-                    <small>Toplam Yanlış: <span id="stat-wrong">0</span></small>
-                </div>
-            </div>
+/* --- 4. SORU KARTI VE ŞIKLAR --- */
+.question-card {
+    background: var(--cam-bocegi);
+    color: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-            <div style="margin-bottom: 20px;">
-    <div style="margin-bottom: 25px; padding: 0 10px;">
-    <button id="reset-btn" onclick="resetProgress()" 
-        style="width: 100%; 
-               background: linear-gradient(135deg, #ff5252 0%, #b33939 100%); 
-               color: white; 
-               border: none; 
-               padding: 14px; 
-               border-radius: 12px; 
-               cursor: pointer; 
-               font-weight: 800; 
-               text-transform: uppercase;
-               letter-spacing: 1px;
-               box-shadow: 0 4px 15px rgba(255, 82, 82, 0.3);
-               transition: all 0.3s ease;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               gap: 10px;">
-        <span style="font-size: 1.2rem;">🔄</span> İLERLEMEYİ SIFIRLA
-    </button>
-</div>
-</div>
-            <div class="year-selection">
-                <h3>📅 Sınav Arşivi</h3>
-                <div class="year-grid">
-                    <button onclick="setYear(2020)" class="year-btn">2020</button>
-                    <button onclick="setYear(2021)" class="year-btn">2021</button>
-                    <button onclick="setYear(2022)" class="year-btn">2022</button>
-                    <button onclick="setYear(2023)" class="year-btn">2023</button>
-                    <button onclick="setYear(2024)" class="year-btn">2024</button>
-                    <button onclick="setYear(2025)" class="year-btn active">2025</button>
-                </div>
-            </div>
-        </aside>
+.option-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-        <div class="spotify-container" id="spotify-player">
-            <div class="spotify-header" onclick="toggleSpotify()">
-                <span>🎵 Çalma Listesi</span>
-                <button id="spot-toggle-btn">▲</button>
-            </div>
-            <div class="spotify-content">
-                <div class="spotify-config" style="padding: 10px; background: #1a1a1a; display: flex; gap: 5px; border-bottom: 1px solid #333;">
-                    <input type="text" id="spotify-link-input" placeholder="Spotify Çalma Listesi Linkini Yapıştır..." 
-                           style="flex:1; padding: 6px; border-radius: 4px; border: 1px solid #00bfa5; background: #000; color: #fff; font-size: 11px;">
-                    <button onclick="updatePlaylist()" 
-                            style="background: #00bfa5; color: #000; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; font-weight: bold;">
-                        Kur
-                    </button>
-                </div>
-                <iframe 
-                    id="spotify-iframe"
-                    data-testid="embed-iframe" 
-                    style="border-radius:0px" 
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Ueb9Cj9YmR" 
-                    width="100%" 
-                    height="352" 
-                    frameBorder="0" 
-                    allowfullscreen="" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
+.option-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
 
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+/* --- 5. SONRAKİ SORU BUTONU --- */
+.next-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--cam-bocegi);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- 6. AI ANALİZ KUTUSU VE GİRİŞ ALANI --- */
+.ai-card {
+    background: var(--siyah-kutu);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 191, 165, 0.3);
+}
+
+.ai-content {
+    min-height: 60px;
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.input-area {
+    display: flex;
+    background: var(--koyu-gri);
+    padding: 8px;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    outline: none;
+}
+
+#send-btn {
+    background: var(--cam-bocegi);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- 7. DİĞER BİLEŞENLER (Nav, Year, Spotify) --- */
+.nav-grid, .year-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.year-btn {
+    background: #252525;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.year-btn.active { background: var(--cam-bocegi); color: #000; }
+
+.spotify-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+    background: var(--siyah-kutu);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--cam-bocegi);
+}
+
+/* --- 8. MOBİL UYUM --- */
+@media (max-width: 1100px) {
+    .main-layout { flex-direction: column; align-items: center; }
+    .sidebar, .container { width: 100% !important; max-width: 100%; }
+    .sidebar-left { order: 2; }
+    .container { order: 1; }
+    .sidebar-right { order: 3; }
+}
