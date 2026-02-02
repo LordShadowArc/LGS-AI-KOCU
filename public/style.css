@@ -12,7 +12,7 @@ body {
 .main-layout {
     display: flex;
     justify-content: space-between; /* Sol paneli sola, sağ paneli sağa yaslar */
-    width: 95%;
+    width: 100%;
     max-width: 1600px; /* Geniş ekranlarda panellerin arasını daha çok açar */
     padding: 30px 0;
     gap: 20px;
