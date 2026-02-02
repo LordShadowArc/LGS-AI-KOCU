@@ -424,3 +424,42 @@ function shareScore() {
     const text = `Kanka LGS AI Koçu ile denemeyi bitirdim! Puanım: ${score}, Netim: ${net}. Bakalım sen beni geçebilecek misin? 🔥`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
 }
+
+function showFinishScreen() {
+    // Mevcut yılları tanımlayalım
+    const years = [2020, 2021, 2022, 2023, 2024, 2025];
+    let currentIndex = years.indexOf(parseInt(currentYear));
+    
+    // Ekranı temizle ve hazırlık yap
+    document.body.innerHTML = ''; 
+    document.body.classList.add('exam-finished-mode');
+
+    // Butonları hazırlayalım (Sadece varsa görünecekler)
+    let prevBtn = currentIndex > 0 ? 
+        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex-1]})">⬅️ ${years[currentIndex-1]} Denemesi</button>` : '';
+    
+    let nextBtn = currentIndex < years.length - 1 ? 
+        `<button class="nav-btn neon-btn" onclick="goToYear(${years[currentIndex+1]})">${years[currentIndex+1]} Denemesi ➡️</button>` : '';
+
+    const finishHTML = `
+        <div class="score-card finish-container" style="text-align: center;">
+            <h2 style="color: #00ffa5; margin-bottom: 20px; text-shadow: 0 0 10px #00ffa5;">🏆 DENEME SONUCUN 🏆</h2>
+            ${document.querySelector('.score-card').innerHTML} 
+            
+            <button class="share-btn" onclick="shareScore()">SONUCU WHATSAPP'TA PAYLAŞ</button>
+            
+            <div class="finish-navigation" style="margin-top: 20px; display: flex; justify-content: space-between; gap: 10px;">
+                ${prevBtn}
+                ${nextBtn}
+            </div>
+            <button class="share-btn" style="background: #444; margin-top: 15px;" onclick="location.reload()">Anasayfaya Dön</button>
+        </div>
+    `;
+    document.body.innerHTML = finishHTML;
+}
+
+// Yeni yıla geçiş fonksiyonu
+function goToYear(year) {
+    localStorage.setItem('selectedYear', year); // Seçimi kaydet
+    location.reload(); // Sayfayı yenileyerek yeni yılı yükle
+}
