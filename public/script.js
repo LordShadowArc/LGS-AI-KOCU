@@ -49,7 +49,54 @@ function updatePlaylist() {
         alert('Geçerli bir Spotify linki yapıştır kanka!');
     }
 }
+// --- SÜRÜKLEME ÖZELLİĞİ (MOBİL VE PC) ---
+const playlistContainer = document.querySelector('.playlist-container');
+let isDragging = false;
+let currentX, currentY, initialX, initialY, xOffset = 0, yOffset = 0;
 
+function dragStart(e) {
+    if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+    } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+    }
+    if (e.target === playlistContainer || playlistContainer.contains(e.target)) {
+        isDragging = true;
+    }
+}
+
+function dragEnd() {
+    initialX = currentX;
+    initialY = currentY;
+    isDragging = false;
+}
+
+function drag(e) {
+    if (isDragging) {
+        e.preventDefault();
+        if (e.type === "touchmove") {
+            currentX = e.touches[0].clientX - initialX;
+            currentY = e.touches[0].clientY - initialY;
+        } else {
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+        }
+        xOffset = currentX;
+        yOffset = currentY;
+        playlistContainer.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+    }
+}
+
+// Event Listeners
+playlistContainer.addEventListener("touchstart", dragStart, false);
+playlistContainer.addEventListener("touchend", dragEnd, false);
+playlistContainer.addEventListener("touchmove", drag, false);
+
+playlistContainer.addEventListener("mousedown", dragStart, false);
+playlistContainer.addEventListener("mouseup", dragEnd, false);
+playlistContainer.addEventListener("mousemove", drag, false);
 function loadSavedPlaylist() {
     const saved = localStorage.getItem('userLgsPlaylist');
     const iframe = document.getElementById('spotify-iframe');
