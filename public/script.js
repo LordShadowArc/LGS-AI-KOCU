@@ -156,11 +156,14 @@ async function loadQuestion(index) {
         
         if (!response.ok) {
             currentQuestion = null; 
-            resetOptionButtons(); 
-            document.getElementById('question-text').innerText = `${currentYear} dosyası veya ${index}. soru bulunamadı kanka.`;
-            ['A','B','C','D'].forEach(l => document.getElementById(`opt-${l}`).innerText = "");
-            return;
-        }
+            function resetOptionButtons() {
+    const options = ['A', 'B', 'C', 'D'];
+    options.forEach(opt => {
+        const btn = document.getElementById(`opt-${opt}`);
+        btn.classList.remove('correct', 'wrong'); // Eski neonları temizle
+        btn.disabled = false;
+    });
+}
 
         currentQuestion = await response.json();
         displayQuestion();
