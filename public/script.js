@@ -214,6 +214,7 @@ async function checkAnswer(selected) {
         document.getElementById('ai-response').innerHTML = "<b style='color:#00bfa5'>DOĞRU! Harikasın kanka.</b>";
     }
     calculateLGSScore();
+    localStorage.setItem('lgs_progress', JSON.stringify(examData));
 }
 
 function calculateLGSScore() {
