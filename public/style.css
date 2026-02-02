@@ -344,3 +344,12 @@ body {
     position: fixed;    /* Ekranda istediğin yere gidebilmesi için şart */
     z-index: 9999;      /* Diğer her şeyin üstünde kalsın */
 }
+#reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 82, 82, 0.5);
+    filter: brightness(1.1);
+}
+
+#reset-btn:active {
+    transform: translateY(1px);
+}
