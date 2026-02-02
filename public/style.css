@@ -1,635 +1,183 @@
+/* --- GENEL AYARLAR --- */
+:root {
+    --cam-bocegi: #00bfa5;
+    --arka-plan: #004d40;
+    --siyah-kutu: #1a1a1a;
+    --neon-yesil: #2ecc71;
+    --neon-kirmizi: #e74c3c;
+}
+
 body {
-    background: #004d40; /* Cam Böceği Arka Plan */
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    background: var(--arka-plan);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Ana Layout: Panelleri yanlara iten ve orta alanı ferahlatan kısım */
 .main-layout {
-    display: flex;
-    justify-content: space-between; /* Sol paneli sola, sağ paneli sağa yaslar */
-    width: 95%;
-    max-width: 1600px; /* Geniş ekranlarda panellerin arasını daha çok açar */
-    padding: 30px 0;
-    gap: 20px;
+    display: flex;
+    width: 95%;
+    max-width: 1600px;
+    padding: 30px 0;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Yan Paneller (Soru Hafızası ve Canlı Skor) */
+/* --- PANELLER --- */
 .sidebar {
-    width: 260px;
-    background: #1a1a1a; /* Siyah Kutu Tasarımı */
-    border-radius: 20px;
-    padding: 20px;
-    color: white;
-    height: fit-content;
-    position: sticky;
-    top: 30px;
-    border: 1px solid rgba(0, 191, 165, 0.2);
+    width: 260px;
+    background: var(--siyah-kutu);
+    border-radius: 20px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+    border: 1px solid rgba(0, 191, 165, 0.2);
 }
 
-/* Orta Konteyner: Soru ve AI Alanı */
-.container { 
-    width: 100%;
-    max-width: 750px; /* Orta alanı derli toplu tutar */
+.container {
+    flex: 1;
+    max-width: 750px;
 }
 
-/* Kategori Seçimi (Sayısal/Sözel) */
+/* --- KATEGORİ SEÇİMİ --- */
 .category-selection {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .cat-btn {
-    flex: 1;
-    padding: 12px;
-    border-radius: 12px;
-    border: 2px solid rgba(255,255,255,0.1);
-    font-weight: bold;
-    cursor: pointer;
-    background: #1a1a1a;
-    color: white;
-    transition: 0.3s;
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    background: #1a1a1a;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.1);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .cat-btn.active {
-    background: #00bfa5; /* Seçili olduğunda Cam Böceği Yeşili */
-    border-color: #00bfa5;
+    background: var(--cam-bocegi);
+    border-color: var(--cam-bocegi);
+    color: #000;
 }
 
-/* Soru Kartı */
+/* --- SORU KARTI VE ŞIKLAR (KAYA GİBİ) --- */
 .question-card {
-    background: #00bfa5;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 15px;
-    color: #333;
+    background: var(--cam-bocegi);
+    border-radius: 20px;
+    padding: 30px;
+    color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .option-btn {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #ffffff !important; /* Yazı rengi bembeyaz olsun */
-    font-weight: 850 !important; /* İŞTE BU SATIR KALINLAŞTIRIR */
-    font-size: 1.15rem !important; /* Biraz daha büyük ve heybetli */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
-    text-align: left;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Yazıya derinlik katar, daha net okunur */
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    font-weight: 850 !important; /* İŞTE O KALINLIK */
+    font-size: 1.15rem !important;
+    text-align: left;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: 0.2s all;
 }
 
-/* Üstüne gelince büyüme ve parlama */
-.option-btn:hover {
-    transform: scale(1.02);
-    background: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
+.option-btn:hover { transform: scale(1.02); background: rgba(255,255,255,0.25) !important; }
 
-/* Doğru bildiğinde yanacak yeşil neon */
 .option-btn.correct {
-    background-color: #2ecc71 !important;
-    color: white !important;
-    border-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6) !important;
+    background: var(--neon-yesil) !important;
+    box-shadow: 0 0 20px var(--neon-yesil) !important;
+    border-color: var(--neon-yesil) !important;
 }
 
-/* Yanlış bildiğinde yanacak kırmızı neon */
 .option-btn.wrong {
-    background-color: #e74c3c !important;
-    color: white !important;
-    border-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.6) !important;
+    background: var(--neon-kirmizi) !important;
+    box-shadow: 0 0 20px var(--neon-kirmizi) !important;
+    border-color: var(--neon-kirmizi) !important;
 }
 
-/* Sonraki Soruya Geç Butonu */
-.next-btn {
-    background: #00bfa5;
-    color: white;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 15px;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* AI Kartı ve Chat Alanı */
+/* --- AI KARTI --- */
 .ai-card {
-    background: #1a1a1a;
-    color: white;
-    border-radius: 20px;
-    padding: 25px;
+    background: var(--siyah-kutu);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.ai-content { 
-    min-height: 100px; 
-    max-height: 200px; 
-    overflow-y: auto; 
-    line-height: 1.6; 
-    margin-bottom: 15px; 
+.ai-content {
+    min-height: 80px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .input-area {
-    display: flex;
-    background: #333;
-    padding: 10px;
-    border-radius: 10px;
+    display: flex;
+    background: #252525;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 #user-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: white;
-    padding: 10px;
-    outline: none;
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    outline: none;
 }
 
-#send-btn { 
-    background: #00bfa5; 
-    color: white; 
-    border: none; 
-    padding: 10px 15px; 
-    border-radius: 8px; 
-    cursor: pointer; 
+#send-btn, .next-btn {
+    background: var(--cam-bocegi);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Soru Navigasyon Izgarası */
-.nav-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin: 15px 0;
+.next-btn { width: 100%; margin-top: 15px; font-size: 1.1rem; }
+
+/* --- DİĞERLERİ --- */
+.nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; margin-top: 10px; }
+.nav-item { background: #333; color: white; border: none; padding: 8px 0; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.nav-item.correct { background: var(--neon-yesil) !important; }
+.nav-item.wrong { background: var(--neon-kirmizi) !important; }
+
+.score-box { background: var(--cam-bocegi); padding: 15px; border-radius: 15px; text-align: center; color: #000; margin: 15px 0; }
+#stat-score { font-size: 2.2rem; font-weight: 900; }
+
+.year-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.year-btn { background: #000; color: #fff; border: 1px solid #333; padding: 8px; border-radius: 5px; cursor: pointer; }
+.year-btn.active { background: var(--cam-bocegi); color: #000; }
+
+.reset-button-style { width: 100%; padding: 12px; background: #ff5252; color: white; border: none; border-radius: 10px; font-weight: bold; margin-top: 15px; cursor: pointer; }
+
+/* --- MOBİL UYUM (ZIRHLI) --- */
+@media screen and (max-width: 1100px) {
+    .main-layout { flex-direction: column; align-items: center; padding: 15px; }
+    .sidebar, .container { width: 100% !important; max-width: 100%; position: relative; top: 0; }
+    .container { order: 1; }
+    .sidebar-left { order: 2; }
+    .sidebar-right { order: 3; }
 }
 
-.nav-item {
-    background: #333;
-    border: none;
-    color: white;
-    padding: 10px 5px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Puan Kutusu */
-.score-box { 
-    text-align: center; 
-    margin-top: 20px; 
-    background: #00bfa5; 
-    padding: 15px; 
-    border-radius: 12px; 
-    color: white;
-}
-
-#stat-score { font-size: 32px; margin-top: 5px; }
-
-/* Nokta Renkleri */
-.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
-.green { background-color: #2ecc71; }
-.red { background-color: #e74c3c; }
-.nav-item.correct { background-color: #2ecc71 !important; color: white; }
-.nav-item.wrong { background-color: #e74c3c !important; color: white; }
-
-/* Yıl Seçimi Konteynırı */
-.year-selection {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(0, 191, 165, 0.3);
-}
-
-.year-selection h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-/* Yıl Buton Izgarası */
-.year-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-}
-
-/* Yıl Butonları - Siyah */
-.year-btn {
-    background: #111;
-    color: #fff;
-    border: 1px solid #333;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s all;
-}
-
-.year-btn:hover {
-    border-color: #00bfa5;
-}
-
-/* Seçili Yıl - Cam Böceği Yeşili */
-.year-btn.active {
-    background: #00bfa5;
-    color: #fff;
-    border-color: #00bfa5;
-    box-shadow: 0 0 10px rgba(0, 191, 165, 0.4);
-}
-
-.section-stats {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.section-stats h4 {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.main-score {
-    margin-bottom: 20px !important;
-    border: 2px solid #00bfa5 !important; /* Daha belirgin yapalım */
-}
-
-.spotify-container {
-    position: fixed; /* Ekranın sağ altına sabitler */
-    bottom: 20px;    /* Alttan 20px boşluk */
-    right: 20px;     /* Sağdan 20px boşluk */
-    width: 300px;
-    background: #111;
-    border: 1px solid #00bfa5;
-    border-radius: 12px;
-    overflow: hidden;
-    z-index: 9999;   /* Diğer her şeyin üstünde görünmesi için */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, bottom 0.3s ease;
-}
-
-/* Panel kapalıyken sadece başlık görünsün */
-.spotify-container.collapsed {
-    transform: translateY(152px); /* İçeriği aşağıya gizler */
-}
-
-.spotify-header {
-    background: #00bfa5;
-    color: #000;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.spotify-content {
-    height: 152px; /* Spotify widget yüksekliği */
-    background: #000;
-}
-
-#spot-toggle-btn {
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Panel açıkken butonu döndür */
-.spotify-container:not(.collapsed) #spot-toggle-btn {
-    transform: rotate(180deg);
-}
-
-.spotify-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999; /* En üstte kalsın */
-}
-.spotify-content {
-    height: 352px; /* Iframe boyutuyla aynı olmalı */
-}
-
-.spotify-header {
-    cursor: move; /* Sürüklenebilir olduğunu gösteren imleç */
-    user-select: none; /* Metin seçilmeyi engelle ki sürüklerken çirkin durmasın */
-}
-
-.spotify-container {
-    /* Mevcut özelliklere ek olarak */
-    touch-action: none; /* Mobil cihazlarda çakışmayı önler */
-    transition: transform 0.1s ease-out; /* Sürükleme akıcılığı için */
-}
-
-/* Panel kapalıyken transform çakışmaması için .collapsed durumunu güncelle kanka */
-.spotify-container.collapsed .spotify-content {
-    display: none; /* Katlanmayı translateY yerine display ile yapalım ki sürükleme bozulmasın */
-}
-
-#spotify-player {
-    position: fixed;
-    bottom: 20px; /* Alttan boşluk */
-    left: 160px;   /* Soldan boşluk */
-    z-index: 9999; /* Diğer her şeyin üstünde dursun */
-    transform: translate3d(0px, 0, 0); /* Başlangıç pozisyonu */
-    transition: none; /* Sürükleme sırasında gecikme olmaması için */
-}
-
-@media screen and (max-width: 768px) {
-    /* Çalma listesi kutusunu mobilde daha küçük ve saydam yap */
-    .playlist-container {
-        position: relative !important; /* Ekranı kaplamasın, akışa katılsın */
-        width: 100% !important;
-        max-height: 150px; /* Çok yer kaplamasın */
-        overflow: hidden;
-        z-index: 10;
-        margin-top: 20px;
-    }
-
-    /* Sayfanın geri kalanını engellememesi için dokunma ayarı */
-    .playlist-container iframe {
-        pointer-events: auto; /* Sadece widget içine dokunulabilsin */
-    }
-}
-
-.playlist-container {
-    touch-action: none; /* Mobilde sayfa kaymasını engeller, kutuyu özgür bırakır */
-    user-select: none;  /* Sürüklerken yazıların seçilmesini engeller */
-    position: fixed;    /* Ekranda istediğin yere gidebilmesi için şart */
-    z-index: 9999;      /* Diğer her şeyin üstünde kalsın */
-}
-#reset-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 82, 82, 0.5);
-    filter: brightness(1.1);
-}
-
-#reset-btn:active {
-    transform: translateY(1px);
-}
-
-/* Bütün butonlar için genel neon ve büyüme ayarı */
-button, .option-btn, .year-btn, #reset-btn, .nav-btn {
-    transition: all 0.2s ease-in-out !important; /* Yumuşak geçiş */
-    position: relative;
-    overflow: hidden;
-}
-
-/* Üstüne gelince (Hover) yapılacaklar */
-button:hover, .option-btn:hover, .year-btn:hover, #reset-btn:hover, .nav-btn:hover {
-    transform: scale(1.03); /* Yaklaşık 2mm büyüme efekti */
-    filter: brightness(1.2); /* Neon parlama efekti */
-    box-shadow: 0 0 15px rgba(0, 191, 165, 0.5); /* Hafif RGB/Neon gölgesi */
-    cursor: pointer;
-}
-
-/* Tıklayınca hafifçe içine çökme efekti */
-button:active, .option-btn:active {
-    transform: scale(0.98);
-}
-
-/* Şıkların genel görünümü ve kalınlığı */
-.option-btn {
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: blur(5px);
-    color: #ffffff !important;
-    font-weight: 850 !important; /* Kalınlık buraya geldi */
-    font-size: 1.1rem !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Şıklar seçilince yanacak NEONLAR */
-.option-btn.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
-    border-color: #2ecc71 !important;
-}
-
-.option-btn.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
-    border-color: #e74c3c !important;
-}
-
-/* 1. Şıkları Kaya Gibi Kalın ve Beyaz Yapar */
-.option-btn {
-    font-weight: 850 !important; /* İnce görünümü bitirir */
-    font-size: 1.1rem !important;
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
-}
-
-/* 2. Tıklanan Şık DOĞRU ise Yeşil Neon Yanar */
-.option-btn.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
-    border: 1px solid #2ecc71 !important;
-    color: white !important;
-}
-
-/* 3. Tıklanan Şık YANLIŞ ise Kırmızı Neon Yanar */
-.option-btn.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
-    border: 1px solid #e74c3c !important;
-    color: white !important;
-}
-
-/* Deneme Bitince Ekranı Temizleyen ve Skoru Büyüten Sınıf */
-.exam-finished-mode {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(10, 25, 30, 0.95); /* Arkadaki her şeyi gizler */
-    z-index: 9999;
-}
-
-.exam-finished-mode .score-card {
-    width: 500px !important; /* Tabloyu dev yapıyoruz */
-    transform: scale(1.2);
-    box-shadow: 0 0 50px rgba(46, 204, 113, 0.5) !important;
-    border: 2px solid #00ffa5 !important;
-}
-
-.share-btn {
-    background: #00ffa5;
-    color: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 800;
-    margin-top: 20px;
-    width: 100%;
-    cursor: pointer;
-}
-
-/* Bitiş Ekranındaki Neon Butonlar */
-.neon-btn {
-    background: rgba(0, 255, 165, 0.1) !important;
-    border: 1px solid #00ffa5 !important;
-    color: #00ffa5 !important;
-    font-weight: 800 !important;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 5px #00ffa5;
-    box-shadow: 0 0 10px rgba(0, 255, 165, 0.2);
-}
-
-.neon-btn:hover {
-    background: #00ffa5 !important;
-    color: #1a1a1a !important;
-    box-shadow: 0 0 20px #00ffa5 !important;
-}
-
-/* Skor kartını dev yapma */
-.finish-container {
-    width: 450px !important;
-    padding: 30px !important;
-    border: 2px solid #00ffa5 !important;
-    box-shadow: 0 0 30px rgba(0, 255, 165, 0.3) !important;
-}
-
-/* --- ŞIKLARIN NEON PARLAMALARI --- */
-
-/* 1. Doğru Şık (Yeşil Neon) */
-.option-btn.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
-    border: 2px solid #2ecc71 !important;
-    color: white !important;
-    font-weight: 900 !important;
-}
-
-/* 2. Yanlış Şık (Kırmızı Neon) */
-.option-btn.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
-    border: 2px solid #e74c3c !important;
-    color: white !important;
-    font-weight: 900 !important;
-}
-
-/* 3. Şıkların Genel Yazı Kalınlığı (Daha net okunsun diye) */
-.option-btn {
-    font-weight: 800 !important;
-    transition: all 0.3s ease !important;
-}
-
-/* JavaScript'in eklediği sınıfları en üstün tut */
-#opt-A.correct, #opt-B.correct, #opt-C.correct, #opt-D.correct {
-    background-color: #2ecc71 !important;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8) !important;
-    color: white !important;
-}
-
-#opt-A.wrong, #opt-B.wrong, #opt-C.wrong, #opt-D.wrong {
-    background-color: #e74c3c !important;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
-    color: white !important;
-}
-
-/* --- MOBİL ÖZEL AYARLAR --- */
-@media screen and (max-width: 768px) {
-    .main-layout {
-        flex-direction: column; /* Yan yana olan panelleri alt alta diz */
-        height: auto;
-        padding: 10px;
-    }
-
-    .sidebar {
-        width: 100% !important; /* Yan panelleri tam genişlik yap */
-        position: relative;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0;
-    }
-
-    .question-card {
-        padding: 15px;
-    }
-
-    .option-btn {
-        padding: 15px; /* Parmakla basmak kolay olsun diye büyüt */
-        font-size: 16px;
-    }
-
-    /* AI Kutusu mobilde çok dar kalmasın */
-    .ai-card {
-        margin-bottom: 100px; /* Spotify arkasında kalmasın diye boşluk */
-    }
-}
-
-/* --- EVRENSEL ESNEK TASARIM --- */
-:root {
-    --side-width: 280px;
-}
-
-.main-layout {
-    display: flex;
-    flex-wrap: wrap; /* Ekran daralınca alt satıra geçişi sağlar */
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-/* Yan panelleri (Soru hafızası ve Skor) esnek yap */
-.sidebar {
-    flex: 1 1 var(--side-width); /* En az 280px olsun, yer varsa büyüsün */
-    max-width: 350px;
-    min-width: 250px;
-}
-
-/* Ana soru alanı */
-.container {
-    flex: 2 1 500px; /* Soru kartı merkezde kalsın ve daha geniş olsun */
-    max-width: 800px;
-    min-width: 320px;
-}
-
-/* Mobil ve Tablet için ince ayar */
-@media (max-width: 1100px) {
-    .main-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .sidebar, .container {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Mobilde yazı boyutlarını hafif küçült ki her şey sığsın */
-    #question-text { font-size: 1.1rem; }
-}
-
-/* Spotify her zaman sürüklenebilir olduğu için başlangıç konumu */
-.spotify-container {
-    z-index: 9999;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    touch-action: none; /* Mobilde tarayıcı kaydırmasını engeller, sürüklemeyi önceler */
-}
+/* SPOTIFY */
+.spotify-container { position: fixed; bottom: 20px; right: 20px; width: 300px; background: #000; border: 1px solid var(--cam-bocegi); border-radius: 12px; z-index: 9999; }
+.spotify-container.collapsed .spotify-content { display: none; }
+.spotify-header { background: var(--cam-bocegi); color: #000; padding: 10px; cursor: move; display: flex; justify-content: space-between; font-weight: bold; }
