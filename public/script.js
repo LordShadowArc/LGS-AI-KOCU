@@ -312,69 +312,68 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- SPOTIFY SÜRÜKLEME VE AÇILIR-KAPANIR SİSTEMİ (PC & MOBİL) ---
+// --- SPOTIFY SÜRÜKLEME (PC) VE AKILLI MOD (MOBİL) SİSTEMİ ---
 const spotPlayer = document.getElementById('spotify-player');
 const spotHeader = document.querySelector('.spotify-header');
 
 if (spotHeader && spotPlayer) {
-    let isDragging = false;
-    let offsetX, offsetY;
+    // 1. MOBİL MOD (1024px ve altı)
+    if (window.innerWidth <= 1024) {
+        // Başlangıçta küçük modda başlat
+        spotPlayer.classList.add('minimized');
 
-    // Sürükleme Başlangıcı
-    const dragStart = (e) => {
-        // Eğer mobil "is-open" modundaysa veya başlığa tıklandıysa sürüklemeyi başlat
-        isDragging = true;
-        
-        const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
-        const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+        spotHeader.addEventListener('click', () => {
+            if (spotPlayer.classList.contains('minimized')) {
+                spotPlayer.classList.remove('minimized');
+                spotPlayer.classList.add('expanded');
+                document.getElementById('spot-toggle-btn').innerText = '▼';
+            } else {
+                spotPlayer.classList.remove('expanded');
+                spotPlayer.classList.add('minimized');
+                document.getElementById('spot-toggle-btn').innerText = '▲';
+            }
+        });
+    } 
+    // 2. PC MODU (Sürükleme Sistemi)
+    else {
+        let isDragging = false;
+        let offsetX, offsetY;
 
-        // Panelin o anki konumuna göre farenin panel içindeki uzaklığını hesapla
-        const rect = spotPlayer.getBoundingClientRect();
-        offsetX = clientX - rect.left;
-        offsetY = clientY - rect.top;
+        const dragStart = (e) => {
+            isDragging = true;
+            const clientX = e.clientX;
+            const clientY = e.clientY;
+            const rect = spotPlayer.getBoundingClientRect();
+            offsetX = clientX - rect.left;
+            offsetY = clientY - rect.top;
+            spotPlayer.style.transition = "none";
+        };
 
-        spotPlayer.style.transition = "none"; // Sürüklerken animasyonu kapat ki gecikmesin
-    };
+        const dragMove = (e) => {
+            if (!isDragging) return;
+            let x = e.clientX - offsetX;
+            let y = e.clientY - offsetY;
+            
+            // Ekran sınırları
+            const maxX = window.innerWidth - spotPlayer.offsetWidth;
+            const maxY = window.innerHeight - spotPlayer.offsetHeight;
+            x = Math.max(0, Math.min(x, maxX));
+            y = Math.max(0, Math.min(y, maxY));
 
-    // Sürükleme Hareketi
-    const dragMove = (e) => {
-        if (!isDragging) return;
-        
-        const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
-        const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+            spotPlayer.style.left = `${x}px`;
+            spotPlayer.style.top = `${y}px`;
+            spotPlayer.style.bottom = "auto";
+            spotPlayer.style.right = "auto";
+            spotPlayer.style.transform = "none";
+        };
 
-        // Yeni konum hesaplama
-        let x = clientX - offsetX;
-        let y = clientY - offsetY;
+        const dragEnd = () => {
+            isDragging = false;
+            spotPlayer.style.transition = "transform 0.4s ease";
+        };
 
-        // Paneli ekrandan dışarı kaçırmama (Opsiyonel sınırlar)
-        const maxX = window.innerWidth - spotPlayer.offsetWidth;
-        const maxY = window.innerHeight - spotPlayer.offsetHeight;
-        
-        x = Math.max(0, Math.min(x, maxX));
-        y = Math.max(0, Math.min(y, maxY));
-
-        // Konumu uygula
-        spotPlayer.style.left = `${x}px`;
-        spotPlayer.style.top = `${y}px`;
-        spotPlayer.style.bottom = "auto"; // Sabit bottom değerini iptal et
-        spotPlayer.style.right = "auto";  // Sabit right değerini iptal et
-        spotPlayer.style.transform = "none"; // Mobil transformunu sıfırla
-    };
-
-    // Sürükleme Bitişi
-    const dragEnd = () => {
-        isDragging = false;
-        spotPlayer.style.transition = "transform 0.4s ease"; // Animasyonu geri aç
-    };
-
-    // Event Listenerlar
-    spotHeader.addEventListener('mousedown', dragStart);
-    spotHeader.addEventListener('touchstart', dragStart, {passive: true});
-    
-    window.addEventListener('mousemove', dragMove);
-    window.addEventListener('touchmove', dragMove, {passive: false});
-    
-    window.addEventListener('mouseup', dragEnd);
-    window.addEventListener('touchend', dragEnd);
+        spotHeader.addEventListener('mousedown', dragStart);
+        window.addEventListener('mousemove', dragMove);
+        window.addEventListener('mouseup', dragEnd);
+    }
 }
