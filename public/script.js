@@ -312,37 +312,34 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- MOBİL SPOTIFY SÜRÜKLEME SİSTEMİ ---
+// --- MOBİL SPOTIFY AÇILIR-KAPANIR SİSTEMİ ---
 const spotContainer = document.querySelector('.spotify-container');
 const spotHeader = document.querySelector('.spotify-header');
 
-if (spotHeader) {
-    let isDragging = false;
-    let currentY;
-    let initialY;
-    let yOffset = 0;
-
-    // Dokunmatik (Mobil) ve Mouse (PC Simülasyonu) başlangıcı
-    const dragStart = (e) => {
-        initialY = (e.type === "touchstart" ? e.touches[0].clientY : e.clientY) - yOffset;
-        isDragging = true;
-    };
-
-    const drag = (e) => {
-        if (isDragging) {
-            currentY = (e.type === "touchmove" ? e.touches[0].clientY : e.clientY) - initialY;
-            yOffset = currentY;
-            // Sadece Y ekseninde (yukarı-aşağı) hareket ettir
-            spotContainer.style.transform = `translateY(${currentY}px)`;
+if (spotHeader && spotContainer) {
+    // Başlığa tıklandığında aç/kapat
+    spotHeader.addEventListener('click', () => {
+        spotContainer.classList.toggle('is-open');
+        const btn = document.getElementById('spot-toggle-btn');
+        if (btn) {
+            btn.innerText = spotContainer.classList.contains('is-open') ? '▼' : '▲';
         }
-    };
+    });
 
-    const dragEnd = () => isDragging = false;
+    // Opsiyonel: Yukarı/Aşağı kaydırma hareketi (Swipe) desteği
+    let touchStartY = 0;
+    spotHeader.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    }, {passive: true});
 
-    spotHeader.addEventListener('mousedown', dragStart);
-    spotHeader.addEventListener('touchstart', dragStart, {passive: true});
-    window.addEventListener('mousemove', drag);
-    window.addEventListener('touchmove', drag, {passive: false});
-    window.addEventListener('mouseup', dragEnd);
-    window.addEventListener('touchend', dragEnd);
+    spotHeader.addEventListener('touchend', (e) => {
+        let touchEndY = e.changedTouches[0].clientY;
+        if (touchStartY > touchEndY + 50) {
+            // Yukarı kaydırdı -> Paneli aç
+            spotContainer.classList.add('is-open');
+        } else if (touchStartY < touchEndY - 50) {
+            // Aşağı kaydırdı -> Paneli kapat
+            spotContainer.classList.remove('is-open');
+        }
+    });
 }
