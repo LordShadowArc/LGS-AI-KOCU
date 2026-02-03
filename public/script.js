@@ -312,51 +312,63 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- SPOTIFY SÜRÜKLEME (PC) VE AKILLI MOD (MOBİL) SİSTEMİ ---
+// --- SPOTIFY SİSTEMİ: PC (SÜRÜKLEME) & MOBİL (ANİMASYONLU DOCK) ---
 const spotPlayer = document.getElementById('spotify-player');
 const spotHeader = document.querySelector('.spotify-header');
 
 if (spotHeader && spotPlayer) {
-    // 1. MOBİL MOD (1024px ve altı)
+    // 1. MOBİL KATMANI (1024px ve altı) - TIKLA-FIRLA SİSTEMİ
     if (window.innerWidth <= 1024) {
-        // Başlangıçta küçük modda başlat
+        // Başlangıçta küçük (minimized) modda başlat ve PC koordinatlarını temizle
         spotPlayer.classList.add('minimized');
+        spotPlayer.style.left = "auto";
+        spotPlayer.style.top = "auto";
 
-        spotHeader.addEventListener('click', () => {
+        spotHeader.addEventListener('click', (e) => {
+            // Tıklama anında PC sürükleme değerlerini sıfırlıyoruz ki animasyon bozulmasın
+            spotPlayer.style.left = "auto";
+            spotPlayer.style.top = "auto";
+            
             if (spotPlayer.classList.contains('minimized')) {
                 spotPlayer.classList.remove('minimized');
                 spotPlayer.classList.add('expanded');
-                document.getElementById('spot-toggle-btn').innerText = '▼';
+                // Ok işaretini güncelle
+                const btn = document.getElementById('spot-toggle-btn');
+                if (btn) btn.innerText = '▼';
             } else {
                 spotPlayer.classList.remove('expanded');
                 spotPlayer.classList.add('minimized');
-                document.getElementById('spot-toggle-btn').innerText = '▲';
+                // Ok işaretini güncelle
+                const btn = document.getElementById('spot-toggle-btn');
+                if (btn) btn.innerText = '▲';
             }
         });
     } 
-    // 2. PC MODU (Sürükleme Sistemi)
+    // 2. PC KATMANI (1024px üstü) - SÜRÜKLEME SİSTEMİ
     else {
         let isDragging = false;
         let offsetX, offsetY;
 
-        const dragStart = (e) => {
+        spotHeader.addEventListener('mousedown', (e) => {
             isDragging = true;
-            const clientX = e.clientX;
-            const clientY = e.clientY;
             const rect = spotPlayer.getBoundingClientRect();
-            offsetX = clientX - rect.left;
-            offsetY = clientY - rect.top;
+            offsetX = e.clientX - rect.left;
+            offsetY = e.clientY - rect.top;
+            
+            // Sürükleme başladığında animasyonu (transition) kapatıyoruz ki imleci takip etsin
             spotPlayer.style.transition = "none";
-        };
+        });
 
-        const dragMove = (e) => {
+        window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
+
             let x = e.clientX - offsetX;
             let y = e.clientY - offsetY;
-            
-            // Ekran sınırları
+
+            // Ekran sınırları (Dışarı kaçmasın)
             const maxX = window.innerWidth - spotPlayer.offsetWidth;
             const maxY = window.innerHeight - spotPlayer.offsetHeight;
+            
             x = Math.max(0, Math.min(x, maxX));
             y = Math.max(0, Math.min(y, maxY));
 
@@ -365,15 +377,14 @@ if (spotHeader && spotPlayer) {
             spotPlayer.style.bottom = "auto";
             spotPlayer.style.right = "auto";
             spotPlayer.style.transform = "none";
-        };
+        });
 
-        const dragEnd = () => {
-            isDragging = false;
-            spotPlayer.style.transition = "transform 0.4s ease";
-        };
-
-        spotHeader.addEventListener('mousedown', dragStart);
-        window.addEventListener('mousemove', dragMove);
-        window.addEventListener('mouseup', dragEnd);
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                // Sürükleme bittiğinde yumuşak geçişi geri açıyoruz
+                spotPlayer.style.transition = "transform 0.4s ease";
+            }
+        });
     }
 }
