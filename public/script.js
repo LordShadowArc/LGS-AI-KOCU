@@ -325,15 +325,19 @@ if (spotHeader && spotPlayer) {
 
         // Tıklama olayı
         spotHeader.addEventListener('click', (e) => {
-            // Widget içine tıklanmasını engellememek için sadece header'ı dinliyoruz
             e.stopPropagation(); 
             
             if (spotPlayer.classList.contains('minimized')) {
                 spotPlayer.classList.remove('minimized');
                 spotPlayer.classList.add('expanded');
-                // Açıldığında iframe'in boyutunu tekrar tetikle (Donmayı önler)
+                
+                // --- WIDGET CANLANDIRMA DOKUNUŞU ---
                 const ifr = document.getElementById('spotify-iframe');
-                if(ifr) ifr.style.display = "block";
+                if(ifr) {
+                    // Kaynağı (src) değiştirmeden genişliği tazeleyerek içeriği zorla yükletiyoruz
+                    ifr.style.width = "99%"; 
+                    setTimeout(() => { ifr.style.width = "100%"; }, 50);
+                }
             } else {
                 spotPlayer.classList.remove('expanded');
                 spotPlayer.classList.add('minimized');
