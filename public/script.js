@@ -312,39 +312,49 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- SPOTIFY SİSTEMİ: PC & MOBİL KUSURSUZ BİRLEŞİM ---
+// --- SPOTIFY SİSTEMİ: PC (SÜRÜKLEME) & MOBİL (ANİMASYONLU DOCK) ---
 const spotPlayer = document.getElementById('spotify-player');
 const spotHeader = document.querySelector('.spotify-header');
 
 if (spotHeader && spotPlayer) {
+    // 1. MOBİL KATMANI (1024px ve altı) - TIKLA-FIRLA SİSTEMİ
     if (window.innerWidth <= 1024) {
-        // MOBİL: İlk açılış ayarları
+        // Başlangıç ayarlarını temizleyip minimized ekliyoruz
         spotPlayer.classList.add('minimized');
-        spotPlayer.style.left = "auto";
-        spotPlayer.style.top = "auto";
+        spotPlayer.style.left = "";
+        spotPlayer.style.top = "";
 
-        // Tıklama olayı
         spotHeader.addEventListener('click', (e) => {
-            e.stopPropagation(); 
+            // Tıklama anında her şeyi temizle ki CSS animasyonu özgür kalsın
+            spotPlayer.style.left = "";
+            spotPlayer.style.top = "";
+            spotPlayer.style.bottom = "";
+            spotPlayer.style.right = "";
             
             if (spotPlayer.classList.contains('minimized')) {
                 spotPlayer.classList.remove('minimized');
                 spotPlayer.classList.add('expanded');
                 
-                // --- WIDGET CANLANDIRMA DOKUNUŞU ---
+                // --- WIDGET CANLANDIRMA (Siyah ekran kalmasın diye) ---
                 const ifr = document.getElementById('spotify-iframe');
                 if(ifr) {
-                    // Kaynağı (src) değiştirmeden genişliği tazeleyerek içeriği zorla yükletiyoruz
                     ifr.style.width = "99%"; 
                     setTimeout(() => { ifr.style.width = "100%"; }, 50);
                 }
+                
+                const btn = document.getElementById('spot-toggle-btn');
+                if (btn) btn.innerText = '▼';
             } else {
                 spotPlayer.classList.remove('expanded');
                 spotPlayer.classList.add('minimized');
+                
+                const btn = document.getElementById('spot-toggle-btn');
+                if (btn) btn.innerText = '▲';
             }
         });
-    } else {
-        // PC SÜRÜKLEME SİSTEMİ (Değişmedi, aynen korundu)
+    } 
+    // 2. PC KATMANI (1024px üstü) - SÜRÜKLEME SİSTEMİ
+    else {
         let isDragging = false;
         let offsetX, offsetY;
 
@@ -358,13 +368,28 @@ if (spotHeader && spotPlayer) {
 
         window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
-            spotPlayer.style.left = (e.clientX - offsetX) + "px";
-            spotPlayer.style.top = (e.clientY - offsetY) + "px";
+
+            let x = e.clientX - offsetX;
+            let y = e.clientY - offsetY;
+
+            const maxX = window.innerWidth - spotPlayer.offsetWidth;
+            const maxY = window.innerHeight - spotPlayer.offsetHeight;
+            
+            x = Math.max(0, Math.min(x, maxX));
+            y = Math.max(0, Math.min(y, maxY));
+
+            spotPlayer.style.left = `${x}px`;
+            spotPlayer.style.top = `${y}px`;
             spotPlayer.style.bottom = "auto";
             spotPlayer.style.right = "auto";
             spotPlayer.style.transform = "none";
         });
 
-        window.addEventListener('mouseup', () => { isDragging = false; spotPlayer.style.transition = "transform 0.4s ease"; });
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                spotPlayer.style.transition = "transform 0.4s ease";
+            }
+        });
     }
 }
