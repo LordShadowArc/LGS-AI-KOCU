@@ -579,18 +579,30 @@ button:active, .option-btn:active {
         padding: 20px !important;
         border-radius: 15px !important;
     }
-
+    
     .spotify-container {
         position: fixed !important;
         z-index: 10000 !important;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-        overflow: hidden !important;
+        /* Yağ gibi akan animasyon efekti */
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
         background: #121212 !important;
         border: 1px solid #00bfa5 !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+        box-shadow: 0 0 20px rgba(0, 191, 165, 0.4) !important;
+        overflow: hidden !important;
     }
 
-    /* DURUM 1: BÜYÜK MOD (Ekranın Ortasında) */
+    /* DURUM 1: GİZLİ/KÜÇÜK (Ekranın sağında yarısı dışarıda) */
+    .spotify-container.minimized {
+        width: 120px !important;
+        height: 45px !important;
+        bottom: 80px !important; /* Biraz yukarıda kalsın butonlara çakışmasın */
+        right: -60px !important; /* Yarısını ekranın sağına gömdük */
+        left: auto !important;
+        border-radius: 25px 0 0 25px !important; /* Sadece sol tarafı oval */
+        transform: none !important;
+    }
+
+    /* DURUM 2: BÜYÜK (Ekranın tam ortasında fırlamış hali) */
     .spotify-container.expanded {
         width: 90% !important;
         height: 450px !important;
@@ -598,31 +610,19 @@ button:active, .option-btn:active {
         left: 50% !important;
         transform: translate(-50%, 50%) !important;
         border-radius: 20px !important;
+        right: auto !important;
     }
 
-    /* DURUM 2: KÜÇÜK MOD (Sağ Alt Köşede Şık Bir Sekme) */
-    .spotify-container.minimized {
-        width: 140px !important;
-        height: 45px !important;
-        bottom: 20px !important;
-        right: 10px !important;
-        left: auto !important;
-        transform: none !important;
-        border-radius: 25px !important;
+    /* Küçük modda içeriği gizle, sadece neon başlık kalsın */
+    .spotify-container.minimized .spotify-content {
+        display: none !important;
     }
 
     .spotify-header {
-        height: 45px !important;
+        height: 100% !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 0 15px !important;
-        background: #121212 !important;
         cursor: pointer !important;
-    }
-
-    /* Küçültülmüş modda iframe'i gizle ki sadece başlık görünsün */
-    .spotify-container.minimized .spotify-content {
-        display: none !important;
     }
 }
