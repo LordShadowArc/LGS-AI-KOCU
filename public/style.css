@@ -581,54 +581,48 @@ button:active, .option-btn:active {
     }
     
     .spotify-container {
-        /* Diğer temel ayarlar aynı kalsın... */
-        background: #000000 !important; /* Tam siyah arka plan */
+        position: fixed !important;
+        z-index: 10000 !important;
+        /* Yağ gibi akan animasyon efekti */
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+        background: #121212 !important;
         border: 1px solid #00bfa5 !important;
+        box-shadow: 0 0 20px rgba(0, 191, 165, 0.4) !important;
+        overflow: hidden !important;
     }
 
-    /* KÜÇÜK MOD: Sağ tarafa düzgünce gömülme */
+    /* DURUM 1: GİZLİ/KÜÇÜK (Ekranın sağında yarısı dışarıda) */
     .spotify-container.minimized {
-        width: 140px !important;
+        width: 120px !important;
         height: 45px !important;
-        bottom: 100px !important; 
-        right: -70px !important; /* Yarısı dışarıda */
+        bottom: 80px !important; /* Biraz yukarıda kalsın butonlara çakışmasın */
+        right: -60px !important; /* Yarısını ekranın sağına gömdük */
         left: auto !important;
+        border-radius: 25px 0 0 25px !important; /* Sadece sol tarafı oval */
         transform: none !important;
-        border-radius: 25px 0 0 25px !important;
     }
 
-    /* BÜYÜK MOD: Merkeze kusursuz fırlama */
+    /* DURUM 2: BÜYÜK (Ekranın tam ortasında fırlamış hali) */
     .spotify-container.expanded {
         width: 90% !important;
-        height: 480px !important; /* Widget tam sığsın diye biraz yükselttik */
+        height: 450px !important;
         bottom: 50% !important;
         left: 50% !important;
         transform: translate(-50%, 50%) !important;
-        right: auto !important;
         border-radius: 20px !important;
+        right: auto !important;
+    }
+
+    /* Küçük modda içeriği gizle, sadece neon başlık kalsın */
+    .spotify-container.minimized .spotify-content {
+        display: none !important;
     }
 
     .spotify-header {
-        background: #000000 !important; /* Header da siyah kalsın */
-        color: #00bfa5 !important; /* Yazı neon camböceği */
-        text-shadow: 0 0 8px #00bfa5 !important; /* Hafif neon parlaması */
+        height: 100% !important;
         display: flex !important;
-        justify-content: flex-start !important; /* Küçük modda yazının görünmesi için sola yasla */
-        padding-left: 15px !important;
         align-items: center !important;
-        height: 45px !important;
-    }
-    
-    .spotify-content {
-        display: block !important; /* Gizli kalmasın */
-        height: calc(100% - 45px) !important; /* Başlıktan kalan tüm alanı kaplasın */
-        width: 100% !important;
-        background: #000 !important;
-    }
-
-    #spotify-iframe {
-        min-height: 352px !important; /* Spotify'ın standart yüksekliğini zorla */
-        opacity: 1 !important;
-        visibility: visible !important;
+        justify-content: center !important;
+        cursor: pointer !important;
     }
 }
