@@ -582,8 +582,29 @@ button:active, .option-btn:active {
 
     /* Spotify Mobilde Taşmasın */
     .spotify-container {
-        width: 94% !important;
-        right: 3% !important;
-        bottom: 5px !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(300px); /* Başlangıçta içerik gizli, sadece başlık görünür */
+        width: 90% !important;
+        max-width: 400px;
+        z-index: 10000 !important;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        border-radius: 15px 15px 0 0 !important;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.5) !important;
+    }
+
+    /* Panel açıkken yukarı kalkması için bu class'ı kullanacağız */
+    .spotify-container.is-open {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .spotify-header {
+        border-radius: 15px 15px 0 0 !important;
+        padding: 12px !important;
+        text-align: center;
+        background: var(--cam-bocegi) !important;
+        color: #000 !important;
+        font-weight: 900 !important;
     }
 }
