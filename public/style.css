@@ -580,31 +580,49 @@ button:active, .option-btn:active {
         border-radius: 15px !important;
     }
 
-    /* Spotify Mobilde Taşmasın */
     .spotify-container {
         position: fixed !important;
-        bottom: 0 !important;
-        left: 50% !important;
-        transform: translateX(-50%) translateY(300px); /* Başlangıçta içerik gizli, sadece başlık görünür */
-        width: 90% !important;
-        max-width: 400px;
         z-index: 10000 !important;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        border-radius: 15px 15px 0 0 !important;
-        box-shadow: 0 -5px 20px rgba(0,0,0,0.5) !important;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        overflow: hidden !important;
+        background: #121212 !important;
+        border: 1px solid #00bfa5 !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
     }
 
-    /* Panel açıkken yukarı kalkması için bu class'ı kullanacağız */
-    .spotify-container.is-open {
-        transform: translateX(-50%) translateY(0) !important;
+    /* DURUM 1: BÜYÜK MOD (Ekranın Ortasında) */
+    .spotify-container.expanded {
+        width: 90% !important;
+        height: 450px !important;
+        bottom: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, 50%) !important;
+        border-radius: 20px !important;
+    }
+
+    /* DURUM 2: KÜÇÜK MOD (Sağ Alt Köşede Şık Bir Sekme) */
+    .spotify-container.minimized {
+        width: 140px !important;
+        height: 45px !important;
+        bottom: 20px !important;
+        right: 10px !important;
+        left: auto !important;
+        transform: none !important;
+        border-radius: 25px !important;
     }
 
     .spotify-header {
-        border-radius: 15px 15px 0 0 !important;
-        padding: 12px !important;
-        text-align: center;
-        background: var(--cam-bocegi) !important;
-        color: #000 !important;
-        font-weight: 900 !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 15px !important;
+        background: #121212 !important;
+        cursor: pointer !important;
+    }
+
+    /* Küçültülmüş modda iframe'i gizle ki sadece başlık görünsün */
+    .spotify-container.minimized .spotify-content {
+        display: none !important;
     }
 }
