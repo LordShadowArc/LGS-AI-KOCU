@@ -543,3 +543,47 @@ button:active, .option-btn:active {
     box-shadow: 0 0 20px rgba(231, 76, 60, 0.8) !important;
     color: white !important;
 }
+
+/* --- SADECE MOBİL VE TABLET İÇİN (PC'DE ÇALIŞMAZ) --- */
+@media screen and (max-width: 1024px) {
+    /* Ana yerleşimi yan yanadan alt altaya çevir */
+    .main-layout {
+        flex-direction: column !important;
+        padding: 10px !important;
+        gap: 15px !important;
+        align-items: center !important;
+    }
+
+    /* Panelleri ekrana tam yay */
+    .sidebar, .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: unset !important;
+        position: static !important; /* PC'deki asılı kalma özelliğini mobilde iptal et */
+        margin-bottom: 10px;
+    }
+
+    /* Mobilde Soru Alanını (Orta Panel) En Üste Taşı */
+    .container { order: 1 !important; }
+    .sidebar-left { order: 2 !important; }
+    .sidebar-right { order: 3 !important; }
+
+    /* Mobilde parmakla tıklamayı kolaylaştır */
+    .option-btn {
+        padding: 16px !important;
+        font-size: 1.1rem !important;
+        margin-top: 10px !important;
+    }
+
+    .question-card {
+        padding: 20px !important;
+        border-radius: 15px !important;
+    }
+
+    /* Spotify Mobilde Taşmasın */
+    .spotify-container {
+        width: 94% !important;
+        right: 3% !important;
+        bottom: 5px !important;
+    }
+}
