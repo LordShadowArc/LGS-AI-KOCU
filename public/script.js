@@ -311,3 +311,38 @@ function setupSpotifyDragging() {
 document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
+
+// --- MOBİL SPOTIFY SÜRÜKLEME SİSTEMİ ---
+const spotContainer = document.querySelector('.spotify-container');
+const spotHeader = document.querySelector('.spotify-header');
+
+if (spotHeader) {
+    let isDragging = false;
+    let currentY;
+    let initialY;
+    let yOffset = 0;
+
+    // Dokunmatik (Mobil) ve Mouse (PC Simülasyonu) başlangıcı
+    const dragStart = (e) => {
+        initialY = (e.type === "touchstart" ? e.touches[0].clientY : e.clientY) - yOffset;
+        isDragging = true;
+    };
+
+    const drag = (e) => {
+        if (isDragging) {
+            currentY = (e.type === "touchmove" ? e.touches[0].clientY : e.clientY) - initialY;
+            yOffset = currentY;
+            // Sadece Y ekseninde (yukarı-aşağı) hareket ettir
+            spotContainer.style.transform = `translateY(${currentY}px)`;
+        }
+    };
+
+    const dragEnd = () => isDragging = false;
+
+    spotHeader.addEventListener('mousedown', dragStart);
+    spotHeader.addEventListener('touchstart', dragStart, {passive: true});
+    window.addEventListener('mousemove', drag);
+    window.addEventListener('touchmove', drag, {passive: false});
+    window.addEventListener('mouseup', dragEnd);
+    window.addEventListener('touchend', dragEnd);
+}
