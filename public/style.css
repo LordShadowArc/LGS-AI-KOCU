@@ -598,22 +598,13 @@ button:active, .option-btn:active {
     .spotify-container.is-open {
         transform: translateX(-50%) translateY(0) !important;
     }
-    
+
     .spotify-header {
-    border-radius: 15px 15px 0 0 !important;
-    padding: 12px !important;
-    text-align: center !important;
-    background-color: #121212 !important; /* Arka planı asil bir siyah yaptık */
-    color: #00bfa5 !important; /* Yazı rengi Camböceği */
-    font-weight: 900 !important;
-    cursor: pointer !important;
-    
-    /* NEON ETKİSİ BURADA */
-    text-shadow: 0 0 5px #00bfa5, 0 0 10px #00bfa5, 0 0 20px #00bfa5 !important; 
-    border-top: 1px solid #00bfa5 !important; /* Üstten ince bir neon çizgi */
-    
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px;
+        border-radius: 15px 15px 0 0 !important;
+        padding: 12px !important;
+        text-align: center;
+        background: var(--cam-bocegi) !important;
+        color: #000 !important;
+        font-weight: 900 !important;
+    }
 }
