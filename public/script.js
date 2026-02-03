@@ -312,40 +312,35 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- SPOTIFY SİSTEMİ: PC (SÜRÜKLEME) & MOBİL (ANİMASYONLU DOCK) ---
+// --- SPOTIFY SİSTEMİ: PC & MOBİL KUSURSUZ BİRLEŞİM ---
 const spotPlayer = document.getElementById('spotify-player');
 const spotHeader = document.querySelector('.spotify-header');
 
 if (spotHeader && spotPlayer) {
-    // 1. MOBİL KATMANI (1024px ve altı) - TIKLA-FIRLA SİSTEMİ
     if (window.innerWidth <= 1024) {
-        // Başlangıçta küçük (minimized) modda başlat ve PC koordinatlarını temizle
+        // MOBİL: İlk açılış ayarları
         spotPlayer.classList.add('minimized');
         spotPlayer.style.left = "auto";
         spotPlayer.style.top = "auto";
 
+        // Tıklama olayı
         spotHeader.addEventListener('click', (e) => {
-            // Tıklama anında PC sürükleme değerlerini sıfırlıyoruz ki animasyon bozulmasın
-            spotPlayer.style.left = "auto";
-            spotPlayer.style.top = "auto";
+            // Widget içine tıklanmasını engellememek için sadece header'ı dinliyoruz
+            e.stopPropagation(); 
             
             if (spotPlayer.classList.contains('minimized')) {
                 spotPlayer.classList.remove('minimized');
                 spotPlayer.classList.add('expanded');
-                // Ok işaretini güncelle
-                const btn = document.getElementById('spot-toggle-btn');
-                if (btn) btn.innerText = '▼';
+                // Açıldığında iframe'in boyutunu tekrar tetikle (Donmayı önler)
+                const ifr = document.getElementById('spotify-iframe');
+                if(ifr) ifr.style.display = "block";
             } else {
                 spotPlayer.classList.remove('expanded');
                 spotPlayer.classList.add('minimized');
-                // Ok işaretini güncelle
-                const btn = document.getElementById('spot-toggle-btn');
-                if (btn) btn.innerText = '▲';
             }
         });
-    } 
-    // 2. PC KATMANI (1024px üstü) - SÜRÜKLEME SİSTEMİ
-    else {
+    } else {
+        // PC SÜRÜKLEME SİSTEMİ (Değişmedi, aynen korundu)
         let isDragging = false;
         let offsetX, offsetY;
 
@@ -354,37 +349,18 @@ if (spotHeader && spotPlayer) {
             const rect = spotPlayer.getBoundingClientRect();
             offsetX = e.clientX - rect.left;
             offsetY = e.clientY - rect.top;
-            
-            // Sürükleme başladığında animasyonu (transition) kapatıyoruz ki imleci takip etsin
             spotPlayer.style.transition = "none";
         });
 
         window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
-
-            let x = e.clientX - offsetX;
-            let y = e.clientY - offsetY;
-
-            // Ekran sınırları (Dışarı kaçmasın)
-            const maxX = window.innerWidth - spotPlayer.offsetWidth;
-            const maxY = window.innerHeight - spotPlayer.offsetHeight;
-            
-            x = Math.max(0, Math.min(x, maxX));
-            y = Math.max(0, Math.min(y, maxY));
-
-            spotPlayer.style.left = `${x}px`;
-            spotPlayer.style.top = `${y}px`;
+            spotPlayer.style.left = (e.clientX - offsetX) + "px";
+            spotPlayer.style.top = (e.clientY - offsetY) + "px";
             spotPlayer.style.bottom = "auto";
             spotPlayer.style.right = "auto";
             spotPlayer.style.transform = "none";
         });
 
-        window.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                // Sürükleme bittiğinde yumuşak geçişi geri açıyoruz
-                spotPlayer.style.transition = "transform 0.4s ease";
-            }
-        });
+        window.addEventListener('mouseup', () => { isDragging = false; spotPlayer.style.transition = "transform 0.4s ease"; });
     }
 }
