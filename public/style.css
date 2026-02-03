@@ -618,16 +618,17 @@ button:active, .option-btn:active {
         align-items: center !important;
         height: 45px !important;
     }
-
+    
     .spotify-content {
-        height: calc(100% - 45px) !important;
+        display: block !important; /* Gizli kalmasın */
+        height: calc(100% - 45px) !important; /* Başlıktan kalan tüm alanı kaplasın */
         width: 100% !important;
+        background: #000 !important;
     }
 
-    /* Widget donmaması için içerik ayarı */
     #spotify-iframe {
-        width: 100% !important;
-        height: 100% !important;
-        border: none !important;
+        min-height: 352px !important; /* Spotify'ın standart yüksekliğini zorla */
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }
