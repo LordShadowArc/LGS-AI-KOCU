@@ -312,34 +312,69 @@ document.getElementById('user-input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSend();
 });
 
-// --- MOBİL SPOTIFY AÇILIR-KAPANIR SİSTEMİ ---
-const spotContainer = document.querySelector('.spotify-container');
+// --- SPOTIFY SÜRÜKLEME VE AÇILIR-KAPANIR SİSTEMİ (PC & MOBİL) ---
+const spotPlayer = document.getElementById('spotify-player');
 const spotHeader = document.querySelector('.spotify-header');
 
-if (spotHeader && spotContainer) {
-    // Başlığa tıklandığında aç/kapat
-    spotHeader.addEventListener('click', () => {
-        spotContainer.classList.toggle('is-open');
-        const btn = document.getElementById('spot-toggle-btn');
-        if (btn) {
-            btn.innerText = spotContainer.classList.contains('is-open') ? '▼' : '▲';
-        }
-    });
+if (spotHeader && spotPlayer) {
+    let isDragging = false;
+    let offsetX, offsetY;
 
-    // Opsiyonel: Yukarı/Aşağı kaydırma hareketi (Swipe) desteği
-    let touchStartY = 0;
-    spotHeader.addEventListener('touchstart', (e) => {
-        touchStartY = e.touches[0].clientY;
-    }, {passive: true});
+    // Sürükleme Başlangıcı
+    const dragStart = (e) => {
+        // Eğer mobil "is-open" modundaysa veya başlığa tıklandıysa sürüklemeyi başlat
+        isDragging = true;
+        
+        const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
 
-    spotHeader.addEventListener('touchend', (e) => {
-        let touchEndY = e.changedTouches[0].clientY;
-        if (touchStartY > touchEndY + 50) {
-            // Yukarı kaydırdı -> Paneli aç
-            spotContainer.classList.add('is-open');
-        } else if (touchStartY < touchEndY - 50) {
-            // Aşağı kaydırdı -> Paneli kapat
-            spotContainer.classList.remove('is-open');
-        }
-    });
+        // Panelin o anki konumuna göre farenin panel içindeki uzaklığını hesapla
+        const rect = spotPlayer.getBoundingClientRect();
+        offsetX = clientX - rect.left;
+        offsetY = clientY - rect.top;
+
+        spotPlayer.style.transition = "none"; // Sürüklerken animasyonu kapat ki gecikmesin
+    };
+
+    // Sürükleme Hareketi
+    const dragMove = (e) => {
+        if (!isDragging) return;
+        
+        const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+
+        // Yeni konum hesaplama
+        let x = clientX - offsetX;
+        let y = clientY - offsetY;
+
+        // Paneli ekrandan dışarı kaçırmama (Opsiyonel sınırlar)
+        const maxX = window.innerWidth - spotPlayer.offsetWidth;
+        const maxY = window.innerHeight - spotPlayer.offsetHeight;
+        
+        x = Math.max(0, Math.min(x, maxX));
+        y = Math.max(0, Math.min(y, maxY));
+
+        // Konumu uygula
+        spotPlayer.style.left = `${x}px`;
+        spotPlayer.style.top = `${y}px`;
+        spotPlayer.style.bottom = "auto"; // Sabit bottom değerini iptal et
+        spotPlayer.style.right = "auto";  // Sabit right değerini iptal et
+        spotPlayer.style.transform = "none"; // Mobil transformunu sıfırla
+    };
+
+    // Sürükleme Bitişi
+    const dragEnd = () => {
+        isDragging = false;
+        spotPlayer.style.transition = "transform 0.4s ease"; // Animasyonu geri aç
+    };
+
+    // Event Listenerlar
+    spotHeader.addEventListener('mousedown', dragStart);
+    spotHeader.addEventListener('touchstart', dragStart, {passive: true});
+    
+    window.addEventListener('mousemove', dragMove);
+    window.addEventListener('touchmove', dragMove, {passive: false});
+    
+    window.addEventListener('mouseup', dragEnd);
+    window.addEventListener('touchend', dragEnd);
 }
