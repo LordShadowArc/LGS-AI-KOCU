@@ -76,7 +76,7 @@ async function loadQuestion(index) {
         updateNavHighlight();
     } catch (err) {
         console.error(err);
-        qText.innerText = "Hata: Sunucudan soru alınamadı kanka.";
+        qText.innerText = "Hata: Sunucudan soru alınamadı.";
     }
 }
 
@@ -124,7 +124,7 @@ async function checkAnswer(selected) {
         askAI(null, selected, correctAnswer);
     } else {
         document.getElementById('ai-response').innerHTML = 
-            "<div class='ai-msg' style='color:#00ffa5; text-shadow:0 0 10px #00ffa5; font-weight:bold;'>✔️ DOĞRU! Kralsın kanka, böyle devam! 🚀</div>";
+            "<div class='ai-msg' style='color:#00ffa5; text-shadow:0 0 10px #00ffa5; font-weight:bold;'>✔️ DOĞRU! , böyle devam! 🚀</div>";
     }
 }
 
@@ -200,7 +200,7 @@ async function askAI(customMsg = null, selected = "", correct = "") {
         chatHistory.push({ role: 'user', text: customMsg || "Bu soruyu anlat." }, { role: 'assistant', text: reply });
         
     } catch (err) {
-        aiBox.innerHTML = "⚠️ Hocaya ulaşılamıyor, interneti kontrol et kanka.";
+        aiBox.innerHTML = "⚠️ Hocaya ulaşılamıyor, interneti kontrol et.";
     } finally {
         isAiLoading = false;
     }
@@ -232,7 +232,7 @@ function getNewQuestion() {
     if (currentQuestionIndex < max) {
         loadQuestion(currentQuestionIndex + 1);
     } else {
-        alert("Bölümün sonuna geldin kanka, harikasın!");
+        alert("Bölümün sonuna geldin , harikasın!");
     }
 }
 
@@ -285,7 +285,7 @@ function loadSavedPlaylist() {
 }
 
 function resetProgress() {
-    if (confirm("Bütün emeklerin sıfırlanacak, emin misin kanka?")) {
+    if (confirm("Bütün emeklerin sıfırlanacak, emin misin ?")) {
         localStorage.removeItem('lgs_progress');
         location.reload();
     }
