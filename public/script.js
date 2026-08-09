@@ -124,7 +124,7 @@ async function checkAnswer(selected) {
         askAI(null, selected, correctAnswer);
     } else {
         document.getElementById('ai-response').innerHTML = 
-            "<div class='ai-msg' style='color:#00ffa5; text-shadow:0 0 10px #00ffa5; font-weight:bold;'>✔️ DOĞRU! , böyle devam! 🚀</div>";
+            "<div class='ai-msg' style='color:#00ffa5; text-shadow:0 0 10px #00ffa5; font-weight:bold;'>✔️ DOĞRU!, böyle devam! 🚀</div>";
     }
 }
 
