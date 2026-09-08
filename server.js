@@ -56,7 +56,7 @@ app.post('/api/explain', async (req, res) => {
         let messages = [
             {
                 role: "system",
-                content: `Sen uzman bir LGS öğretmenisin. Soru: "${questionText}". Doğru cevap: "${correctAnswer}". Samimi ol, motive et, önemli yerleri **kalın** yaz.`
+                content: `Sen uzman bir LGS öğretmenisin. Soru: "${questionText}". Doğru cevap: "${correctAnswer}". Samimi ol, motive et.`
             }
         ];
 
@@ -71,7 +71,7 @@ app.post('/api/explain', async (req, res) => {
 
         const chatCompletion = await groq.chat.completions.create({
             messages: messages,
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-120b",
             temperature: 0.7,
         });
 
