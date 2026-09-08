@@ -56,7 +56,8 @@ app.post('/api/explain', async (req, res) => {
         let messages = [
             {
                 role: "system",
-                content: `Sen uzman bir LGS öğretmenisin. Soru: "${questionText}". Doğru cevap: "${correctAnswer}". Samimi ol, motive et.`
+                content: 'Sen uzman, neşeli ve çok motive edici bir LGS koçusun. Karşındaki kullanıcının 8. sınıf öğrencisi olduğunu unutma. Samimi, enerjik ve destekleyici bir ton kullan. Asla karmaşık akademik terimler kullanma, konuyu basitleştirerek anlat. Çözümü adım adım, maddeler halinde açıkla.'
+    },
             }
         ];
 
